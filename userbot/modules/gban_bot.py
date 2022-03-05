@@ -34,9 +34,9 @@ async def _(event):
             "/gban [user](tg://user?id={}) {}".format(r_from_id, reason),
         )
     await event.delete()
-    await event.reply("**gbanning...**")
+    await event.reply("`Gbanning...`")
     asyncio.sleep(3.5)
-    await event.edit(f"**User gbanned by {DEFAULTUSER}**")
+    await event.edit(f"**User Global Banned by {DEFAULTUSER}**")
     asyncio.sleep(5)
     await event.delete()
 
@@ -57,8 +57,8 @@ async def _(event):
             "/ungban [user](tg://user?id={}) {}".format(r_from_id, reason),
         )
     await event.delete()
-    await event.reply("**ungbanning...**")
+    await event.reply("`Ungbanning...`")
     asyncio.sleep(3.5)
-    await event.edit(f"**User ungbanned by {DEFAULTUSER}**")
+    await event.edit(f"**User Ungbanned by {DEFAULTUSER}**")
     asyncio.sleep(5)
     await event.delete()
