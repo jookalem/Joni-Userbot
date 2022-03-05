@@ -62,11 +62,11 @@ CMD_HELP.update(
     {
         "truth_dare": "** Plugin :** truth_dare\
         \n\n  •  Perintah : `{cmd}truth`\
-        \n  •  Function : Untuk mengirim pesan truth\
+        \n  •  Function : Untuk Mengirim Pesan Truth\
         \n\n  •  Perintah : `{cmd}dare`\
-        \n  •  Function : Untuk mengirim pesan dare\
+        \n  •  Function : Untuk Mengirim Pesan Dare\
         \n\n  •  Perintah : `{cmd}spill`\
-        \n  •  Function : Untuk Pertanyaan\
+        \n  •  Function : Untuk Mengirim Pesan Pertanyaan\
     "
     }
 )
