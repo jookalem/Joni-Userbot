@@ -14,7 +14,7 @@ async def _(event):
             "`Mohon Maaf, Saya Membutuhkan Link Video Tiktok Untuk Mendownload Nya`"
         )
     else:
-        await event.edit("```Video Sedang Diproses.....```")
+        await event.edit("```Download Video.....```")
     chat = "@ttsavebot"
     async with bot.conversation(chat) as conv:
         try:
