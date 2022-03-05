@@ -162,7 +162,7 @@ async def bot_ver(event):
         revout = str(stdout.decode().strip()) + str(stderr.decode().strip())
 
         await event.edit(
-            "**⚜-**⚡Skyzu-Userbot⚡ Versi:** \n "
+            "**⚜-**⚡𝐉ᴏɴɪ-𝐔sᴇʀʙᴏᴛ⚡ Versi:** \n "
             f"heads/Skyzu-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
@@ -221,12 +221,12 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@skyzu_cmd(pattern="(?:skyzualive)\s?(.)?")
+@skyzu_cmd(pattern="(?:jonialive)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"丂Ҝㄚ乙ㄩ 卂ㄥ丨ᐯ乇\n\n"
+        f"ﾌの刀ﾉ　ﾑﾚﾉ√乇\n\n"
         f"\n__**{ROSE_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"➥ **Name** : `{DEFAULTUSER}` \n"
@@ -236,7 +236,7 @@ async def amireallyalive(alive):
         f"➥ **Bot Ver**  : `{BOT_VER}` \n"
         f"➥ **Modules**  : `{len(modules)}` \n"
         f"╰✠╼━━━━━━━━━━━━━━━✠╯\n"
-        f"[ɢʀᴏᴜᴘꜱ](https://t.me/skyzusupport) | [ʙᴏᴛᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/Skyzu/skyzu-userbot)"
+        f"[ɢʀᴏᴜᴘꜱ](https://t.me/JoniSupport) | [ʙᴏᴛ ᴏꜰ](https://t.me/{user.username}) | [ɢɪᴛʜᴜʙ](https://github.com/jookalem/Joni-Userbot)"
     )
     if ALIVE_LOGO:
         try:
@@ -258,13 +258,13 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@skyzu_cmd(pattern="(?:skyzuon)\s?(.)?")
+@skyzu_cmd(pattern="(?:jonion)\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[Sƙȥυ](t.me/skyzu)             ㅤ \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[𝐉ᴏɴɪ](t.me/ikhsanntarjo)             ㅤ \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ. :`Ubuntu 20.10            \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__}                ㅤㅤ  \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ. :`v.{python_version()} ㅤㅤ\n"
@@ -314,9 +314,9 @@ async def redis(alive):
         f"┃✧ **Branch   :** {UPSTREAM_REPO_BRANCH} \n"
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
-        f"┃✧ **GitHub   :** [UserBot](https://github.com/Skyzu/skyzu-userbot) \n"
-        f"┃✧ **Owner    :** [Skyzu](https://t.me/skyzu) \n"
-        f"┃✧ **support  :** [groups](https://t.me/skyzusupport) \n"
+        f"┃✧ **GitHub   :** [𝐆ɪᴛʜᴜʙ](https://github.com/jookalem/Joni-Userbot) \n"
+        f"┃✧ **Owner    :** [𝐉ᴏɴɪ](https://t.me/ikhsanntarjo) \n"
+        f"┃✧ **Support  :** [𝐆ʀᴏᴜᴘ](https://t.me/JoniSupport) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
@@ -371,7 +371,7 @@ CMD_HELP.update(
 )
 CMD_HELP.update(
     {
-        "alive": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}alive` or `{cmd}on` or `skyzu`"
+        "alive": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}alive` or `{cmd}on` or `joni`"
         "\n↳ : To see whether your bot is working or not."
         f"\n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}aliveu` <text>"
         "\n↳ : Changes the 'user' in alive to the text you want."
