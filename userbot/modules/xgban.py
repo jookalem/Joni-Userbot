@@ -17,7 +17,7 @@ async def testing(event):
     admin = nikal.admin_rights
     creator = nikal.creator
     if not admin and not creator:
-        await event.edit("Anda Tidak Mempunyai Hak")
+        await event.edit("Anda Tidak Mempunyai Hak Tuan")
         return
     await event.edit("Tidak Melakukan Apa-apa")
     # Thank for Dark_Cobra
@@ -43,6 +43,6 @@ CMD_HELP.update(
     {
         "allban": f"**Plugin : **`allban`\
     \n\n**Syntax : **`{cmd}allban`\
-    \n**Function : **ban all members in 1 cmnd"
+    \n**Function : **Banned All Members in 1 cmnd"
     }
 )
