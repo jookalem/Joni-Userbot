@@ -15,7 +15,7 @@ async def _(event):
         await event.client.send_file(event.chat_id, response["url"])
         await event.delete()
     except Exception:
-        await event.edit("**Tidak bisa menemukan video asupan.**")
+        await event.edit("**Tidak bisa menemukan Video Asupan.**")
 
 
 @skyzu_cmd(pattern="wibu$")
@@ -25,7 +25,7 @@ async def _(event):
         await event.client.send_file(event.chat_id, response["url"])
         await event.delete()
     except Exception:
-        await event.edit("**Tidak bisa menemukan video wibu.**")
+        await event.edit("**Tidak bisa menemukan Video Wibu.**")
 
 
 @skyzu_cmd(pattern="chika$")
@@ -35,7 +35,7 @@ async def _(event):
         await event.client.send_file(event.chat_id, response["url"])
         await event.delete()
     except Exception:
-        await event.edit("**Tidak bisa menemukan video chikakiku.**")
+        await event.edit("**Tidak bisa menemukan Video Chikakiku.**")
 
 
 @skyzu_cmd(pattern="bocil$")
@@ -54,13 +54,13 @@ CMD_HELP.update(
     {
         "asupan": f"**Plugin : **`asupan`\
         \n\n  •  **Syntax :** `{cmd}asupan`\
-        \n  •  **Function : **Untuk Mengirim video asupan secara random.\
+        \n  •  **Function : **Untuk Mengirim Video Asupan secara random.\
         \n\n  •  **Syntax :** `{cmd}wibu`\
-        \n  •  **Function : **Untuk Mengirim video wibu secara random.\
+        \n  •  **Function : **Untuk Mengirim Video Wibu secara random.\
         \n\n  •  **Syntax :** `{cmd}chika`\
-        \n  •  **Function : **Untuk Mengirim video chikakiku secara random.\
+        \n  •  **Function : **Untuk Mengirim Video Chikakiku secara random.\
         \n\n  •  **Syntax :** `{cmd}bocil`\
-        \n  •  **Function : **Untuk Mengirim video bocil secara random.\
+        \n  •  **Function : **Untuk Mengirim Video Bocil secara random.\
     "
     }
 )
