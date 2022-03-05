@@ -13,7 +13,7 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("**Aku Sayang Kamu**")
     sleep(1)
-    await typew.edit("**I LOVE YOU 💞**")
+    await typew.edit("**I love u more than anything💞**")
 
 
 # Create by myself @localheart
@@ -27,7 +27,7 @@ async def typewriter(typew):
     sleep(3)
     await typew.edit("**Tetaplah Bernapas**")
     sleep(1)
-    await typew.edit("**Dan Selalu Bersyukur**")
+    await typew.edit("**Dan Selalu Bersyukur ygy**")
 
 
 # Create by myself @localheart
@@ -36,7 +36,7 @@ async def typewriter(typew):
 @skyzu_cmd(pattern="jamet(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**WOII**")
+    await typew.edit("**WOII JAMET**")
     sleep(1.5)
     await typew.edit("**JAMET KONTOL**")
     sleep(1.5)
@@ -46,17 +46,17 @@ async def typewriter(typew):
     sleep(1.5)
     await typew.edit("**EMANG KENAL?**")
     sleep(1.5)
-    await typew.edit("**GAUSAH REPLY**")
+    await typew.edit("**GAUSAH REPLY GUA JAMET**")
     sleep(1.5)
-    await typew.edit("**KITA BUKAN KAWAN**")
+    await typew.edit("**EHH ANAK PEMULUNG**")
     sleep(1.5)
-    await typew.edit("**GASUKA PC ANJING**")
+    await typew.edit("**MUKA LU KEK LUTUNG**")
     sleep(1.5)
-    await typew.edit("**BOCAH KAMPUNG**")
+    await typew.edit("**DASAR BOCAH KAMPUNG**")
     sleep(1.5)
-    await typew.edit("**MENTAL TEMPE**")
+    await typew.edit("**YANG TINGGAL DI LAMPUNG**")
     sleep(1.5)
-    await typew.edit("**LEMBEK NGENTOT🔥**")
+    await typew.edit("**MUKA LU KEK LUTUNG KASARUNG**")
 
 
 @skyzu_cmd(pattern="pp(?: |$)(.*)")
@@ -180,7 +180,7 @@ CMD_HELP.update(
         \n  •  **Function : **Ngeledek anak haram\
         \n\n  •  **Syntax :** `{cmd}gcs`\
         \n  •  **Function : **Ngeledek gc sampah\
-        \n\n**Klo mau Req, kosa kata dari lu Hubungi @skyzu**\
+        \n\n**Klo mau Req, kosa kata dari lu Hubungi @ikhsanntarjo**\
     "
     }
 )
