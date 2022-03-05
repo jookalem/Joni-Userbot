@@ -6,7 +6,7 @@ from userbot import CMD_HELP, bot
 from userbot.utils import skyzu_cmd
 
 
-@skyzu_cmd(pattern="getid(?: |$)(.*)")
+@skyzu_cmd(pattern="id(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -22,7 +22,7 @@ async def _(event):
     if reply_message.sender.bot:
         await event.edit("`Mohon Reply Ke Pesan`")
         return
-    await event.edit("`Mencari ID.......`")
+    await event.edit("`Searching...`")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(
@@ -41,7 +41,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "getid": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}gid`"
+        "getid": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}id`"
         "\n↳ : Balas Ke Pesan Pengguna Untuk Mendapatkan ID Nya."
     }
 )
