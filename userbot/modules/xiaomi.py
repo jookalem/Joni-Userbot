@@ -191,7 +191,7 @@ CMD_HELP.update(
 \n\n`.pb` (codename)\
      \nUsage : Get latest PitchBlack Recovery\
 \n\n`.specs` (codename)\
-     \nUsage : Get quick spec information about device\
+     \nUsage : Get quick spec Information about device\
 \n\n`.fastboot` (codename)\
      \nUsage : Get latest fastboot MIUI\
 \n\n`.recovery` (codename)\
