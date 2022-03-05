@@ -179,18 +179,18 @@ async def _(event):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
                         event.chat_id,
-                        f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
+                        f"⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
                     )
                 else:
                     await bot.send_message(
                         event.chat_id,
-                        f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
+                        f"⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
                         file=pic,
                     )
             except BaseException:
                 await bot.send_message(
                     event.chat_id,
-                    f"⚡OᖴᖴᒪIᑎE\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
+                    f"⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄\n\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
                 )
         else:
             try:
@@ -198,18 +198,18 @@ async def _(event):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
                         event.chat_id,
-                        f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
+                        f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
                     )
                 else:
                     await bot.send_message(
                         event.chat_id,
-                        f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
+                        f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
                         file=pic,
                     )
             except BaseException:
                 await bot.send_message(
                     event.chat_id,
-                    f"**OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
+                    f"**𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
                 )
         await event.delete()
         try:
@@ -218,36 +218,36 @@ async def _(event):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
+                        f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
                     )
                 else:
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
+                        f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
                         file=pic,
                     )
             elif reason:
                 await bot.send_message(
                     BOTLOG_CHATID,
-                    f"\n**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
+                    f"\n**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈",
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
+                        f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
                     )
                 else:
                     await bot.send_message(
                         BOTLOG_CHATID,
-                        f"**⚡OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
+                        f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄**\n╭┈──────────────┈\n**▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈",
                         file=pic,
                     )
             else:
                 await bot.send_message(
                     BOTLOG_CHATID,
-                    f"**⚡OᖴᖴᒪIᑎE **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈",
+                    f"**⚡𝐎𝐅𝐅𝐋𝐈𝐍𝐄 **\n╭┈──────────────┈\n **▸ {ALIVE_NAME} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈",
                 )
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
