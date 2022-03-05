@@ -330,21 +330,21 @@ CMD_HELP.update(
     {
         "siaran": "**𝘾𝙤𝙢𝙢𝙖𝙣𝙙 : **`siaran`\
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.sendto` <category_name>\
-        \n  **Usage : **akan mengirim pesan balasan ke semua obrolan dalam kategori yang diberikan.\
+        \n  **Usage : **Akan Mengirim Pesan Balasan Ke Semua Obrolan Dalam Kategori Yang Diberikan.\
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.fwdto` <category_name>\
-        \n  **Usage : **akan meneruskan pesan yang dibalas ke semua obrolan di kategori berikan. \
+        \n  **Usage : **Akan Meneruskan Pesan Yang Dibalas Ke Semua Obrolan Di Kategori Berikan. \
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.addto` <category name>\
-        \n  **Usage : **Ini akan menambahkan obrolan / pengguna / saluran ini ke kategori nama yang diberikan. \
+        \n  **Usage : **Akan Menambahkan Obrolan / Pengguna / Saluran Ini Ke Kategori Nama Yang Diberikan. \
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.rmfrom` <category name>\
-        \n  **Usage : **Untuk menghapus Obrolan / pengguna / saluran dari nama kategori yang diberikan. \
+        \n  **Usage : **Untuk Menghapus Obrolan / Pengguna / Saluran Dari Nama Kategori Yang Diberikan. \
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.list` <category_name>\
-        \n  **Usage : **Akan menampilkan daftar semua obrolan dalam kategori yang diberikan. \
+        \n  **Usage : **Akan Menampilkan Daftar Semua Obrolan Dalam Kategori Yang Diberikan. \
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.listall`\
-        \n  **Usage : **Akan menampilkan daftar semua nama kategori. \
+        \n  **Usage : **Akan Menampilkan Daftar Semua Nama Kategori. \
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.frmfrom` <category_name/chat_id>\
-        \n  **Usage : **Untuk memaksa menghapus chat_id yang diberikan dari nama kategori yang diberikan berguna ketika Anda meninggalkan obrolan itu atau melarang Anda di sana \
+        \n  **Usage : **Akan Memaksa Menghapus chat_id Yang Diberikan Dari Nama Kategori Yang Diberikan Berguna Ketika Anda Meninggalkan Obrolan Itu Atau Melarang Anda Di Sana \
         \n\n  **𝘾𝙤𝙢𝙢𝙖𝙣𝙙 :** `.delc` <category_name>\
-        \n  **Usage : **Menghapus kategori sepenuhnya di database \
+        \n  **Usage : **Akan Menghapus Kategori Sepenuhnya Di Database \
     "
     }
 )
