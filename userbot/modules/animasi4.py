@@ -355,17 +355,17 @@ async def koc(e):
 @skyzu_cmd(pattern="sangean(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Kalo Sange Modal`")
+    await typew.edit("`Kalo Sange Modal Anjing`")
     sleep(1)
-    await typew.edit("`Jangan Modal Kontol Doang`")
+    await typew.edit("`Jangan Modal Kontol Doang Anjing`")
     sleep(1)
-    await typew.edit("`Goblook Emang`")
+    await typew.edit("`Goblok Emang`")
     sleep(1)
-    await typew.edit("`Kelamaan Nge Jomblo Sih`")
+    await typew.edit("`Kelamaan Nge Jomblo Sih Goblok`")
     sleep(1)
-    await typew.edit("`Jadinya Gitu, Sange Berat`")
+    await typew.edit("`Jadinya Gitu, Sange Berat Goblok`")
     sleep(1)
-    await typew.edit("`MAKANYA KALO HIDUP HARUS GANTENG KONTOOOLL`")
+    await typew.edit("`MAKANYA KALO HIDUP HARUS GANTENG KONTOOLLL`")
 
 
 # Create by myself @localheart
@@ -395,17 +395,17 @@ async def _(event):
         await event.edit(input_str)
 
         animation_chars = [
-            "`Connecting Ke Server Cinta`",
-            "`Mencari Target Cinta`",
-            "`Mengirim Cintaku.. 0%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Mengirim Cintaku.. 4%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Mengirim Cintaku.. 8%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Mengirim Cintaku.. 20%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Mengirim Cintaku.. 36%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
-            "`Mengirim Cintaku.. 52%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Connecting Ke Server Cinta♡`",
+            "`Mencari Target Cinta♡`",
+            "`Mengirim Cintaku.. 4%\n▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mengirim Cintaku.. 8%\n█▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mengirim Cintaku.. 16%\n██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mengirim Cintaku.. 24%\n█████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mengirim Cintaku.. 34%\n█████████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒ `",
+            "`Mengirim Cintaku.. 54%\n█████████████▒▒▒▒▒▒▒▒▒▒▒▒ `",
             "`Mengirim Cintaku.. 84%\n█████████████████████▒▒▒▒ `",
             "`Mengirim Cintaku.. 100%\n█████████CINTAKU███████████ `",
-            f"`Cintaku Sekarang Sepenuhnya Terkirim Padamu, Dan Sekarang Aku Sangat Mencintai Mu, I Love You 💞`",
+            f"`Cintaku Sekarang Sepenuhnya Terkirim Padamu, Dan Sekarang Aku Sangat Mencintai Mu, I Love You 🤍`",
         ]
 
         for i in animation_ttl:
@@ -415,29 +415,29 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@skyzu_cmd(pattern="yatim(?: |$)(.*)")
+@skyzu_cmd(pattern="siluman(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("`Hai Anak Kontol 🙈, Jangan Lupa Makan Yaa`")
+    await typew.edit("`Hai Anak Kontol Bedebah`")
     sleep(1)
-    await typew.edit("`Jangan Bilang Lu Ga Dikasih Makan Sama Ortu 😁`")
+    await typew.edit("`Muka Kek Uler Sawah`")
     sleep(1)
-    await typew.edit("`APA PERLU GUA SANTUNIN ?? 🙈🙈 xixixi`")
+    await typew.edit("`Jangan Banyak Gaya Kalo Kasta Rendah`")
     sleep(1)
-    await typew.edit("`OH IYAA LUPAAA, LU KAN BEBAN KELUARGA 🤣`")
+    await typew.edit("`Tangan Buntung Udah Mirip Pemulung`")
     sleep(1)
-    await typew.edit("`MANA MUNGKIN ORTU LU PEDULII xixixi 🙈`")
+    await typew.edit("`Ehh Anak Yatim Gatau Diri`")
     sleep(1)
-    await typew.edit("`KETAWA DULU BOLEH KALI YAA 😁`")
+    await typew.edit("`Muka Lu Kek Siluman Babi`")
     sleep(1)
-    await typew.edit("`HAHAHAHAHAHAHA`")
+    await typew.edit("`Jangan Belagu Lu Tukang Jualan Kaos Kaki`")
     sleep(1)
-    await typew.edit("`KASIAN ORTUNYAA GAPEDULIII 🙈🤣`")
+    await typew.edit("`Muka Lu Banyak Daki`")
     sleep(1)
-    await typew.edit("`MAAF YA, CANDAA BEBANNNN xixixi 🙈`")
+    await typew.edit("`Sering Makan Nasi Basi`")
     sleep(1)
-    await typew.edit("`Tapi Bo'ong Hiyahiyahiya`")
+    await typew.edit("`Jangan Belagu Lu Siluman Babi`")
 
 
 # Create by myself @localheart
@@ -445,14 +445,14 @@ async def typewriter(typew):
 CMD_HELP.update(
     {
         "animasi4": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}gabut` atau `{cmd}dino`\
-    \n↳ : Dikala gabut, yaaa pake aja xixixi.\
-    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}yatim`\
-    \n↳ : Buat bercandaan, kalo gasuka jangan dipake.\
+    \n↳ : Dikala Gabut, Yaaa Pake Aja.\
+    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}siluman`\
+    \n↳ : Buat Ngeledek Siluman Babi.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}cinta`\
-    \n↳ : Mengirim cinta tai anjiing ke seseorang.\
+    \n↳ : Mengirim Cinta Tai Anjing Ke Seseorang.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sayang`\
-    \n↳ : Berubah menjadi kadal.\
+    \n↳ : Berubah Menjadi Kadal.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sangean`\
-    \n↳ : Kasih aja buat orang yang sangean."
+    \n↳ : Kasih Aja Buat Orang Yang Sangean."
     }
 )
