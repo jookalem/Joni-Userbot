@@ -21,7 +21,7 @@ async def _(event):
             await conv.send_message(f"{kurir} {resi}")
             response = await response
         except YouBlockedUserError:
-            await event.reply("Unblock @ GeDebugBetaBot dulu Goblok!!")
+            await event.reply("Unblock @GeDebugBetaBot Dulu Goblok!!")
             return
         else:
             await event.edit(f"{response.message.message}")
@@ -31,8 +31,8 @@ async def _(event):
 CMD_HELP.update(
     {
         "resi": "`.resi`\
-\nUsage: Cek resi \
+\nUsage: Untuk Mengecek Resi \
 \n\n`.lacak`\
-\nUsage:lacak paket"
+\nUsage:Untuk Melacak Paket"
     }
 )
