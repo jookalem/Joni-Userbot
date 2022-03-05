@@ -16,10 +16,10 @@ async def convert(event):
     reply_message = await event.get_reply_message()
     if reply_message is None:
         await event.edit(
-            "membalas media untuk menggunakan operasi `nfc`.\nTerinspirasi oleh @FileConverterBot"
+            "Membalas Media Untuk Menggunakan Operasi `nfc`.\nTerinspirasi oleh @FileConverterBot"
         )
         return
-    await event.edit("mencoba mengunduh file media, ke lokal saya")
+    await event.edit("Mencoba Mengunduh File Media, Ke Lokal Saya")
     try:
         start = datetime.now()
         c_time = time.time()
