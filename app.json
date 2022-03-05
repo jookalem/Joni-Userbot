@@ -1,7 +1,7 @@
 {
-  "name": "⚡Skyzu-Userbot⚡",
-  "description": "🚫Skyzu-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg",
+  "name": "⚡Joni-Userbot⚡",
+  "description": "🚫Joni-Userbot🚫 USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
+  "logo": "https://telegra.ph/file/3b5688eef749f7ba4bd12.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -9,55 +9,47 @@
     "modular",
     "productivity"
 ],
-  "repository": "https://github.com/Skyzu/skyzu-userbot",
-  "telegram": "https://t.me/skyzu",
-  "success_url": "https://t.me/skyzusupport",
+  "repository": "https://github.com/jookalem/Joni-Userbot",
+  "telegram": "https://t.me/ikhsanntarjo",
+  "success_url": "https://t.me/JoniSupport",
   "stack": "container",
   "env": {
     "API_KEY": {
-      "description": "Dapatkan Api Key di web my.telegram.org/Dibot @scrapsenbot.",
+      "description": "Dapatkan Api Key Di @JoniSupport, Dengan Mengetik /get api atau #api",
       "required": true
     },
     "API_HASH": {
-      "description": "Dapatkan Api Hash Di Web my.telegram.org/Dibot @scrapsendbot.",
+      "description": "Dapatkan Api Hash Di @JoniSupport, Dengan Mengetik /get hash atau #hash",
       "required": true
     },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @skyzuuuu di telegram",
+      "description": "Dapatkan String Session di @JoniSupport, Dengan Mengetik /get string atau #string",
       "required": true
     },
     "HEROKU_APP_NAME": {
-      "description": "Nama App heroku, Nama App yang paling pertama di isi (liat paling atas)",
+      "description": "Nama App Heroku, Nama App Yang Paling Pertama Di Isi (liat paling atas)",
       "required": true
     },
     "HEROKU_API_KEY": {
-      "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
+      "description": "Heroku API KEY Mu, Dapatkan Dari Web 'https://dashboard.heroku.com/account'",
       "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
     "BOTLOG_CHATID": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
-      "required": true
-    },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah itu Ketik /id. Nanti akan muncul ID seperti ini Contoh : -1001234567890",
+      "description": "Buatlah Sebuah Grup Publik Lalu Masukkan Bot @MissRose_Bot Ke Grup Mu, Setelah Itu Ketik /id. Nanti Akan Muncul ID Seperti Ini Contoh : -1001234567890",
       "required": true
     },
     "PM_AUTO_BAN": {
-      "description": "PM Auto-Ban Feature Switch. Also known as the 'bleep blop, this is a bot...' module.",
-      "value": "False",
+      "description": "Untuk Mengaktifkan PM_AUTO_BAN Di Room Chat Anda, Jika Tidak Ingin Mengaktifkan Silahkan Isi False",
+      "value": "True",
       "required": true
     },
     "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
+      "description": "Nama Untuk Menunjukan Pesan .alive",
       "required": true
     },
-    "S_PACK_NAME": {
-      "description": "Nama Sticker Pack Mu",
-      "required": false
-    },
     "LOGSPAMMER": {
-      "description": "Set this to True in case you want the error logs to be stored in the userbot log group, instead of spitting out the file in the current chat, requires a valid BOTLOG_CHATID to be set.",
+      "description": "Untuk Menyimpan Logs Error Di Botlog Anda.",
       "value": "True",
       "required": true
     }
