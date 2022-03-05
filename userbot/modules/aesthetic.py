@@ -16,7 +16,7 @@ def aesthetify(string):
         yield chr(c)
 
 
-@skyzu_cmd(pattern="ae(?: |$)(.*)")
+@skyzu_cmd(pattern="aes(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -28,7 +28,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "aeshtetic": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.ae <teks>`\
-    \n↳ : Mengubah fonts teks"
+        "aeshtetic": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙`.aes <teks>`\
+    \n↳ : Mengubah Fonts Teks"
     }
 )
