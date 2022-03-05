@@ -45,7 +45,7 @@ async def start_voice(c):
         return
     try:
         await c.client(startvc(c.chat_id))
-        await c.edit("`Memulai Obrolan Suara`")
+        await c.edit("`Memulai Obrolan Suara..`")
     except Exception as ex:
         await c.edit(f"**ERROR:** `{ex}`")
 
@@ -61,14 +61,14 @@ async def stop_voice(c):
         return
     try:
         await c.client(stopvc(await get_call(c)))
-        await c.edit("`Mematikan Obrolan Suara`")
+        await c.edit("`Mematikan Obrolan Suara..`")
     except Exception as ex:
         await c.edit(f"**ERROR:** `{ex}`")
 
 
 @skyzu_cmd(pattern="vcinvite")
 async def _(sky):
-    await sky.edit("`Sedang Menginvite Member...`")
+    await sky.edit("`Sedang Menginvite Anggota...`")
     users = []
     z = 0
     async for x in sky.client.iter_participants(sky.chat_id):
@@ -87,10 +87,10 @@ async def _(sky):
 CMD_HELP.update(
     {
         "vcg": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}startvc`\
-         \n↳ : Memulai Obrolan Suara dalam Group.\
+         \n↳ : Memulai Obrolan Suara Dalam Group.\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}stopvc`\
          \n↳ : `Menghentikan Obrolan Suara Pada Group.`\
          \n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}vcinvite`\
-         \n↳ : Invite semua member yang berada di group."
+         \n↳ : Invite Semua Anggota Yang Berada Di Group."
     }
 )
