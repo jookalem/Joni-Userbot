@@ -232,11 +232,11 @@ CMD_HELP.update(
     {
         "carbon": f"**Plugin : **`carbon`\
         \n\n  •  **Syntax :** `{cmd}carbon` <text/reply>\
-        \n  •  **Function : **Carbonisasi teks dengan pengaturan default.\
+        \n  •  **Function : **Carbonisasi Teks Dengan Pengaturan Default.\
         \n\n  •  **Syntax :** `{cmd}rcarbon` <text/reply>\
-        \n  •  **Function : **Carbonisasi teks, dengan warna background acak.\
+        \n  •  **Function : **Carbonisasi Teks, Dengan Warna Background Acak.\
         \n\n  •  **Syntax :** `{cmd}ccarbon` <warna> <text/reply>\
-        \n  •  **Function : **Carbonisasi teks, dengan warna background custom.\
+        \n  •  **Function : **Carbonisasi Teks, Dengan Warna Background Custom.\
     "
     }
 )
