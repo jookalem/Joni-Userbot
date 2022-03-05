@@ -31,7 +31,7 @@ async def _(event):
     if not event.is_reply:
         await event.edit("`Reply to a file to compress it.`")
         return
-    mone = await event.edit("`Processing...`")
+    mone = await event.edit("`Processing File...`")
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
     if event.reply_to_msg_id:
@@ -82,7 +82,7 @@ async def addzip(add):
     if not add.is_reply:
         await add.edit("`Reply to a file to compress it.`")
         return
-    mone = await add.edit("`Processing...`")
+    mone = await add.edit("`Processing File...`")
     if not os.path.isdir(ZIP_DOWNLOAD_DIRECTORY):
         os.makedirs(ZIP_DOWNLOAD_DIRECTORY)
     if add.reply_to_msg_id:
