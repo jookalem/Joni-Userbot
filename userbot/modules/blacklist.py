@@ -95,11 +95,11 @@ async def on_delete_blacklist(rmbl):
 CMD_HELP.update(
     {
         "blacklist": f">`{cmd}listbl`"
-        "\nUsage: Melihat daftar blacklist yang aktif di obrolan."
+        "\nUsage: Melihat Daftar Blacklist Yang Aktif Di Obrolan."
         f"\n\n>`{cmd}addbl <kata>`"
-        "\nUsage: Memasukan pesan ke blacklist 'kata blacklist'."
+        "\nUsage: Memasukan Pesan Ke Blacklist 'kata blacklist'."
         "\nlord bot akan otomatis menghapus 'kata blacklist'."
         f"\n\n>`{cmd}rmbl <kata>`"
-        "\nUsage: Menghapus kata blacklist."
+        "\nUsage: Menghapus Kata Blacklist."
     }
 )
