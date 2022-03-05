@@ -84,7 +84,7 @@ async def _(event):
             "😎 \n/\\_,__😫 \n  //    //       \\",
             "😖 \n/\\_,💦_😋  \n  //         //        \\",
             "  😭      ☺️ \n  /|\\   /(👶)\\ \n  /!\\   / \\ ",
-            "`TAMAT 😅`",
+            "`TAMAT 😆`",
         ]
 
         for i in animation_ttl:
@@ -130,9 +130,9 @@ async def _(event):
 @skyzu_cmd(pattern="nah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />💖 *Ini Buat Kamu`")
+    await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />💖 *Ini buat kamu`")
     sleep(2)
-    await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n💖<\\  *Tapi Bo'ong Hiyahiyahiya`")
+    await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n💖<\\  *Tapi boong yahaha wahyoe`")
 
 
 @bot.on(events.NewMessage(pattern=r"\.(.*)", outgoing=True))
