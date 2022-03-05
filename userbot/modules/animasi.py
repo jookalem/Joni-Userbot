@@ -5,7 +5,7 @@ from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 
 
-@skyzu_cmd(pattern="sadboy(?: |$)(.*)")
+@skyzu_cmd(pattern="bohong(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(2)
@@ -13,7 +13,7 @@ async def typewriter(typew):
     sleep(2)
     await typew.edit("`Kedua kamu manis`")
     sleep(1)
-    await typew.edit("`Dan yang terakhir adalah kamu bukan jodohku`")
+    await typew.edit("`Dan yang ketiga itu semua bohong`")
 
 
 # Create by myself @localheart
@@ -48,7 +48,7 @@ async def typewriter(typew):
         "`\n┻┳|￣  )`"
         "`\n┳ﾐ(￣ ／`"
         "`\n┻┳T￣|`"
-        "\n**Masih Ku Pantau**"
+        "\n**Memantau**"
     )
 
 
@@ -98,13 +98,13 @@ async def typewriter(typew):
 
 CMD_HELP.update(
     {
-        "animasi2": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sadboy`\
-    \n↳ : Biasalah sadboy hikss\
+        "animasi2": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}bohong`\
+    \n↳ : Muji tapi bohong yahaha\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}punten` dan `{cmd}pantau`\
     \n↳ : Coba aja hehehe.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}idiot`\
     \n↳ : u're ediot xixixi.\
     \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `kosong`\
-    \n↳ : Tunggu update selanjutnya kawan."
+    \n↳ : Tunggu Update Selanjutnya Kawan."
     }
 )
