@@ -319,17 +319,17 @@ CMD_HELP.update(
     {
         "android": f"**Plugin : **`android`\
         \n\n  •  **Syntax :** `{cmd}magisk`\
-        \n  •  **Function : **Dapatkan rilis Magisk terbaru \
+        \n  •  **Function : **Dapatkan Rilis Magisk Terbaru \
         \n\n  •  **Syntax :** `{cmd}device <codename>`\
-        \n  •  **Function : **Dapatkan info tentang nama kode atau model perangkat android. \
+        \n  •  **Function : **Dapatkan Info Tentang Nama Kode atau Model Perangkat Android. \
         \n\n  •  **Syntax :** `{cmd}codename <brand> <device>`\
-        \n  •  **Function : **Cari nama kode perangkat android. \
+        \n  •  **Function : **Cari Nama Kode Perangkat Android. \
         \n\n  •  **Syntax :** `{cmd}pixeldl` **<download.pixelexperience.org>**\
-        \n  •  **Function : **Unduh ROM pengalaman piksel ke server bot pengguna Anda. \
+        \n  •  **Function : **Unduh ROM Pengalaman Piksel Ke Server Bot Pengguna Anda. \
         \n\n  •  **Syntax :** `{cmd}specs <brand> <device>`\
-        \n  •  **Function : **Dapatkan info spesifikasi perangkat. \
+        \n  •  **Function : **Dapatkan Info Spesifikasi Perangkat. \
         \n\n  •  **Syntax :** `{cmd}twrp <codename>`\
-        \n  •  **Function : **Dapatkan unduhan twrp terbaru untuk perangkat android. \
+        \n  •  **Function : **Dapatkan Unduhan twrp terbaru untuk perangkat android. \
     "
     }
 )
