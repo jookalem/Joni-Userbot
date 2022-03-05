@@ -119,7 +119,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="awkwok(?: |$)(.*)")
+@skyzu_cmd(pattern="awokwok(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -127,7 +127,7 @@ async def typewriter(typew):
         "──▄▀█▄▄▄─────▄▀█▄▄▄\n"
         "▄▀──█▄▄──────█─█▄▄\n"
         "─▄▄▄▀──▀▄───▄▄▄▀──▀▄\n"
-        "─▀───────▀▀─▀───────▀▀\n`Awkwokwokwok..`"
+        "─▀───────▀▀─▀───────▀▀\n`AwokAwokAwok..`"
     )
 
 
