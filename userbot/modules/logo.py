@@ -17,7 +17,7 @@ async def _(event):
     if not text:
         await event.edit("`Give a name too!`")
     else:
-        await event.edit("`Processing`")
+        await event.edit("`Processing...`")
     chat = "@Nastymusiicboy"
     async with event.client.conversation(chat) as conv:
         try:
@@ -45,7 +45,7 @@ CMD_HELP.update(
     {
         "logo": f"**Plugin : **`logo`\
         \n\n  •  **Syntax :** `{cmd}logo` <text>\
-        \n  •  **Function : **Membuat logo dari Teks yang diberikan\
+        \n  •  **Function : **Untuk Membuat Logo Dari Teks Yang Diberikan\
     "
     }
 )
