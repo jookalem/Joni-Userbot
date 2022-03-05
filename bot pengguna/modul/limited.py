@@ -8,7 +8,7 @@ from userbot.utils import skyzu_cmd
 
 @skyzu_cmd(pattern="limit(?: |$)(.*)")
 async def _(event):
-    await event.edit("`Checking If You Are Limited...`")
+    await event.edit("`Bentar Lagi Gua Cek Anjing`")
     async with bot.conversation("@SpamBot") as conv:
         try:
             response = conv.wait_event(
