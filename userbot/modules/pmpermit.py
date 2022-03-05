@@ -46,11 +46,12 @@ DEF_UNAPPROVED_MSG = (
     "╔═════════════════════╗\n"
     "    ⚡ 𝗔𝗧𝗧𝗘𝗡𝗧𝗜𝗢𝗡 𝗣𝗟𝗘𝗔𝗦𝗘 ⚡ \n"
     "╚═════════════════════╝\n"
-    "**TOLONG JANGAN MELAKUKAN SPAM CHAT KEPADA MAJIKAN SAYA** \n"
-    f"**YA KONTOL KARENA SAYA AKAN OTOMATIS MEMBLOKIR KAMU, TUNGGU SAMPAI {DEFAULTUSER} MENERIMA PESAN KAMU** \n"
+    "ᴛᴏʟᴏɴɢ ᴊᴀɴɢᴀɴ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ ᴄʜᴀᴛ ᴘᴀᴅᴀ ᴛᴜᴀɴ sᴀʏᴀ \n"
+    "sᴀʏᴀ ᴀᴋᴀɴ ᴍᴇᴍʙʟᴏᴋɪʀ ᴀɴᴅᴀ ᴊɪᴋᴀ ᴀɴᴅᴀ ᴍᴇʟᴀᴋᴜᴋᴀɴ sᴘᴀᴍ \n"
+    f"ᴛᴜɴɢɢᴜ sᴀᴍᴘᴀɪ {DEFAULTUSER} ᴍᴇɴᴇʀɪᴍᴀ ᴘᴇsᴀɴ ᴋᴀᴍᴜ \n"
     "╔═════════════════════╗\n"
-    "│○›Support : @skyzusupport      \n"
-    f"│○›ᗷy : 𝐒𝐊𝐘𝐙𝐔 𝐔𝐒𝐄𝐑𝐁𝐎𝐓​           \n"
+    "│○›𝐒ᴜᴘᴘᴏʀᴛ : @JoniSupport      \n"
+    f"│○›𝐁ʏ : 𝐉ᴏɴɪ-𝐔sᴇʀʙᴏᴛ ​           \n"
     "╚═════════════════════╝"
 )
 # =================================================================
@@ -110,8 +111,8 @@ async def permitpm(event):
 
             if COUNT_PM[event.chat_id] > PM_LIMIT:
                 await event.respond(
-                    "`Dibilangin jangan spam goblok gw Blokir juga lu anjeng, makanya jangan spam`\n"
-                    f"`Ke majikan saya blok`"
+                    "ɢᴜᴀ ʙʟᴏᴋɪʀ ʟᴏ ᴋᴏɴᴛᴏʟ, ɢᴀᴜsᴀʜ ɴɢᴇsᴘᴀᴍ\n"
+                    f"ᴛᴜᴀɴ ɢᴜᴀ ɢᴏʙʟᴏᴋ"
                 )
 
                 try:
@@ -138,7 +139,7 @@ async def permitpm(event):
                         + "](tg://user?id="
                         + str(event.chat_id)
                         + ")"
-                        + " Telah Diblokir Karna Melakukan Spam Ke Room Chat",
+                        + " ♤ Telah Diblokir Karna Melakukan Spam Ke Room Chat ♤",
                     )
 
 
@@ -254,10 +255,9 @@ async def approvepm(apprvpm):
     try:
         approve(uid)
     except IntegrityError:
-        return await apprvpm.edit("`Oke Pesan Anda Sudah Diterima ツ`")
-
+        return await apprvpm.edit("`Pesan Anda Sudah Diterima ツ`")
     await apprvpm.edit(
-        f"`Hai` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ya entot`"
+        f"`Hi` [{name0}](tg://user?id={uid}) `Pesan Anda Sudah Diterima ya ngentod`"
     )
     await apprvpm.delete(getmsg)
     await message.delete()
@@ -287,7 +287,7 @@ async def disapprovepm(disapprvpm):
         name0 = str(aname.first_name)
 
     await disapprvpm.edit(
-        f"`Maaf` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Telah Ditolak, Mohon Jangan Melakukan Spam Ke Room Chat!`"
+        f"`Hi` [{name0}](tg://user?id={disapprvpm.chat_id}) `Pesan Anda Di Tolak Oleh Tuan Saya`"
     )
 
     if BOTLOG:
@@ -311,7 +311,7 @@ async def blockpm(block):
     else:
         await block.client(BlockRequest(block.chat_id))
         aname = await block.client.get_entity(block.chat_id)
-        await block.edit(f"`LU JAMET, MAAF GUA BLOCK YA KONTOLL`")
+        await block.edit(f"ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴅɪ ʙʟᴏᴋɪʀ ᴏʟᴇʜ ᴛᴜᴀɴ sᴀʏᴀ")
         name0 = str(aname.first_name)
         uid = block.chat_id
 
@@ -337,7 +337,7 @@ async def unblockpm(unblock):
         replied_user = await unblock.client.get_entity(reply.from_id)
         name0 = str(replied_user.first_name)
         await unblock.client(UnblockRequest(replied_user.id))
-        await unblock.edit("`UDAH DI UNBLOCK NIH, JANGAN NGEJAMET LAGI YA NGENTOT!!`")
+        await unblock.edit("ʙʟᴏᴋɪʀ ᴀɴᴅᴀ ᴛᴇʟᴀʜ ᴅɪʟᴇᴘᴀs ᴏʟᴇʜ ᴛᴜᴀɴ sᴀʏᴀ")
 
     if BOTLOG:
         await unblock.client.send_message(
@@ -351,7 +351,7 @@ async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
         return await cust_msg.edit(
-            "**Anda Harus Menyetel** `PM_AUTO_BAN` **Ke** `True` Atau Ketik `.set var PM_AUTO_BAN True`"
+            "**Anda Harus Mengaktifkan** `PM_AUTO_BAN` **Ke** `True` Atau Ketik `.set var PM_AUTO_BAN True`"
         )
     try:
         import userbot.modules.sql_helper.globals as sql
