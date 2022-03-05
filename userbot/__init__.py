@@ -757,7 +757,7 @@ with bot:
                     f"Modules Name **pmbot**\n\n"
                     f"× `.set var START_WELCOME` [**TEKS**] \n"
                     f"°__Kamu Juga Bisa Mengubah Start Welcome Untuk Bot Kamu Yang Ini, Dengan Cara Diatas Dan Kata Kata Bebas__.\n\n"
-                    f"© @skyzu"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
@@ -783,11 +783,11 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk Skyzu Ubot, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk Joni-Userbot, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
-                    f"© @skyzu"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
@@ -848,7 +848,7 @@ with bot:
                     f"**|**  [`{percentage}`**%**]\n"
                     f" ✠➲ **ʙᴏᴛ ᴏꜰ :** {ALIVE_NAME}  "
                     "\n╚════════════════════╝"
-                    f"© @skyzu"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
@@ -869,7 +869,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring Skyzu-Userbot**..."
+                text = f"**Restaring Joni-Userbot**..."
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -892,7 +892,7 @@ with bot:
                     file=kyylogo,
                     link_preview=True,
                     buttons=[
-                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectSkyzu")],
+                        [Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectJoni")],
                     ],
                 )
 
@@ -913,26 +913,26 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⚡Skyzu-Userbot⚡",
+                    "Bantuan Dari ⚡Joni-Userbot⚡",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
                 result = builder.article(
-                    " ⚡Skyzu-Userbot",
-                    text="""°Skyzu-Userbot°""",
+                    " ⚡Joni-Userbot",
+                    text="""°Joni-Userbot°""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "Skyzu", "https://github.com/Skyzu/skyzu-userbot"
+                                "𝐉ᴏɴɪ", "https://github.com/jookalem/Joni-Userbot"
                             ),
-                            custom.Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectSkyzu"),
+                            custom.Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectJoni"),
                         ],
                         [
                             custom.Button.url(
                                 "ʟɪᴄᴇɴsᴇ",
-                                "https://github.com/Skyzu/skyzu-userbot/LICENSE",
+                                "https://github.com/jookalem/Joni-Userbot/LICENSE",
                             )
                         ],
                     ],
@@ -970,8 +970,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/SkyzuSupport"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ProjectSkyzu"),
+                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/JoniSupport"),
+                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ProjectJoni"),
                         ],
                         [custom.Button.inline("°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
