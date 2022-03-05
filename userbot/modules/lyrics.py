@@ -18,7 +18,7 @@ if GENIUS is not None:
 
 @register(outgoing=True, pattern="^.lyrics (?:(now)|(.*) - (.*))")
 async def lyrics(lyric):
-    await lyric.edit("`Getting information...`")
+    await lyric.edit("`Mencari Lirik Lagu...`")
     if GENIUS is None:
         await lyric.edit("`Provide genius access token to Heroku ConfigVars...`")
         return False
