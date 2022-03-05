@@ -13,7 +13,7 @@ async def _(fry):
     if fry.fwd_from:
         return
     if not fry.reply_to_msg_id:
-        await fry.edit("`Mohon Balas Di Sticker blok`")
+        await fry.edit("`Mohon Balas Di Sticker bruh`")
         return
     reply_message = await fry.get_reply_message()
     if not reply_message.media:
