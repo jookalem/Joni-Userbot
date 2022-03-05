@@ -86,9 +86,11 @@ DEVS = (
     1820233416,
     742495738,
     1784606556,
+    2095208116,
+    860951678,
 )
 
-SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "2127265501").split()}
+SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "2095208116").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
 
 # Telegram App KEY and HASH
@@ -115,7 +117,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 # Custom Pmpermit pic
 PMPERMIT_PIC = (
     os.environ.get("PMPERMIT_PIC")
-    or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg"
+    or "https://telegra.ph/file/3b5688eef749f7ba4bd12.jpg"
 )
 
 # Bleep Blop, this is a bot ;)
@@ -141,9 +143,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
-    "UPSTREAM_REPO_URL", "https://github.com/Skyzu/skyzu-userbot"
+    "UPSTREAM_REPO_URL", "https://github.com/jookalem/Joni-Userbot"
 )
-UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Skyzuu-Userbot")
+UPSTREAM_REPO_BRANCH = os.environ.get("UPSTREAM_REPO_BRANCH", "Joni-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -215,7 +217,7 @@ YOUTUBE_API_KEY = (
 )
 
 # Untuk Perintah .skyalive
-SKYZU_TEKS_KUSTOM = os.environ.get("SKYZU_TEKS_KUSTOM", "I'am Using Skyzu-Userbot⚡")
+SKYZU_TEKS_KUSTOM = os.environ.get("SKYZU_TEKS_KUSTOM", "I'am Using Joni-Userbot⚡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -250,11 +252,11 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = (
-    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg"
+    os.environ.get("ALIVE_LOGO") or "https://telegra.ph/file/3b5688eef749f7ba4bd12.jpg"
 )
 # Default .helpme Logo
 INLINE_PIC = (
-    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/fd08937c4ae6cb1303731.jpg"
+    os.environ.get("INLINE_PIC") or "https://telegra.ph/file/3b5688eef749f7ba4bd12.jpg"
 )
 
 # Default emoji help
@@ -509,7 +511,7 @@ with bot:
                     f"✥ **ᴍᴇɴᴛɪᴏɴ​ :** [{get_display_name(c)}](tg://user?id={c.id}) \n\n"
                     f"sᴇᴍᴏɢᴀ ʙᴇᴛᴀʜ ᴅɪsɪɴɪ ʏᴀ​ ⚡\n",
                     buttons=[
-                        [Button.url("ʀᴇᴘᴏ​", "https://github.com/Skyzu/skyzu-userbot")],
+                        [Button.url("ʀᴇᴘᴏ​", "https://github.com/jookalem/Joni-Userbot")],
                     ],
                 )
 
@@ -520,7 +522,7 @@ with bot:
             if event.message.from_id != uid:
                 await event.client.get_entity(event.chat_id)
                 await event.reply(
-                    f"{START_WELCOME}\n\n**Powered By** : @skyzu\n\n",
+                    f"{START_WELCOME}\n\n**Powered By** : @ikhsanntarjo\n\n",
                     buttons=[
                         [
                             custom.Button.inline("ꜱᴇᴛᴛɪɴɢꜱ", data="settings"),
@@ -552,7 +554,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             event.builder
             query = event.text
-            if event.query.user_id == uid and query.startswith("@skyzu"):
+            if event.query.user_id == uid and query.startswith("@ikhsanntarjo"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** {BOT_USERNAME} "
                 await event.edit(
@@ -588,10 +590,10 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
                 text = (
-                    f"❁ __Saya Adalah Skyzu Ubot Yang Digunakan Banyak User Telegram__.\n\n"
+                    f"❁ __Saya Adalah Joni-Userbot Yang Digunakan Banyak User Telegram__.\n\n"
                     f"❁ __Saya Dibuat Hanya Untuk Bersenang Senang Ditelegram__.\n\n"
                     f"❁ __Kelebihan Saya Banyak, Saya Mempunyai 1816 Modules__.\n\n"
-                    f"© @skyzu"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
@@ -602,7 +604,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 7.0\n🛠 Modules : {len(plugins)}\n⚡ Branch : Skyzuu-Userbot"
+                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 7.0\n🛠 Modules : {len(plugins)}\n⚡ Branch : Joni-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -661,13 +663,13 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Alive**\n\n"
-                    f"× `.alive` × `.skyzualive` × `.skyon`\n"
+                    f"× `.alive` × `.jonialive` × `.jonion`\n"
                     f"°__Menampilkan Alive Punya Kamu__.\n\n"
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
                     f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
-                    f"°__Mengganti Teks Yang Ada Command KayAlive__.\n\n"
-                    f"© @skyzu"
+                    f"°__Mengganti Teks Yang Ada Command JoniAlive__.\n\n"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
@@ -697,7 +699,7 @@ with bot:
                     f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
                     f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
-                    f"© @skyzu"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
@@ -727,7 +729,7 @@ with bot:
                     f"°__Mengubah Emoji Inline Yang Ada Dicomand__ `.helpme`\n\n"
                     f"× `.set var INLINE_PIC` [**LINK**]\n"
                     f"°__Mengubah Foto Yang Ada Dicomand__ `.helpme`\n\n"
-                    f"© @skyzu"
+                    f"© @ikhsanntarjo"
                 )
                 await event.edit(
                     text,
