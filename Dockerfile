@@ -3,7 +3,7 @@ FROM skyzuxzy/skyzu-userbot:buster
 #━━━━━ Userbot Telegram ━━━━━
 #━━━━━ By Skyzuu-Userbot ━━━━━
 
-RUN git clone -b Joni-Userbot https://github.com/jookalek/Joni-Userbot /root/userbot
+RUN git clone -b Joni-Userbot https://github.com/jookalem/Joni-Userbot /root/userbot
 RUN mkdir /root/userbot/.bin
 RUN pip install --upgrade pip setuptools
 WORKDIR /root/userbot
