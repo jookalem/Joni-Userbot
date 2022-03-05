@@ -10,7 +10,7 @@ from userbot.events import register
 @register(outgoing=True, pattern=r"^\.tm(?: |$)(.*)")
 async def _(event):
     chat = "@TempMailBot"
-    geez = await event.edit("Sedang Memprosess...")
+    geez = await event.edit("Sedang Mengambil Email...")
     async with bot.conversation(chat) as conv:
         try:
             response = conv.wait_event(
