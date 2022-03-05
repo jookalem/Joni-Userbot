@@ -45,10 +45,10 @@ CMD_HELP.update(
     {
         "games": "\
 𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.xogame`\
-\n↳ : Mainkan game XO bersama temanmu.\
+\n↳ : Mainkan Game XO Bersama Temanmu.\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.mod <nama app>`\
-\n↳ : Dapatkan applikasi mod\
+\n↳ : Dapatkan Aplikasi Mod\
 \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.whisp <teks> <username/ID>`\
-\n↳ : Berikan pesan rahasia"
+\n↳ : Berikan Pesan Rahasia"
     }
 )
