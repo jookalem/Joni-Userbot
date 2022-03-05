@@ -97,12 +97,12 @@ async def download_from_youtube_(event):
 CMD_HELP.update(
     {
         "ytdownload": "𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.yta` <(youtube) link>\
-   \nUsage : Download audio from the link.\
+   \nUsage : Download Audio from the Link.\
    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ytv <(youtube) link>`\
-   \nUsage : Download video  from the link.\
+   \nUsage : Download Video  from the Link.\
    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ytsa <(youtube) search query>`\
-   \nUsage : Search and download audio from youtube.\
+   \nUsage : Search and Download audio from Youtube.\
    \n\n𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `.ytsv <(youtube) search query>`\
-   \nUsage : Search and download video from youtube."
+   \nUsage : Search and Download Video from Youtube."
     }
 )
