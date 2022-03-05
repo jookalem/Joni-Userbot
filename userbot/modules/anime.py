@@ -190,7 +190,7 @@ def replace_text(text):
 async def anime(event):
     query = event.pattern_match.group(1)
     reply = await event.get_reply_message()
-    await event.edit("`Searching Anime...`")
+    await event.edit("`Searching Anime Bruh...`")
     if query:
         pass
     elif reply:
@@ -265,7 +265,7 @@ async def anime(event):
 @register(outgoing=True, pattern=r"^\.manga ?(.*)")
 async def manga(event):
     query = event.pattern_match.group(1)
-    await event.edit("`Searching Manga...`")
+    await event.edit("`Searching Manga Bruh...`")
     if not query:
         await event.edit("`Bruh.. Gib me Something to Search`")
         return
@@ -438,7 +438,7 @@ async def get_anime(message):
         await message.edit(f"**Encountered an Unknown Exception**: \n{err}")
         return
 
-    p_rm = await message.reply("`Searching Anime...`")
+    p_rm = await message.reply("`Searching Anime Bruh...`")
     f_mal_id = ""
     try:
         jikan = jikanpy.AioJikan()
@@ -546,7 +546,7 @@ async def manga(message):
 async def anime(message):
     search_query = message.pattern_match.group(1)
     await message.get_reply_message()
-    await message.edit("`Searching Anime..`")
+    await message.edit("`Searching Anime Bruh..`")
     jikan = jikanpy.jikan.Jikan()
     search_result = jikan.search("anime", search_query)
     first_mal_id = search_result["results"][0]["mal_id"]
