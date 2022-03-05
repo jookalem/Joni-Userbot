@@ -27,6 +27,6 @@ async def _(event):
 CMD_HELP.update(
     {
         "allunban": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}allunban`\
-    \n↳ : Membatalkan semua Ban Di Anggota Grup."
+    \n↳ : Membatalkan Semua Anggota Yang Di Ban Dari Grup."
     }
 )
