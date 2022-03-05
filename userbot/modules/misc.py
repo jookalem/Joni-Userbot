@@ -22,7 +22,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 REPOLINK = (
     str(UPSTREAM_REPO_URL)
     if UPSTREAM_REPO_URL
-    else "https://github.com/Askarbot/Skyzuu-Userbot"
+    else "https://github.com/jookalem/Joni-Userbot"
 )
 # ============================================
 
@@ -64,24 +64,24 @@ async def sleepybot(time):
 @skyzu_cmd(pattern="shutdown$")
 async def killdabot(event):
     """For .shutdown command, shut the bot down."""
-    await event.edit("**Mematikan Skyzu-Userbot....**")
+    await event.edit("**Mematikan ⚡Joni-Userbot⚡**")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#SHUTDOWN \n" "`Userbot Telah Dimatikan`"
+            BOTLOG_CHATID, "#SHUTDOWN \n" "`⚡Joni-Userbot⚡ Telah Dimatikan`"
         )
     await bot.disconnect()
 
 
 @skyzu_cmd(pattern="restart$")
 async def killdabot(event):
-    await event.edit("**Restarting Skyzu-Userbot...**")
+    await event.edit("**Restarting ⚡Joni-Userbot⚡**")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#RESTARTBOT \n" "`Userbot Telah Di Restart`"
+            BOTLOG_CHATID, "#RESTARTBOT \n" "`⚡Joni-Userbot⚡ Telah Di Restart`"
         )
     await bot.disconnect()
     # Spin a new instance of bot
@@ -93,8 +93,8 @@ async def killdabot(event):
 @skyzu_cmd(pattern="readme$")
 async def reedme(e):
     await e.edit(
-        "Here's Something for You to Read :\n"
-        "\n[⚡ Skyzu-UserBot Repo](https://github.com/Askarbot/Skyzuu-Userbot/blob/skyzu-userBot/README.md)"
+        "Sesuatu Yang Harus Kamu Baca:\n"
+        "\n[⚡ Joni-UserBot Repo](https://github.com/jookalem/Joni-Userbot/blob/Joji-Userbot/README.md)"
         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)"
     )
@@ -120,9 +120,9 @@ async def repo_is_here(wannasee):
     await wannasee.edit(
         "**Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ**\n"
         "𝗥𝗲𝗽𝗼 🇮🇩\n"
-        "╰⎆ [𝐒𝐊𝐘𝐙𝐔-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​](https://github.com/Skyzu/skyzu-userbot)\n"
-        "❏ **Oᴡɴᴇʀ​** ⎆ [Skyzu](t.me/skyzu)\n"
-        "❏ **Sᴜᴘᴘᴏʀᴛ**​ ⎆ [groups](t.me/skyzusupport)\n"
+        "╰⎆ [⚡𝐉𝐎𝐍𝐈-𝐔𝐒𝐄𝐑𝐁𝐎𝐓⚡​](https://github.com/jookalem/Joni-Userbot)\n"
+        "❏ **Oᴡɴᴇʀ​** ⎆ [𝐉ᴏɴɪ](t.me/skyzu)\n"
+        "❏ **Sᴜᴘᴘᴏʀᴛ**​ ⎆ [𝐆ʀᴏᴜᴘ](t.me/JoniSupport)\n"
     )
 
 
