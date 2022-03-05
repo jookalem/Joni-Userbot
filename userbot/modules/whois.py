@@ -21,7 +21,7 @@ from userbot.events import register
 @register(pattern=".whois(?: |$)(.*)", outgoing=True)
 async def who(event):
 
-    await event.edit("`Mengambil Informasi Pengguna Ini...`")
+    await event.edit("`Mengambil Informasi Pengguna Ini Bruh...`")
 
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
         os.makedirs(TEMP_DOWNLOAD_DIRECTORY)
@@ -149,6 +149,6 @@ async def fetch_info(replied_user, event):
 CMD_HELP.update(
     {
         "whois": ">`.whois <username> Atau Balas Ke Pesan Pengguna Ketik .whois`"
-        "\nUsage: Mendapatkan Informasi Pengguna."
+        "\nUsage: Untuk Mendapatkan Informasi Pengguna."
     }
 )
