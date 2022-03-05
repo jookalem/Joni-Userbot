@@ -17,78 +17,78 @@ async def typewriter(typew):
 @register(outgoing=True, pattern="^E(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**GAK USAH SOK KERAS GOBLOK!!KENCING MASIH BERDIRI AJA BELAGU**")
+    await typew.edit("**GAK USAH SOK KERAS LO DONGO**")
 
 
 @register(outgoing=True, pattern="^F(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**MUKA LU SEMUA KAYA KONTOL HAHAHAHA!!**")
+    await typew.edit("**MUKA LU SEMUA KAYA KONTOL**")
 
 
 @register(outgoing=True, pattern="^I(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**KONTOL MASIH BENGKOK AJA BANGGA LU HAHAHAHA!!**")
+    await typew.edit("**MUKA LU KEK MONYET BEKANTAN**")
 
 
 @register(outgoing=True, pattern="^Q(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**EHH GOBLOK LU SEMUA RIBUT SAMA GUA SINI NGENTOT!**")
+    await typew.edit("**MUKA LU ITEM DEKIL KEK BOCAH KERDIL**")
 
 
 @register(outgoing=True, pattern="^R(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**KONTOL KONTOL APA YANG BESAR?KONTOL LU LAH HAHAHAHA!!**")
+    await typew.edit("**BACOT NIH BOCAH KAMPUNG**")
 
 
 @register(outgoing=True, pattern="^T(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**BABI!!KONTOL!!NGENTOT!!!**")
+    await typew.edit("**BERISIK NGENTODDD**")
 
 
 @register(outgoing=True, pattern="^U(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**BABI LU GOBLOK!!GANTENGAN JUGA GUA BHAHAHAHA**")
+    await typew.edit("**MUKA LU KEK SILUMAN BABI**")
 
 
 @register(outgoing=True, pattern="^W(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**BABI LU GOBLOK!!CANTIKAN JUGA GUA HAHAHAHA**")
+    await typew.edit("**BAPA LU KAKINYA BUNTUNG GOBLOK**")
 
 
 @register(outgoing=True, pattern="^Q(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("**BACOTAN LU GAK BIKIN GUA TREMOR GOBLOK HAHAHAHA!!**")
+    await typew.edit("**BACOTAN LU GAK BIKIN GUA KETAR KETIR TOLOL**")
 
 
 CMD_HELP.update(
     {
         "toxic": "D\
-\nUsage: Bacotin Orang.\
+\nUsage: Coba Aja Bruh.\
 \n\nE\
-\nUsage: Buat Orang Yang Sok Keras.\
+\nUsage: Coba Aja Bruh.\
 \n\nF\
-\nUsage: Ngatain Orang Wkwkkw.\
+\nUsage: Coba Aja Bruh.\
 \n\nI\
-\nUsage: Kontol Orang Ngatain.\
+\nUsage: Coba Aja Bruh.\
 \n\nQ\
-\nUsage: Ngajak Ribut Orang.\
+\nUsage: Coba Aja Bruh.\
 \n\nR\
-\nUsage: Pantun Anjing.\
+\nUsage: Coba Aja Bruh.\
 \n\nT\
-\nUsage: Nyebutin Binatang.\
+\nUsage: Coba Aja Bruh.\
 \n\nU\
-\nUsage: Biar Dikata Ganteng.\
+\nUsage: Coba Aja Bruh.\
 \n\nW\
-\nUsage: Biar Dikata Cantik.\
+\nUsage: Coba Aja Bruh.\
 \n\nQ\
-\nUsage: Tremor Kan Lu."
+\nUsage: Coba Aja Bruh."
     }
 )
