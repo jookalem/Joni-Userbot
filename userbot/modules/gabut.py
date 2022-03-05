@@ -16,7 +16,7 @@ async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(f"**JAKA SEMBUNG BAWA GOLOK**")
     sleep(3)
-    await typew.edit("**NIMBRUNG LAH GOBLOKK!!!**")
+    await typew.edit("**GA NYAMBUNG GOBLOK**")
 
 
 # Pantun
@@ -36,7 +36,7 @@ async def typewriter(typew):
 @skyzu_cmd(pattern="l(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("`Kalo Orang Salam Itu Dijawab...`")
+    await typew.edit("`Waalaikumsalam brodie...`")
     sleep(2)
     await typew.edit("`وَعَلَيْكُمْ السَّلاَمُ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ`")
 
@@ -47,28 +47,28 @@ async def typewriter(typew):
 @skyzu_cmd(pattern="kenalin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
-    await typew.edit("☑️ `putra wibu`")
+    await typew.edit("☑️ `Skyzu Kuli Jawa`")
     sleep(2)
-    await typew.edit("✅ `putra wibu`")
+    await typew.edit("✅ `Skyzu Kuli Jawa`")
     sleep(1)
-    await typew.edit("☑️ `duta stres`")
+    await typew.edit("☑️ `Dior Stres`")
     sleep(2)
-    await typew.edit("✅ `duta stres`")
+    await typew.edit("✅ `Dior Stres`")
     sleep(1)
-    await typew.edit("☑️ `fajar Gajelas`")
+    await typew.edit("☑️ `Kyura Sakit Jiwa`")
     sleep(2)
-    await typew.edit("✅ `fajar Gajelas`")
+    await typew.edit("✅ `Kyura Sakit Jiwa`")
     sleep(1)
-    await typew.edit("☑️ `ken Wibu Sangean`")
+    await typew.edit("☑️ `Kyy Sering Coli`")
     sleep(2)
-    await typew.edit("✅ `ken Wibu Sangean`")
+    await typew.edit("✅ `Kyy Sering Coli`")
     sleep(1)
-    await typew.edit("☑️ `xxinu Autis`")
+    await typew.edit("☑️ `Kitaro Autis`")
     sleep(2)
-    await typew.edit("✅ `xxinu Autis`")
+    await typew.edit("✅ `Kitaro Autis`")
     sleep(1)
     await typew.edit(
-        "`⚡ Cuma Skyzu Yang Paling Waras, Baik Hati, Dan Tidak Sombong :v`"
+        "`⚡ Cuma Joni Yang Paling Waras, Baik Hati, Ganteng, Calon Imam Mu 🤪`"
     )
 
 
@@ -123,32 +123,32 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@skyzu_cmd(pattern="skyzu(?: |$)(.*)")
+@skyzu_cmd(pattern="joni(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    await typew.edit("**Ehh Lu Mau Tau Gak?**")
+    await typew.edit("**Hi guys..**")
     sleep(1)
-    await typew.edit("**Sih Skyzu mukanya mirip babi😂**")
+    await typew.edit("**Kembali lagi bersama gua Joni ygy..**")
     sleep(1)
-    await typew.edit("**Ehh Gak Bercanda Deh😁**")
+    await typew.edit("**Anjay srepett..**")
     sleep(1)
-    await typew.edit("**Emang Bener Sih Skyzu Mukanya Kaya Babi🙈**")
+    await typew.edit("**Cuman Joni Paling Ganteng Setelegram..**")
     sleep(1)
-    await typew.edit("**Ehh Engga Deh,Skyzu Kan Ganteng Kaya Artis Korea😄**")
+    await typew.edit("**A EN JE A YE**")
     sleep(1)
-    await typew.edit("**Tapi Boong😂**")
+    await typew.edit("**AAANNNJJJAAAYYY**")
     sleep(1)
-    await typew.edit("**HAHAHAHAHAHAHA**")
+    await typew.edit("**SREPETTT**")
     sleep(1)
-    await typew.edit("**Udah Ahh Takut Skyzu Nangis Minta Balon😂**")
+    await typew.edit("**Joni Joni Yes Papa**")
     sleep(1)
-    await typew.edit("**Maaf Ya Skyzu Ganteng Bercanda😁**")
+    await typew.edit("**Lu Belum Keren Kalo Belum Pake Repo Joni**")
     sleep(1)
-    await typew.edit("**Tapi Bo'ong Hiyahiyahiya**")
+    await typew.edit("**Tapi Bo'ong Hayuukk papale papale**")
 
 
-# Create by myself @skyzuex
+# Create by myself @ikhsanntarjo
 
 
 CMD_HELP.update(
@@ -164,8 +164,8 @@ CMD_HELP.update(
         \nUsage : Member Goblok\
         \n\n Cmd : `{cmd}kenalin`\
         \nUsage : Awokwok\
-        \n\n Cmd : `{cmd}skyzu`\
-        \nUsage : buat ngeledek skyzu\
+        \n\n Cmd : `{cmd}joni`\
+        \nUsage : perkenalan Joni\
         \n\n Cmd : `{cmd}p`\
         \nUsage : Untuk Memberi Salam\
     "
