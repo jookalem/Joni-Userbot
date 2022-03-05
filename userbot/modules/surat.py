@@ -26,7 +26,7 @@ async def typewriter(typew):
         "**ṣirāṭallażīna an'amta 'alaihim gairil-magḍụbi 'alaihim wa laḍ-ḍāllīn**"
     )
     sleep(1)
-    await typew.edit("**Amin..**")
+    await typew.edit("**Aamiin..**")
 
 
 # Create by myself @localheart
