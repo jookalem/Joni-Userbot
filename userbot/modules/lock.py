@@ -73,7 +73,7 @@ async def locks(event):
             return
         else:
             await event.edit(
-                f"`LU MAU NGUNCI APAAN SI GOBLOK, KAGA NGARTI GUA BABI!` `{input_str}`"
+                f"`LU MAU NGUNCI APAAN SI GOBLOK, GA NGARTI GUA BABI` `{input_str}`"
             )
             return
 
