@@ -27,9 +27,9 @@ async def igsaver(event):
     chat = "@SaveAsBot"
     reply_message.sender
     if reply_message.sender.bot:
-        await event.edit("`Sedang Memproses...`")
+        await event.edit("`Sedang Memproses Bruh...`")
         return
-    await event.edit("`Sedang Memproses...`")
+    await event.edit("`Sedang Memproses Bruh...`")
     async with event.client.conversation(chat) as conv:
         try:
             response = conv.wait_event(
