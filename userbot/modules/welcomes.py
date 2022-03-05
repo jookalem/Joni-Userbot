@@ -132,7 +132,7 @@ async def save_welcome(event):
             msg_id = msg_o.id
         else:
             return await event.edit(
-                "`Untuk membuat media sebagai pesan Welcome, BOTLOG_CHATID Harus disetel.`"
+                "`Untuk membuat media sebagai pesan Welcome, BOTLOG_CHATID Harus Disetel.`"
             )
     elif event.reply_to_msg_id and not string:
         rep_msg = await event.get_reply_message()
@@ -152,15 +152,15 @@ async def show_welcome(event):
         return await event.edit("`Running on Non-SQL mode!`")
     cws = get_current_welcome_settings(event.chat_id)
     if not cws:
-        return await event.edit("`Disini Tidak Ada Pesan Welcome Yang Anda Simpan `")
+        return await event.edit("`Disini Tidak Ada Pesan Welcome Yang Anda Simpan..`")
     elif cws and cws.f_mesg_id:
         msg_o = await event.client.get_messages(
             entity=BOTLOG_CHATID, ids=int(cws.f_mesg_id)
         )
-        await event.edit("`Anda Telah Membuat Pesan Welcome Disini`")
+        await event.edit("`Anda Telah Membuat Pesan Welcome Disini...`")
         await event.reply(msg_o.message, file=msg_o.media)
     elif cws and cws.reply:
-        await event.edit("`Anda Telah Membuat Pesan Welcome Disini`")
+        await event.edit("`Anda Telah Membuat Pesan Welcome Disini...`")
         await event.reply(cws.reply)
 
 
@@ -171,9 +171,9 @@ async def del_welcome(event):
     except AttributeError:
         return await event.edit("`Running on Non-SQL mode!`")
     if rm_welcome_setting(event.chat_id) is True:
-        await event.edit("`Menghapus Pesan Welcome Berhasil Dilakukan`")
+        await event.edit("`Menghapus Pesan Welcome Berhasil Dilakukan Bruh...`")
     else:
-        await event.edit("`Anda Tidak Menyimpan Pesan Welcome Apapun Disini`")
+        await event.edit("`Anda Tidak Menyimpan Pesan Welcome Apapun Disini...`")
 
 
 CMD_HELP.update(
