@@ -64,24 +64,24 @@ async def sleepybot(time):
 @skyzu_cmd(pattern="shutdown$")
 async def killdabot(event):
     """For .shutdown command, shut the bot down."""
-    await event.edit("**Mematikan ⚡Joni-Userbot⚡**")
+    await event.edit("**Mematikan ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡**")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#SHUTDOWN \n" "`⚡Joni-Userbot⚡ Telah Dimatikan`"
+            BOTLOG_CHATID, "#SHUTDOWN \n" "`⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡ Telah Dimatikan Tuan`"
         )
     await bot.disconnect()
 
 
 @skyzu_cmd(pattern="restart$")
 async def killdabot(event):
-    await event.edit("**Restarting ⚡Joni-Userbot⚡**")
+    await event.edit("**Restarting ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡**")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
         await event.client.send_message(
-            BOTLOG_CHATID, "#RESTARTBOT \n" "`⚡Joni-Userbot⚡ Telah Di Restart`"
+            BOTLOG_CHATID, "#RESTARTBOT \n" "`⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡ Telah Di Restart Tuan`"
         )
     await bot.disconnect()
     # Spin a new instance of bot
@@ -121,8 +121,8 @@ async def repo_is_here(wannasee):
         "**Usᴇʀʙᴏᴛ Tᴇʟᴇɢʀᴀᴍ**\n"
         "𝗥𝗲𝗽𝗼 🇮🇩\n"
         "╰⎆ [⚡𝐉𝐎𝐍𝐈-𝐔𝐒𝐄𝐑𝐁𝐎𝐓⚡​](https://github.com/jookalem/Joni-Userbot)\n"
-        "❏ **Oᴡɴᴇʀ​** ⎆ [𝐉ᴏɴɪ](t.me/skyzu)\n"
-        "❏ **Sᴜᴘᴘᴏʀᴛ**​ ⎆ [𝐆ʀᴏᴜᴘ](t.me/JoniSupport)\n"
+        "❏ **Oᴡɴᴇʀ​** ⎆ [ɪᴋʜsᴀɴ](t.me/skyzu)\n"
+        "❏ **Sᴜᴘᴘᴏʀᴛ**​ ⎆ [ɢʀᴏᴜᴘ](t.me/JoniSupport)\n"
     )
 
 
