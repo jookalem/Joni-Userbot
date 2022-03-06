@@ -80,7 +80,6 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 
 
 @skyzu_cmd(pattern="setgpic$")
-@register(incoming=True, from_users=DEVS, pattern=r"^\.csetgcpic(?: |$)(.*)")
 async def set_group_photo(gpic):
     if not gpic.is_group:
         await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
