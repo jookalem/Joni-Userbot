@@ -226,8 +226,8 @@ async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
     output = (
-        f"ﾌの刀ﾉ　ﾑﾚﾉ√乇\n\n"
-        f"\n__**{ROSE_TEKS_KUSTOM}**__\n\n\n"
+        f"ȷの刀ﾉ　ﾑﾚﾉ√乇\n\n"
+        f"\n__**{JOO_TEKS_KUSTOM}**__\n\n\n"
         f"╭✠╼━━━━━━━━━━━━━━━✠╮\n"
         f"➥ **Name** : `{DEFAULTUSER}` \n"
         f"➥ **Username** : @{user.username} \n"
@@ -264,7 +264,7 @@ async def amireallyalive(alive):
     await get_readable_time((time.time() - StartTime))
     output = (
         f"●▬▬▬▬▬▬ஜ۩۞۩ஜ▬▬▬▬▬▬● \n"
-        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[𝐉ᴏɴɪ](t.me/ikhsanntarjo)             ㅤ \n"
+        f"✾ 🤴 • `ᴏᴡɴᴇʀ :`[ᴊᴏɴɪ](t.me/ikhsanntarjo)             ㅤ \n"
         f"✾ 🖥️ • `ꜱʏꜱᴛᴇᴍ. :`Ubuntu 20.10            \n"
         f"✾ ⚙️ • `ᴛᴇʟᴇᴛʜᴏɴ :`v.{version.__version__}                ㅤㅤ  \n"
         f"✾ 🐍 • `ᴘʏᴛʜᴏɴ. :`v.{python_version()} ㅤㅤ\n"
@@ -315,8 +315,8 @@ async def redis(alive):
         f"┃✧ **Bot Ver  :** {BOT_VER} \n"
         f"┃✧ **Modules  :** {len(modules)} Modules \n"
         f"┃✧ **GitHub   :** [𝐆ɪᴛʜᴜʙ](https://github.com/jookalem/Joni-Userbot) \n"
-        f"┃✧ **Owner    :** [𝐉ᴏɴɪ](https://t.me/ikhsanntarjo) \n"
-        f"┃✧ **Support  :** [𝐆ʀᴏᴜᴘ](https://t.me/JoniSupport) \n"
+        f"┃✧ **Owner    :** [ɪᴋʜsᴀɴ](https://t.me/ikhsanntarjo) \n"
+        f"┃✧ **Support  :** [ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ](https://t.me/JoniSupport) \n"
         f"╰✠╼━━━━━━━━━━━━━━━━✠╯"
     )
     if ALIVE_LOGO:
