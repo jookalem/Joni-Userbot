@@ -208,7 +208,7 @@ YOUTUBE_API_KEY = (
 )
 
 # Untuk Perintah .skyalive
-SKYZU_TEKS_KUSTOM = os.environ.get("SKYZU_TEKS_KUSTOM", "I'am Using Joni-Userbot⚡")
+JOO_TEKS_KUSTOM = os.environ.get("JOO_TEKS_KUSTOM", "Hi! I'am Using 𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ ⚡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -230,7 +230,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Skyzu-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "7.0")
@@ -251,7 +251,7 @@ INLINE_PIC = (
 )
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "⚡"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -355,7 +355,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "skyzu-userbot"
+    session = "𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ"
 try:
     bot = TelegramClient(
         session=session,
@@ -502,7 +502,7 @@ with bot:
                     f"✥ **ᴍᴇɴᴛɪᴏɴ​ :** [{get_display_name(c)}](tg://user?id={c.id}) \n\n"
                     f"sᴇᴍᴏɢᴀ ʙᴇᴛᴀʜ ᴅɪsɪɴɪ ʏᴀ​ ⚡\n",
                     buttons=[
-                        [Button.url("ʀᴇᴘᴏ​", "https://github.com/jookalem/Joni-Userbot")],
+                        [Button.url("ɢɪᴛʜᴜʙ​", "https://github.com/jookalem/Joni-Userbot")],
                     ],
                 )
 
@@ -534,7 +534,7 @@ with bot:
                 ms = (end - start).microseconds / 1000
                 await tgbot.send_message(
                     event.chat_id,
-                    f"**PONG!!**\n `{ms}ms`",
+                    f"**ᴘᴏɴɢ!!**\n `{ms}ms`",
                 )
 
         @tgbot.on(
@@ -605,7 +605,7 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid:
-                text = f"{DEFAULTUSER}Pilih dari opsi di bawah ini :"
+                text = f"{DEFAULTUSER} Pilih dari opsi di bawah ini :"
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -658,7 +658,7 @@ with bot:
                     f"°__Menampilkan Alive Punya Kamu__.\n\n"
                     f"× `.set var ALIVE_LOGO` [**LINK**]\n"
                     f"°__Mengubah Foto Alive Kamu, Yang Kamu Inginkan__.\n\n"
-                    f"× `.set var SKYZU_TEKS_KUSTOM` [**TEKS**]\n"
+                    f"× `.set var JOO_TEKS_KUSTOM` [**TEKS**]\n"
                     f"°__Mengganti Teks Yang Ada Command JoniAlive__.\n\n"
                     f"© @ikhsanntarjo"
                 )
@@ -687,9 +687,9 @@ with bot:
                 text = (
                     f"Modules Name **pmpermit**\n\n"
                     f"× `.set var PM_AUTO_BAN True`\n"
-                    f"°__Mengaktifkan Pmpermit Kalian Atau Disebut Pesan Otomatis__.\n\n"
+                    f"°__Mengaktifkan Pesan Otomatis Di Obrolan Pribadi__.\n\n"
                     f"× `.set pm_msg` [**REPLYCHAT**]\n"
-                    f"°__Mengganti Teks Pmpermit Selera Kamu__.\n\n"
+                    f"°__Mengganti Teks Pesan Otomatis Di Obrolan Pribadi__.\n\n"
                     f"© @ikhsanntarjo"
                 )
                 await event.edit(
@@ -774,7 +774,7 @@ with bot:
             if event.query.user_id == uid:
                 text = (
                     f"Modules Name **Pembaruan**\n\n"
-                    f"× **Pembaruan Data Untuk Joni-Userbot, Command Untuk Pembaruan**.\n"
+                    f"× **Pembaruan Data Untuk ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡, Command Untuk Pembaruan**.\n"
                     f"⚒Pembaruan Data :\n"
                     f"`.update deploy`\n"
                     f"`update`\n\n"
@@ -904,15 +904,15 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⚡Joni-Userbot⚡",
+                    "Bantuan Dari ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
                 result = builder.article(
-                    " ⚡Joni-Userbot",
-                    text="""°Joni-Userbot°""",
+                    " ⚡⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡",
+                    text="""°𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ°""",
                     buttons=[
                         [
                             custom.Button.url(
