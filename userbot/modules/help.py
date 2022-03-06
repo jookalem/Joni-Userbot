@@ -37,10 +37,10 @@ async def help(event):
             string += "`" + str(i)
             string += "`\t ❉  "
         await event.edit(
-            "**⚡𝐉𝐎𝐍𝐈-𝐔𝐒𝐄𝐑𝐁𝐎𝐓​⚡**\n\n"
+            "**⚡ⴢσɴι-υѕєяʙᴏᴛ​⚡**\n\n"
             f"**◉ Bᴏᴛ ᴏꜰ {DEFAULTUSER}**\n**◉ Mᴏᴅᴜʟᴇꜱ : {len(modules)}**\n\n"
             "**• Mᴀɪɴ Mᴇɴᴜ :**\n"
-            f"◉ {string}◉\n\n✐ **ɴᴏᴛᴇꜱ :**  `{cmd}help animasi`\n✐  𝐒ᴜᴘᴘᴏʀᴛ : @JoniSupport"
+            f"◉ {string}◉\n\n✐ **ɴᴏᴛᴇꜱ :**  `{cmd}help animasi`\n✐ sᴜᴘᴘᴏʀᴛ : @JoniSupport"
         )
         await asyncio.sleep(1000)
         await event.delete()
