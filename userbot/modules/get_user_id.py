@@ -6,7 +6,7 @@ from userbot import CMD_HELP, bot
 from userbot.utils import skyzu_cmd
 
 
-@skyzu_cmd(pattern="id(?: |$)(.*)")
+@skyzu_cmd(pattern="getid(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
 
 CMD_HELP.update(
     {
-        "getid": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}id`"
+        "getid": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}getid`"
         "\n↳ : Balas Ke Pesan Pengguna Untuk Mendapatkan ID Nya."
     }
 )
