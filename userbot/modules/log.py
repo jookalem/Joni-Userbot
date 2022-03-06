@@ -1,6 +1,7 @@
 # credits: mrconfused
 # Recode by @mrismanaziz
 # t.me/SharingUserbot
+# Kontol Joni Anjay Srepet
 
 import asyncio
 
