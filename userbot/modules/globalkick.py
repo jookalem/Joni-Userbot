@@ -9,7 +9,8 @@ from telethon.tl.types import MessageEntityMentionName
 
 from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP
+from userbot import CMD_HELP, DEVS
+from userbot.events import register
 from userbot.utils import skyzu_cmd
 
 
