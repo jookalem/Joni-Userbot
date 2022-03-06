@@ -12,6 +12,7 @@
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS
+from userbot.events import register
 from userbot.utils import skyzu_cmd
 
 GCAST_BLACKLIST = [
@@ -29,7 +30,7 @@ GCAST_BLACKLIST = [
     -1001752592753,  # Skyzusupport
     -1001380293847,  # NastySupport
     -1001664518224,  # JoniSupport
-    -1001606097524,  # SanjoSupport
+    -1001606097524,  # SanjoSupportt
 ]
 
 
