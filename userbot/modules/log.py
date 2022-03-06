@@ -53,7 +53,7 @@ async def monito_p_m_s(kyy):
         return
     if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
         return
-    sender = await sky.get_sender()
+    sender = await kyy.get_sender()
     await asyncio.sleep(0.5)
     if not sender.bot:
         chat = await sky.get_chat()
