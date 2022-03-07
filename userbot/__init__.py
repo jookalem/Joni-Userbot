@@ -230,7 +230,7 @@ ZIP_DOWNLOAD_DIRECTORY = os.environ.get("ZIP_DOWNLOAD_DIRECTORY", "./zips")
 BITLY_TOKEN = os.environ.get("BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Joni-Userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "7.0")
@@ -355,7 +355,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ"
+    session = "Joni-Userbot"
 try:
     bot = TelegramClient(
         session=session,
