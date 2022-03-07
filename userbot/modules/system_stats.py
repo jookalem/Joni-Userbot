@@ -163,7 +163,7 @@ async def bot_ver(event):
 
         await event.edit(
             "**⚜-**⚡𝐉ᴏɴɪ-𝐔sᴇʀʙᴏᴛ⚡ Versi:** \n "
-            f"heads/Skyzu-Userbot-0-x634i7u1"
+            f"heads/Joni-Userbot-0-x634i7u1"
             "\n**⚜-**Revisi:**\n "
             f"{revout}"
         )
