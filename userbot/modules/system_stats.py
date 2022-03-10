@@ -21,7 +21,7 @@ import psutil
 from telethon import __version__, version
 
 from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER
-from userbot import CMD_HANDLER as cmd
+from userbot import CMD_HANDLER as cmd, JOO_TEKS_KUSTOM
 from userbot import CMD_HELP, UPSTREAM_REPO_BRANCH, StartTime, bot
 from userbot.utils import skyzu_cmd
 
