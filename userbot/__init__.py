@@ -6,6 +6,7 @@ import random
 import re
 import sys
 import time
+from pytgcalls import PyTgCalls
 from datetime import datetime
 from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
