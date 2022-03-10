@@ -24,13 +24,24 @@
 
 
 ## Stay Support 🚀
-❁   [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
+❁ [LonamiWebs](https://github.com/LonamiWebs/) and [Telethon](https://github.com/LonamiWebs/Telethon)
 
-##
+# Credits
 
-🔰 **THANKS YOU TO**
-*   [Sendi](https://github.com/SendiAp/Rose-Userbot)   Rose-Userbot
-*   [Risman](https://github.com/mrismanaziz/Man-Userbot)   Suhu - Userbot
-*   [Skyzu](https://github.com/Skyzu/skyzu-userbot)   skyzu-userbot
-*   DAN TERIMAKASIH KEPADA USERBOT LAINNYA
+</Click>
+
+<details>
+<summary><b> Makasih banyak nich ya,buat para suhu² dibawah </b></summary>
+<br>
+
+*   [Risman](https://github.com/mrismanaziz/Man-Userbot) Suhu-Userbot
+*   [Kyy](https://github.com/muhammadrizky16/Kyy-Userbot) Kyy-Userbot
+*   [Skyzu](https://github.com/Skyzu/skyzu-userbot) Skyzu-userbot
+*   [Ira](https://github.com/zigaz23) Gada-Userbot
+*   [Alfa](https://github.com/CoeF) Alfa-Userbot
+*   [Tede](https://github.com/tofikdn/tofikdn) Tede-Ubot
+
+*   DAN KEPADA SELURUH OWNER REPO USERBOT INDONESIA LAINNYA!..
+
+Mohon maap banget nih yee yang gak di cantumin di credit 🙏
 
