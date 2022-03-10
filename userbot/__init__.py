@@ -59,7 +59,7 @@ if version_info[0] < 3 or version_info[1] < 8:
         "Multiple features depend on this. Bot quitting."
     )
     quit(1)
-
+PLAY_PIC = "https://telegra.ph/file/6213d2673486beca02967.png"
 # Check if the config was edited by using the already used variable.
 # Basically, its the 'virginity check' for the config file ;)
 CONFIG_CHECK = os.environ.get(
