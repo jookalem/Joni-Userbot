@@ -1,16 +1,19 @@
+# Using Python Slim-Buster
 FROM kyyex/kyy-userbot:busterv2
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends \
-    curl \
-    git \
-    ffmpeg
-RUN curl -sL https://deb.nodesource.com/setup_16.x | bash - && \
-    apt-get install -y nodejs && \
-    npm i -g npm
-RUN git clone -b Joni-Userbot https://github.com/jookalem/Joni-Userbot /home/Joni-Userbot/ \
-    && chmod 777 /home/Joni-Userbot \
-    && mkdir /home/Joni-Userbot/bin/
-WORKDIR /home/Joni-Userbot/
-COPY ./sample_config.env ./config.env* /home/Joni-Userbot/
-RUN pip install -r requirements.txt
+#━━━━━ Userbot Telegram ━━━━━
+#━━━━━ By Joni-Userbot ━━━━━
+
+RUN apt-get update && apt-get upgrade -y
+RUN apt-get install ffmpeg -y
+RUN git clone -b Joni-Userbot https://github.com/jookalem/Joni-Userbot /root/userbot
+RUN mkdir /root/userbot/.bin
+RUN pip install --upgrade pip setuptools
+WORKDIR /root/userbot
+
+#Install python requirements
+RUN pip3 install -r https://raw.githubusercontent.com/jookalem/joni-Userbot/Joni-Userbot/requirements.txt
+
+EXPOSE 80 443
+
+# Finalization
 CMD ["python3", "-m", "userbot"]
