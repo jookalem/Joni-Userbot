@@ -2,30 +2,36 @@
 
 import logging
 import os
-import random
-import re
-import sys
 import time
-from datetime import datetime
-from distutils.util import strtobool as sb
-from logging import DEBUG, INFO, basicConfig, getLogger
-from math import ceil
-from sys import version_info
-from userbot import call_py
-
-import pybase64
+import re
 import redis
-from dotenv import load_dotenv
+import random
+import pybase64
+import sys
+
+from base64 import b64decode
+from sys import version_info
+from logging import basicConfig, getLogger, INFO, DEBUG
+from distutils.util import strtobool as sb
+from math import ceil
+
 from pylast import LastFMNetwork, md5
-from pymongo import MongoClient
 from pySmartDL import SmartDL
+from pytgcalls import PyTgCalls
+from pymongo import MongoClient
+from datetime import datetime
 from redis import StrictRedis
+from dotenv import load_dotenv
 from requests import get
-from telethon import Button, events, functions, types
+from telethon import Button
+from telethon.sync import TelegramClient, custom, events
+from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
+from telethon.tl.functions.channels import JoinChannelRequest as GetSec
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 from telethon.sync import TelegramClient, custom, events
-from telethon.tl.functions.channels import JoinChannelRequest as GetSec
+from telethon import Button, events, functions, types
+from telethon.tl.types import InputWebDocument
 from telethon.utils import get_display_name
 
 redis_db = None
