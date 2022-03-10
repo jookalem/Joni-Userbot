@@ -21,6 +21,7 @@ from .google_images_download import googleimagesdownload
 from .progress import CancelProcess, progress
 from .tools import (
     edit_delete,
+    bash,
     edit_or_reply,
     human_to_bytes,
     humanbytes,
