@@ -11,6 +11,7 @@ from distutils.util import strtobool as sb
 from logging import DEBUG, INFO, basicConfig, getLogger
 from math import ceil
 from sys import version_info
+from userbot import call_py
 
 import pybase64
 import redis
