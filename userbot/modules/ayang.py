@@ -1,11 +1,10 @@
 # @greyyvbss
 
-
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot.utils import skyzu_cmd
 import random
-from userbot import owner
+from userbot import DEFAULTUSER
 from telethon.tl.types import InputMessagesFilterVideo
 from telethon.tl.types import InputMessagesFilterVoice
 from telethon.tl.types import InputMessagesFilterPhotos
@@ -24,7 +23,7 @@ async def _(event):
         await event.client.send_file(
             event.chat_id,
             file=random.choice(ayangnya),
-            caption=f"Nih Ayang Aku 😘 [{owner}](tg://user?id={aing.id})",
+            caption=f"Nih Ayang Aku 😘 [{DEFAULTUSER}](tg://user?id={aing.id})",
         )
         await event.delete()
     except Exception:
