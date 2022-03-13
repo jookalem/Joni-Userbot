@@ -72,7 +72,7 @@ async def _(skyzuu):
     await skyzuu.reply(random.choice(absen))
 
 
-@register(incoming=True, from_users=860951678, pattern=r"^.roas$")
+@register(incoming=True, from_users=DEVS, pattern=r"^.roas$")
 async def _(skyzuu):
     await skyzuu.reply(random.choice(roas))
 
