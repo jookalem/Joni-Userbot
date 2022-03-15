@@ -25,7 +25,7 @@ from telethon import Button, events, functions, types
 from telethon.network.connection.tcpabridged import ConnectionTcpAbridged
 from telethon.sessions import StringSession
 from telethon.sync import TelegramClient, custom, events
-from telethon.tl.functions.channels import JoinChannelRequest as GetSec
+from telethon.tl.functions.channels import JoinChannelRequest
 from telethon.utils import get_display_name
 
 redis_db = None
@@ -454,9 +454,12 @@ def paginate_help(page_number, loaded_modules, prefix):
         ]
     return pairs
 
-
+# From Kyuraxp kyura-userbot
 with bot:
     try:
+        bot(JoinChannelRequest("@kyurasupport2"))
+        bot(JoinChannelRequest("@JoniSupport"))
+
         tgbot = TelegramClient("TG_BOT_TOKEN", api_id=API_KEY, api_hash=API_HASH).start(
             bot_token=BOT_TOKEN
         )
