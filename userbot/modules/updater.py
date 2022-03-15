@@ -11,7 +11,7 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from userbot import BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
-from userbot import register
+from userbot.events import register
 from userbot import (
     CMD_HELP,
     HEROKU_API_KEY,
