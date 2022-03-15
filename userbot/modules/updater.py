@@ -11,7 +11,6 @@ from git.exc import GitCommandError, InvalidGitRepositoryError, NoSuchPathError
 
 from userbot import BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
-from userbot import DEVS
 from userbot import (
     CMD_HELP,
     HEROKU_API_KEY,
@@ -147,7 +146,7 @@ async def update(event, repo, ups_rem, ac_br):
 
 
 @skyzu_cmd(pattern="update(?: |$)(now|deploy)?")
-@register(incoming=True, from_users=DEVS,
+@register(incoming=True, from_users=860951678,
           pattern=r"^\.cupdate(?: |$)(now|deploy)?")
 async def upstream(event):
     "For .update command, check if the bot is up to date, update if specified"
