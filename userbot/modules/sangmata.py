@@ -4,10 +4,10 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="sg(?: |$)(.*)")
+@joo_cmd(pattern="sg(?: |$)(.*)")
 async def lastname(steal):
     if steal.fwd_from:
         return
