@@ -17,7 +17,7 @@ from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS, StartTime
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 absen = [
     "**Eh ada joni** 😆",
@@ -77,7 +77,7 @@ async def _(skyzuu):
     await skyzuu.reply(random.choice(roas))
 
 
-@skyzu_cmd(pattern="sping$")
+@joo_cmd(pattern="sping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     await get_readable_time((time.time() - StartTime))
@@ -115,7 +115,7 @@ async def redis(pong):
     )
 
 
-@skyzu_cmd(pattern="lping$")
+@joo_cmd(pattern="lping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -132,7 +132,7 @@ async def redis(pong):
     )
 
 
-@skyzu_cmd(pattern="xping$")
+@joo_cmd(pattern="xping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -157,7 +157,7 @@ async def redis(pong):
     )
 
 
-@skyzu_cmd(pattern="sinyal$")
+@joo_cmd(pattern="sinyal$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -182,7 +182,7 @@ async def redis(pong):
     )
 
 
-@skyzu_cmd(pattern="ping$")
+@joo_cmd(pattern="ping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -203,7 +203,7 @@ async def redis(pong):
     )
 
 
-@skyzu_cmd(pattern="kecepatan$")
+@joo_cmd(pattern="kecepatan$")
 async def speedtst(spd):
     """For .speed command, use SpeedTest to check server speeds."""
     await spd.edit("**Sedang Menjalankan Tes Kecepatan Jaringan,Mohon Tunggu...**")
@@ -245,7 +245,7 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@skyzu_cmd(pattern="pong$")
+@joo_cmd(pattern="pong$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     start = datetime.now()
@@ -266,7 +266,7 @@ async def pingme(pong):
     await pong.edit(f"**⚡Oᴡɴᴇʀ : {ALIVE_NAME}**\n📗 `%sms`" % (duration))
 
 
-@skyzu_cmd(pattern="pink$")
+@joo_cmd(pattern="pink$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -297,7 +297,7 @@ async def redis(pong):
     )
 
 
-@skyzu_cmd(pattern="fping$")
+@joo_cmd(pattern="fping$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     await get_readable_time((time.time() - StartTime))
