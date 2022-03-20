@@ -9,7 +9,7 @@ from telethon.tl.types import User
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, LOGS, bot
 from userbot.modules.sql_helper.tede_chatbot_sql import is_tede, rem_tede, set_tede
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 translator = Translator()
 LANGUAGE = "id"
@@ -46,7 +46,7 @@ async def chat_bot_toggle(event):
         await event.edit("**Usage:** `.chatbot` <on/off>")
 
 
-@skyzu_cmd(pattern="chatbot(?: |$)(.*)")
+@joo_cmd(pattern="chatbot(?: |$)(.*)")
 async def on_apa_off(event):
     await chat_bot_toggle(event)
 
