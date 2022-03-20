@@ -115,7 +115,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 # Custom Pmpermit pic
 PMPERMIT_PIC = (
     os.environ.get("PMPERMIT_PIC")
-    or "https://telegra.ph/file/3b5688eef749f7ba4bd12.jpg"
+    or "https://telegra.ph/file/744312c6cb4985dce070d.jpg"
 )
 
 # Bleep Blop, this is a bot ;)
@@ -215,7 +215,7 @@ YOUTUBE_API_KEY = (
 )
 
 # Untuk Perintah .skyalive
-JOO_TEKS_KUSTOM = os.environ.get("JOO_TEKS_KUSTOM", "Hi! I'am Using 𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ ⚡")
+JOO_TEKS_KUSTOM = os.environ.get("JOO_TEKS_KUSTOM", "ʜɪ! ɪ'ᴀᴍ ᴜѕɪɴɢ ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -493,7 +493,7 @@ with bot:
                         "`The bot doesn't work! Please set the Bot Token and Username correctly. The module has been stopped.`"
                     )
             except Exception:
-                return await event.edit("⛔ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
+                return await event.edit("⚠️ **Kamu Tidak Diizinkan Untuk Menekan Nya**!")
 
         kyylogo = INLINE_PIC
         plugins = CMD_HELP
@@ -507,14 +507,15 @@ with bot:
                 u = await event.client.get_entity(event.chat_id)
                 c = await event.client.get_entity(event.user_id)
                 await event.reply(
-                    f"**Hallo Kamu**\n**Welcome To** [{get_display_name(u)}](tg://user?id={u.id}) \n\n"
-                    f"✥ **ᴘᴇɴɢɢᴜɴᴀ​ :** {get_display_name(c)} \n"
-                    f"✥ **ɪᴅ ᴘᴇɴɢɢᴜɴᴀ​ :** {c.id} \n"
-                    f"✥ **ᴜsᴇʀɴᴀᴍᴇ​ :** @{c.username} \n"
-                    f"✥ **ᴍᴇɴᴛɪᴏɴ​ :** [{get_display_name(c)}](tg://user?id={c.id}) \n\n"
-                    f"sᴇᴍᴏɢᴀ ʙᴇᴛᴀʜ ᴅɪsɪɴɪ ʏᴀ​ ⚡\n",
+                    f"**sᴇʟᴀɴᴀᴛ ᴅᴀᴛᴀɴɢ ᴀɴᴀᴋ ɴɢᴇɴᴛᴏᴅ** [{get_display_name(u)}](tg://user?id={u.id}) \n\n"
+                    f"✧ **ᴘᴇɴɢɢᴜɴᴀ​ :** {get_display_name(c)} \n"
+                    f"✧ **ɪᴅ ᴘᴇɴɢɢᴜɴᴀ​ :** {c.id} \n"
+                    f"✧ **ᴜsᴇʀɴᴀᴍᴇ​ :** @{c.username} \n"
+                    f"✧ **ᴍᴇɴᴛɪᴏɴ​ :** [{get_display_name(c)}](tg://user?id={c.id}) \n\n"
+                    f"ɴɪᴋᴍᴀᴛɪ ʜɪʙᴜʀᴀɴ ᴋᴏᴛᴏʀᴍᴜ ᴅɪsɪɴɪ​\n",
                     buttons=[
                         [Button.url("ɢɪᴛʜᴜʙ​", "https://github.com/jookalem/Joni-Userbot")],
+                        [Button.url("sᴜᴘᴘᴏʀᴛ​", "https://t.me/JoniSupport")],
                     ],
                 )
 
@@ -535,7 +536,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER} Nanti Kena Ghosting."
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗ Jangan Menggunakan Userbot Milik {DEFAULTUSER}."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(events.NewMessage(pattern="/ping"))
@@ -559,7 +560,7 @@ with bot:
             query = event.text
             if event.query.user_id == uid and query.startswith("@ikhsanntarjo"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 5.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** {BOT_USERNAME} "
+                text = f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -568,7 +569,7 @@ with bot:
                 )
 
             else:
-                reply_pop_up_alert = f"❌ WARNINGS ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -607,7 +608,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"🤴 Name : {DEFAULTUSER}\n🤖 Bot Ver : 7.0\n🛠 Modules : {len(plugins)}\n⚡ Branch : Joni-Userbot"
+                reply_pop_up_alert = f"🤴 ᴋɪɴɢs : {DEFAULTUSER}\n🤖 ʙᴏᴛ ᴠᴇʀ : 7.0\n🛠 ᴍᴏᴅᴜʟᴇs : {len(plugins)}\n✨ ʙʀᴀɴᴄʜ : Joni-Userbot"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -631,7 +632,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -654,7 +655,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -686,7 +687,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -746,7 +747,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -774,7 +775,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -804,7 +805,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -862,7 +863,7 @@ with bot:
                     ],
                 )
             else:
-                reply_pop_up_alert = f"❌ DISCLAIMER ❌\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
+                reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini"
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
         @tgbot.on(
@@ -872,7 +873,7 @@ with bot:
         )
         async def killdabot(event):
             if event.query.user_id == uid:
-                text = f"**Restaring Joni-Userbot**..."
+                text = f"**Restaring ⚡Joni-Userbot⚡**..."
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -909,7 +910,7 @@ with bot:
                 result = builder.photo(
                     file=kyylogo,
                     link_preview=False,
-                    text=f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n❥ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
+                    text=f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
                         len(dugmeler),
                     ),
                     buttons=buttons,
@@ -976,8 +977,8 @@ with bot:
                             Button.url("۵ꜱᴜᴘᴘᴏʀᴛ۵", "t.me/JoniSupport"),
                             Button.url("۵ᴄʜᴀɴɴᴇʟ۵", "t.me/ProjectJoni"),
                         ],
-                        [custom.Button.inline("°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
-                        [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
+                        [custom.Button.inline("۵ᴏᴘᴇɴ ᴍᴇɴᴜ۵", data="open_plugin")],
+                        [custom.Button.inline("۵ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ۵", b"close")],
                     ],
                 )
 
