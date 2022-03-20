@@ -2,10 +2,10 @@
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import edit_or_reply, skyzu_cmd
+from userbot.utils import edit_or_reply, joo_cmd
 
 
-@skyzu_cmd(pattern="sponge(?: |$)(.*)")
+@joo_cmd(pattern="sponge(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -20,7 +20,7 @@ async def _(event):
         "           **BOBBB**      ")
 
 
-@skyzu_cmd(pattern="ngok(?: |$)(.*)")
+@joo_cmd(pattern="ngok(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -34,7 +34,7 @@ async def _(event):
         "┈┈┈┈┗┻┛┗┻┛┈┈┈┈")
 
 
-@skyzu_cmd(pattern="musang(?: |$)(.*)")
+@joo_cmd(pattern="musang(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -48,7 +48,7 @@ async def _(event):
         "┈┗┛┗┛┈┈┈┗┛┗┛┈┈┈")
 
     
-@skyzu_cmd(pattern="gajah(?: |$)(.*)")
+@joo_cmd(pattern="gajah(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,
@@ -62,7 +62,7 @@ async def _(event):
         "┈╲▅▅▏▕▔▔▔▔▏┈┈┈┈")
 
     
-@skyzu_cmd(pattern="liat(?: |$)(.*)")
+@joo_cmd(pattern="liat(?: |$)(.*)")
 async def _(event):
     await edit_or_reply(
         event,    
