@@ -1,10 +1,10 @@
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # FROM skyzu-userbot (https://github.com/Skyzu/skyzu-userbot)
 
 
-@skyzu_cmd(pattern="(?:dm)\s?(.*)?")
+@joo_cmd(pattern="(?:dm)\s?(.*)?")
 async def remoteaccess(event):
 
     p = event.pattern_match.group(1)
@@ -33,7 +33,7 @@ async def remoteaccess(event):
         await event.edit("**Terjadi Error. Gagal Mengirim Pesan.**")
 
 
-@skyzu_cmd(pattern="open(?: |$)(.*)")
+@joo_cmd(pattern="open(?: |$)(.*)")
 async def _(event):
     b = await event.client.download_media(await event.get_reply_message())
     with open(b, "r") as a:
