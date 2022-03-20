@@ -909,9 +909,9 @@ with bot:
                 result = builder.photo(
                     file=kyylogo,
                     link_preview=False,
-                    text=f"Usᴇʀʙᴏᴛ​ Tᴇʟᴇɢʀᴀᴍ\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n❥ **ʙᴏᴛ ᴏꜰ :** {DEFAULTUSER}\n❥ **ʙᴏᴛ ᴠᴇʀ :** 7.0\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}\n❥ **ʙᴏᴛʏᴏᴜ :** {BOT_USERNAME}".format(
+                    text=f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n❥ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
                         len(dugmeler),
-                    ),
+                    BOT_U
                     buttons=buttons,
                 )
             elif query.startswith("tb_btn"):
@@ -923,7 +923,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    " ⚡⚡ʜᴏɴɪ ᴜѕᴇʀʙᴏᴛ⚡",
+                    "⚡ʜᴏɴɪ ᴜѕᴇʀʙᴏᴛ⚡",
                     text="""°ᴊᴏɴɪ ᴜѕᴇʀʙᴏᴛ°""",
                     buttons=[
                         [
@@ -956,7 +956,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"✘ **WARNING** ✘ Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗ Jangan Menggunakan Userbot Milik {DEFAULTUSER}."
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -1003,7 +1003,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"✘ **WARNING** ✘ Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗ Jangan Menggunakan Userbot Milik {DEFAULTUSER}."
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -1037,9 +1037,8 @@ with bot:
                 )
             else:
                 reply_pop_up_alert = (
-                    f"✘ **WARNING** ✘ Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗ Jangan Menggunakan Userbot Milik {DEFAULTUSER}."
                 )
-
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
     except BaseException:
