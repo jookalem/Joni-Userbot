@@ -4,7 +4,8 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
     <p align="center"> 
 
-## <p align="center"> USERBOT TELEGRAM DENGAN MODULE YANG SANGAT AMAT TOXIC, MOHON GUNAKAN DENGAN BIJAK!
+##  <h212 align="center">ᴜsᴇʀʙᴏᴛ ᴛᴇʟᴇɢʀᴀᴍ ᴅᴇɴɢᴀɴ ᴍᴏᴅᴜʟᴇ ʏᴀɴɢ sᴀɴɢᴀᴛ ᴛᴏxɪᴄ. ᴍᴏʜᴏɴ ɢᴜɴᴀᴋᴀɴ ᴅᴇɴɢᴀɴ ʙɪᴊᴀᴋ!
+</h212>
 
 
 <p align="center">
@@ -15,6 +16,18 @@
     <img alt="PYTHON" src="https://img.shields.io/badge/PYTHON-v3.9.6-purple?style=for-the-badge&logo=appveyor"/>
     </p>
 
+#
+
+
+<h2 align="center">
+   ѕтʀɪɴɢ ѕᴇѕѕισɴ
+</h2>
+
+<p align ="center">
+<a href="https://t.me/JoniStringBot"><img src="https://img.shields.io/badge/%20String%20Session-blueviolet?style=for-the-badge&logo=appveyor" width="215""/></a></p>
+
+#
+
 <h2 align="center">
    ᴍᴇᴛᴏᴅᴇ ᴅᴇᴘʟᴏʏ
 </h2>
@@ -23,13 +36,14 @@
 <a href="https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/templat-userbot4"><img src="https://img.shields.io/badge/Deploy%20To%20Heroku-blueviolet?style=for-the-badge&logo=heroku" width="215""/</a>  
 <a href="https://telegram.dog/XTZ_HerokuBot?start=bXVoYW1tYWRyaXpreTE2L0t5eS1Vc2VyYm90IEt5eS1Vc2VyYm90"><img src="https://img.shields.io/badge/Deploy%20Via%20Telegram-blue?style=for-the-badge&logo=telegram" width="215""/</a>  </p>
 
+#
 
+<h2 align="center">
+   ɢʀᴏᴜᴘ sᴜᴘᴘᴏʀᴛ
+</h2>
 
-
-
-## Group Support:
-
-   <a href="https://t.me/JoniSupport"><img src="https://img.shields.io/badge/Group%20Support%3F-yes-green?&style=flat-square?&logo=telegram" width=220px></a></p>
+<p align="center">
+<a href="https://t.me/JoniSupport"><img src="https://img.shields.io/badge/ɢʀᴏᴜᴘ%20sᴜᴘᴘᴏʀᴛ-square?&logo=telegram" width=215px></a></p>
 
 
 # Credits
