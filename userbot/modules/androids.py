@@ -21,7 +21,7 @@ from userbot.utils import (
     human_to_bytes,
     humanbytes,
     md5,
-    skyzu_cmd,
+    joo_cmd,
     time_formatter,
 )
 
@@ -32,7 +32,7 @@ DEVICES_DATA = (
 )
 
 
-@skyzu_cmd(pattern="magisk$")
+@joo_cmd(pattern="magisk$")
 async def magisk(request):
     """magisk latest releases"""
     magisk_dict = {
@@ -56,7 +56,7 @@ async def magisk(request):
     await request.edit(releases)
 
 
-@skyzu_cmd(pattern="device(?: |$)(\S*)")
+@joo_cmd(pattern="device(?: |$)(\S*)")
 async def device_info(request):
     """get android device basic info from its codename"""
     textx = await request.get_reply_message()
@@ -86,7 +86,7 @@ async def device_info(request):
     await request.edit(reply)
 
 
-@skyzu_cmd(pattern="codename(?: |)([\S]*)(?: |)([\s\S]*)")
+@joo_cmd(pattern="codename(?: |)([\S]*)(?: |)([\s\S]*)")
 async def codename_info(request):
     """search for android codename"""
     textx = await request.get_reply_message()
@@ -123,7 +123,7 @@ async def codename_info(request):
     await request.edit(reply)
 
 
-@skyzu_cmd(pattern="pixeldl(?: |$)(.*)")
+@joo_cmd(pattern="pixeldl(?: |$)(.*)")
 async def download_api(dl):
     await dl.edit("`Collecting information...`")
     URL = dl.pattern_match.group(1)
@@ -227,7 +227,7 @@ async def download_api(dl):
     return
 
 
-@skyzu_cmd(pattern="specs(?: |)([\S]*)(?: |)([\s\S]*)")
+@joo_cmd(pattern="specs(?: |)([\S]*)(?: |)([\s\S]*)")
 async def devices_specifications(request):
     """Mobile devices specifications"""
     textx = await request.get_reply_message()
@@ -286,7 +286,7 @@ async def devices_specifications(request):
     await request.edit(reply)
 
 
-@skyzu_cmd(pattern="twrp(?: |$)(\S*)")
+@joo_cmd(pattern="twrp(?: |$)(\S*)")
 async def twrp(request):
     """get android device twrp"""
     textx = await request.get_reply_message()
