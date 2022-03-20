@@ -6,12 +6,12 @@ from telethon.tl.functions.contacts import UnblockRequest
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 chat = "@BotFather"
 
 
-@skyzu_cmd(pattern="botbaru ?(.*)")
+@joo_cmd(pattern="botbaru ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
