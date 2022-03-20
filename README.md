@@ -1,6 +1,6 @@
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
     <p align="center"> 
-<a href="https://t.me/JoniSupport"><img src="https://see.fontimg.com/api/renderfont4/ALEmp/eyJyIjoiZnMiLCJoIjoxMDQsInciOjE2MDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/Sk9OSS1VU0VSQk9U/mandhor.png" alt="Bold fonts"></a>
+<a href="https://t.me/JoniSupport"><img src="https://see.fontimg.com/api/renderfont4/ZV22x/eyJyIjoiZnMiLCJoIjoxMDQsInciOjE2MDAsImZzIjo2NSwiZmdjIjoiIzAwMDAwMCIsImJnYyI6IiNGRkZGRkYiLCJ0IjoxfQ/Sk9OSSBVU0VSQk9U/silvers-personal-use-regular.png" alt="3D fonts"></a>
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
     <p align="center"> 
 
