@@ -2,7 +2,7 @@
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 import random
 from userbot import DEFAULTUSER
 from telethon.tl.types import InputMessagesFilterVideo
@@ -10,7 +10,7 @@ from telethon.tl.types import InputMessagesFilterVoice
 from telethon.tl.types import InputMessagesFilterPhotos
 
 
-@skyzu_cmd(pattern="ayang$")
+@joo_cmd(pattern="ayang$")
 async def _(event):
     try:
         ayangnya = [
