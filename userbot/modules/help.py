@@ -11,7 +11,7 @@ from platform import uname
 from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 modules = CMD_HELP
 
@@ -20,7 +20,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@skyzu_cmd(pattern="help(?: |$)(.*)")
+@joo_cmd(pattern="help(?: |$)(.*)")
 async def help(event):
     """For .help command,"""
     args = event.pattern_match.group(1).lower()
