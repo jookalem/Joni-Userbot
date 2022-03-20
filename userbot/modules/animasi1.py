@@ -5,10 +5,10 @@ from telethon import events
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="hua$")
+@joo_cmd(pattern="hua$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("أ‿أ")
@@ -43,7 +43,7 @@ async def koc(e):
         await e.edit("༼ ༎ຶ ෴ ༎ຶ༽")
 
 
-@skyzu_cmd(pattern="huh(?: |$)(.*)")
+@joo_cmd(pattern="huh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />❤️ *Ini Buat Kamu`")
@@ -127,7 +127,7 @@ async def _(event):
             await event.edit(animation_chars[i % 11])
 
 
-@skyzu_cmd(pattern="nah(?: |$)(.*)")
+@joo_cmd(pattern="nah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`\n(\\_/)`" "`\n(●_●)`" "`\n />💖 *Ini buat kamu`")
