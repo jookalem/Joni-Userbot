@@ -23,6 +23,8 @@ from userbot.modules import ALL_MODULES
 from userbot.utils import autobot
 from userbot.utils.tools import ya_kali_ngga
 
+from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
+
 try:
     for module_name in ALL_MODULES:
         imported_module = import_module("userbot.modules." + module_name)
