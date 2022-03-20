@@ -9,7 +9,7 @@ from telethon.tl.functions.account import UpdateProfileRequest
 
 from userbot import CMD_HANDLER as cmd
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
@@ -45,7 +45,7 @@ afk_start = {}
 # =================================================================
 
 
-@skyzu_cmd(pattern="afk(?: |$)(.*)")
+@joo_cmd(pattern="afk(?: |$)(.*)")
 async def set_afk(afk_e):
     """For .afk command, allows you to inform people that you are afk when they message you"""
     message = afk_e.text  # pylint:disable=E0602
