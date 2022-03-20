@@ -3,10 +3,10 @@ from time import sleep
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="sange$")
+@joo_cmd(pattern="sange$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("SAYANGGGGGGGGG 💕")
@@ -55,7 +55,7 @@ async def koc(e):
         await e.edit("ENAK BANGET SAYANG🥺")
 
 
-@skyzu_cmd(pattern="orgil(?: |$)(.*)")
+@joo_cmd(pattern="orgil(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`ANJING ADA ORANG GILA.....`")
@@ -113,7 +113,7 @@ async def typewriter(typew):
     await typew.edit("`-TAMAT-`")
 
 
-@skyzu_cmd(pattern="mf$")
+@joo_cmd(pattern="mf$")
 async def koc(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
         await e.edit("`MAAF GADULU YA`  ")
@@ -125,7 +125,7 @@ async def koc(e):
             await event.edit(animation_chars[i % 11])
 
 
-@skyzu_cmd(pattern="ass(?: |$)(.*)")
+@joo_cmd(pattern="ass(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Salam Duls Biar Sopan....`")
