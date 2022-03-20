@@ -5,12 +5,12 @@ from telethon.tl.types import ChatBannedRights
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
 # Port By @skyzu
 # Perkontolan Dengan Hapus Credits
-@skyzu_cmd(pattern="allban(?: |$)(.*)")
+@joo_cmd(pattern="allban(?: |$)(.*)")
 async def testing(event):
     nikal = await event.get_chat()
     chutiya = await event.client.get_me()
