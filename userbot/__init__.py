@@ -560,7 +560,7 @@ with bot:
             query = event.text
             if event.query.user_id == uid and query.startswith("@ikhsanntarjo"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
+                text = f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)} "
                 await event.edit(
                     text,
                     file=kyylogo,
