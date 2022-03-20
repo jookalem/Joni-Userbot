@@ -5,10 +5,10 @@ import requests
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="asupan$")
+@joo_cmd(pattern="asupan$")
 async def _(event):
     try:
         response = requests.get("https://api-tede.herokuapp.com/api/asupan/ptl").json()
@@ -18,7 +18,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan Video Asupan.**")
 
 
-@skyzu_cmd(pattern="wibu$")
+@joo_cmd(pattern="wibu$")
 async def _(event):
     try:
         response = requests.get("https://api-tede.herokuapp.com/api/asupan/wibu").json()
@@ -28,7 +28,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan Video Wibu.**")
 
 
-@skyzu_cmd(pattern="chika$")
+@joo_cmd(pattern="chika$")
 async def _(event):
     try:
         response = requests.get("https://api-tede.herokuapp.com/api/chika").json()
@@ -38,7 +38,7 @@ async def _(event):
         await event.edit("**Tidak bisa menemukan Video Chikakiku.**")
 
 
-@skyzu_cmd(pattern="bocil$")
+@joo_cmd(pattern="bocil$")
 async def _(event):
     try:
         response = requests.get(
