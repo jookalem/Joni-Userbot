@@ -4,10 +4,10 @@ import asyncio
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="ftyping(?: |$)(.*)")
+@joo_cmd(pattern="ftyping(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -25,7 +25,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@skyzu_cmd(pattern="faudio(?: |$)(.*)")
+@joo_cmd(pattern="faudio(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -43,7 +43,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@skyzu_cmd(pattern="fvideo(?: |$)(.*)")
+@joo_cmd(pattern="fvideo(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
@@ -61,7 +61,7 @@ async def _(event):
         await asyncio.sleep(t)
 
 
-@skyzu_cmd(pattern="fgame(?: |$)(.*)")
+@joo_cmd(pattern="fgame(?: |$)(.*)")
 async def _(event):
     t = event.pattern_match.group(1)
     if not (t or t.isdigit()):
