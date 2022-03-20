@@ -2,10 +2,10 @@
 # FROM skyzu-userbot <https://github.com/Skyzu/skyzu+userbot>
 
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="gsend ?(.*)")
+@joo_cmd(pattern="gsend ?(.*)")
 async def remoteaccess(event):
 
     p = event.pattern_match.group(1)
