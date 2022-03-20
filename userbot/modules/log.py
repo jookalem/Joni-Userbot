@@ -57,7 +57,7 @@ async def monito_p_m_s(kyy):
     sender = await kyy.get_sender()
     await asyncio.sleep(0.5)
     if not sender.bot:
-        chat = await sky.get_chat()
+        chat = await kyy.get_chat()
         if not no_log_pms_sql.is_approved(chat.id) and chat.id != 777000:
             if LOG_CHATS_.RECENT_USER != chat.id:
                 LOG_CHATS_.RECENT_USER = chat.id
@@ -69,14 +69,14 @@ async def monito_p_m_s(kyy):
                         )
                     )
                     LOG_CHATS_.COUNT = 0
-                LOG_CHATS_.NEWPM = await sky.client.send_message(
+                LOG_CHATS_.NEWPM = await kyy.client.send_message(
                     BOTLOG_CHATID,
                     f"**💌 #MENERUSKAN #PESAN_BARU**\n** • Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** • User ID:** `{chat.id}`",
                 )
             try:
-                if sky.message:
-                    await sky.client.forward_messages(
-                        BOTLOG_CHATID, sky.message, silent=True
+                if kyy.message:
+                    await kyy.client.forward_messages(
+                        BOTLOG_CHATID, kyy.message, silent=True
                     )
                 LOG_CHATS_.COUNT += 1
             except Exception as e:
