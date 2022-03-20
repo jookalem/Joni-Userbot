@@ -20,7 +20,7 @@ from userbot import (
 )
 
 
-def skyzu_cmd(
+def joo_cmd(
     pattern: str = None,
     allow_sudo: bool = True,
     disable_edited: bool = False,
@@ -43,25 +43,25 @@ def skyzu_cmd(
         args["chats"] = black_list_chats
 
     if pattern is not None:
-        global skyzu_reg
+        global joo_reg
         global sudo_reg
         if (
             pattern.startswith(r"\#")
             or not pattern.startswith(r"\#")
             and pattern.startswith(r"^")
         ):
-            skyzu_reg = sudo_reg = re.compile(pattern)
+            joo_reg = sudo_reg = re.compile(pattern)
         else:
-            skyzu_ = "\\" + CMD_HANDLER
+            joo_ = "\\" + CMD_HANDLER
             sudo_ = "\\" + SUDO_HANDLER
-            skyzu_reg = re.compile(skyzu_ + pattern)
+            joo_reg = re.compile(joo_ + pattern)
             sudo_reg = re.compile(sudo_ + pattern)
             if command is not None:
-                cmd1 = skyzu_ + command
+                cmd1 = joo_ + command
                 cmd2 = sudo_ + command
             else:
                 cmd1 = (
-                    (skyzu_ + pattern)
+                    (joo_ + pattern)
                     .replace("$", "")
                     .replace("\\", "")
                     .replace("^", "")
@@ -80,10 +80,10 @@ def skyzu_cmd(
     def decorator(func):
         if not disable_edited:
             bot.add_event_handler(
-                func, events.MessageEdited(**args, outgoing=True, pattern=skyzu_reg)
+                func, events.MessageEdited(**args, outgoing=True, pattern=joo_reg)
             )
         bot.add_event_handler(
-            func, events.NewMessage(**args, outgoing=True, pattern=skyzu_reg)
+            func, events.NewMessage(**args, outgoing=True, pattern=joo_reg)
         )
         if allow_sudo:
             if not disable_edited:
@@ -108,7 +108,7 @@ def skyzu_cmd(
     return decorator
 
 
-def skyzu_handler(
+def joo_handler(
     **args,
 ):
     def decorator(func):
