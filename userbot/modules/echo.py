@@ -13,11 +13,11 @@ from userbot.modules.sql_helper.echo_sql import (
     remove_echo,
     remove_echos,
 )
-from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
+from userbot.utils import edit_delete, edit_or_reply, joo_cmd
 from userbot.utils.events import get_user_from_event
 
 
-@skyzu_cmd(pattern="addecho(?: |$)(.*)")
+@joo_cmd(pattern="addecho(?: |$)(.*)")
 async def echo(event):
     if event.reply_to_msg_id is None:
         return await event.edit("`Balas pesan Pengguna untuk menggemakan pesannya`")
@@ -46,7 +46,7 @@ async def echo(event):
         await edit_or_reply(roseevent, "Berhasil")
 
 
-@skyzu_cmd(pattern="rmecho(?: |$)(.*)")
+@joo_cmd(pattern="rmecho(?: |$)(.*)")
 async def echo(event):
     if event.reply_to_msg_id is None:
         return await event.edit("Reply to a User's message to echo his messages")
@@ -64,7 +64,7 @@ async def echo(event):
         await event.edit("The user is not activated with echo")
 
 
-@skyzu_cmd(pattern="delecho(?: |$)(.*)")
+@joo_cmd(pattern="delecho(?: |$)(.*)")
 async def echo(event):
     input_str = event.pattern_match.group(1)
     if input_str:
@@ -94,7 +94,7 @@ async def echo(event):
             await event.edit("Echo telah di hentikan.")
 
 
-@skyzu_cmd(pattern="echolist(?: |$)(.*)")
+@joo_cmd(pattern="echolist(?: |$)(.*)")
 async def echo(event):  # sourcery no-metrics
     input_str = event.pattern_match.group(1)
     private_chats = ""
