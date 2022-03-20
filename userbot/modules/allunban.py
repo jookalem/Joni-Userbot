@@ -3,10 +3,10 @@ from telethon.tl.types import ChannelParticipantsKicked
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="allunban(?: |$)(.*)")
+@joo_cmd(pattern="allunban(?: |$)(.*)")
 async def _(event):
     await event.edit("`Sedang Mencari List Banning.`")
     p = 0
