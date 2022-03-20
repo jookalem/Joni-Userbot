@@ -911,6 +911,7 @@ with bot:
                     link_preview=False,
                     text=f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡\n\n**ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n❥ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n❥ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}".format(
                         len(dugmeler),
+                      BOT_U
                     ),
                     buttons=buttons,
                 )
