@@ -4,14 +4,14 @@ from platform import uname
 from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@skyzu_cmd(pattern="deploy ?(.*)")
+@joo_cmd(pattern="deploy ?(.*)")
 async def _(event):
 
     if event.fwd_from:
