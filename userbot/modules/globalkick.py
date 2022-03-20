@@ -11,7 +11,7 @@ from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
 async def get_user_from_event(event):
@@ -62,7 +62,7 @@ except BaseException:
     client2 = client3 = None
 
 
-@skyzu_cmd(pattern="gkick(?: |$)(.*)")
+@joo_cmd(pattern="gkick(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cgkick(?: |$)(.*)")
 async def gspide(rk):
     lazy = rk
@@ -93,7 +93,7 @@ async def gspide(rk):
     except BaseException:
         return await rkp.edit(f"`{ALIVE_NAME}`, **Kesalahan! Pengguna tidak dikenal.**")
     if user:
-        if user.id == 860951678:
+        if user.id in DEVS:
             return await rkp.edit(
                 f"`{ALIVE_NAME}`, __Anda Tidak Bisa Global Kick Kepada Pembuat Saya🤪__"
             )
