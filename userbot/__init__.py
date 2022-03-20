@@ -916,25 +916,25 @@ with bot:
                 )
             elif query.startswith("tb_btn"):
                 result = builder.article(
-                    "Bantuan Dari ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡",
+                    "Bantuan Dari ⚡ᴊᴏɴɪ ᴜѕᴇʀʙᴏᴛ⚡",
                     text="Daftar Plugins",
                     buttons=[],
                     link_preview=True,
                 )
             else:
                 result = builder.article(
-                    " ⚡⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡",
-                    text="""°𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ°""",
+                    " ⚡⚡ʜᴏɴɪ ᴜѕᴇʀʙᴏᴛ⚡",
+                    text="""°ᴊᴏɴɪ ᴜѕᴇʀʙᴏᴛ°""",
                     buttons=[
                         [
                             custom.Button.url(
-                                "𝐉ᴏɴɪ", "https://github.com/jookalem/Joni-Userbot"
+                                "✯ᴊᴏɴɪ✯", "https://github.com/jookalem/Joni-Userbot"
                             ),
-                            custom.Button.url("ᴄʜᴀɴɴᴇʟ", "t.me/ProjectJoni"),
+                            custom.Button.url("۵ᴄʜᴀɴɴᴇʟ۵", "t.me/ProjectJoni"),
                         ],
                         [
                             custom.Button.url(
-                                "ʟɪᴄᴇɴsᴇ",
+                                "۵ʟɪᴄᴇɴsᴇ۵",
                                 "https://github.com/jookalem/Joni-Userbot/LICENSE",
                             )
                         ],
@@ -956,7 +956,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"✘ **WARNING** ✘ Jangan Menggunakan Milik {DEFAULTUSER}."
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -973,8 +973,8 @@ with bot:
                     link_preview=True,
                     buttons=[
                         [
-                            Button.url("❈ꜱᴜᴘᴘᴏʀᴛ❈", "t.me/JoniSupport"),
-                            Button.url("❈ᴄʜᴀɴɴᴇʟ❈", "t.me/ProjectJoni"),
+                            Button.url("۵ꜱᴜᴘᴘᴏʀᴛ۵", "t.me/JoniSupport"),
+                            Button.url("۵ᴄʜᴀɴɴᴇʟ۵", "t.me/ProjectJoni"),
                         ],
                         [custom.Button.inline("°ᴏᴘᴇɴ ᴍᴇɴᴜ°", data="open_plugin")],
                         [custom.Button.inline("°ᴄʟᴏꜱᴇ ɪɴʟɪɴᴇ°", b"close")],
@@ -1003,7 +1003,7 @@ with bot:
                 await event.edit(buttons=buttons)
             else:
                 reply_pop_up_alert = (
-                    f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"✘ **WARNING** ✘ Jangan Menggunakan Milik {DEFAULTUSER}."
                 )
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
@@ -1037,7 +1037,7 @@ with bot:
                 )
             else:
                 reply_pop_up_alert = (
-                    f"🚫!WARNING!🚫 Jangan Menggunakan Milik {DEFAULTUSER}."
+                    f"✘ **WARNING** ✘ Jangan Menggunakan Milik {DEFAULTUSER}."
                 )
 
             await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
