@@ -23,7 +23,7 @@ from telethon import __version__, version
 from userbot import ALIVE_LOGO, ALIVE_NAME, BOT_VER
 from userbot import CMD_HANDLER as cmd, JOO_TEKS_KUSTOM
 from userbot import CMD_HELP, UPSTREAM_REPO_BRANCH, StartTime, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -59,7 +59,7 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@skyzu_cmd(pattern="spc")
+@joo_cmd(pattern="spc")
 async def psu(event):
     uname = platform.uname()
     softw = "**Informasi Sistem**\n"
@@ -115,7 +115,7 @@ def get_size(bytes, suffix="B"):
         bytes /= factor
 
 
-@skyzu_cmd(pattern="sysd$")
+@joo_cmd(pattern="sysd$")
 async def sysdetails(sysd):
     if not sysd.text[0].isalpha() and sysd.text[0] not in ("/", "#", "@", "!"):
         try:
@@ -134,7 +134,7 @@ async def sysdetails(sysd):
             await sysd.edit("`Install neofetch first !!`")
 
 
-@skyzu_cmd(pattern="botver$")
+@joo_cmd(pattern="botver$")
 async def bot_ver(event):
     if event.text[0].isalpha() or event.text[0] in ("/", "#", "@", "!"):
         return
@@ -173,7 +173,7 @@ async def bot_ver(event):
         )
 
 
-@skyzu_cmd(pattern="pip(?: |$)(.*)")
+@joo_cmd(pattern="pip(?: |$)(.*)")
 async def pipcheck(pip):
     if pip.text[0].isalpha() or pip.text[0] in ("/", "#", "@", "!"):
         return
@@ -221,7 +221,7 @@ async def pipcheck(pip):
         await pip.edit("Gunakan `.help pip` Untuk Melihat Contoh")
 
 
-@skyzu_cmd(pattern="(?:jonialive)\s?(.)?")
+@joo_cmd(pattern="(?:jonialive)\s?(.)?")
 async def amireallyalive(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -258,7 +258,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@skyzu_cmd(pattern="(?:jonion)\s?(.)?")
+@joo_cmd(pattern="(?:jonion)\s?(.)?")
 async def amireallyalive(alive):
     await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -292,7 +292,7 @@ async def amireallyalive(alive):
         await alive.delete()
 
 
-@skyzu_cmd(pattern="(?:alive|on)\s?(.)?")
+@joo_cmd(pattern="(?:alive|on)\s?(.)?")
 async def redis(alive):
     user = await bot.get_me()
     await get_readable_time((time.time() - StartTime))
@@ -339,7 +339,7 @@ async def redis(alive):
         await alive.delete()
 
 
-@skyzu_cmd(pattern="aliveu")
+@joo_cmd(pattern="aliveu")
 async def amireallyaliveuser(username):
     """For .aliveu command, change the username in the .alive command."""
     message = username.text
@@ -352,7 +352,7 @@ async def amireallyaliveuser(username):
     await username.edit("`" f"{output}" "`")
 
 
-@skyzu_cmd(pattern="resetalive$")
+@joo_cmd(pattern="resetalive$")
 async def amireallyalivereset(ureset):
     global DEFAULTUSER  # global statement
     DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
