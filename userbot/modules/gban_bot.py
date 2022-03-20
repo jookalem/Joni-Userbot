@@ -6,7 +6,7 @@ Available Commands:
 import asyncio
 
 from userbot import ALIVE_NAME, G_BAN_LOGGER_GROUP, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # imported from uniborg by @heyworld
 
@@ -15,7 +15,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@skyzu_cmd(pattern="gbanb(?: |$)(.*)")
+@joo_cmd(pattern="gbanb(?: |$)(.*)")
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("Set G_BAN_LOGGER_GROUP in vars otherwise module won't work.")
@@ -41,7 +41,7 @@ async def _(event):
     await event.delete()
 
 
-@skyzu_cmd(pattern="ungbanb(?: |$)(.*)")
+@joo_cmd(pattern="ungbanb(?: |$)(.*)")
 async def _(event):
     if G_BAN_LOGGER_GROUP is None:
         await event.edit("Set G_BAN_LOGGER_GROUP in vars otherwise module won't work.")
