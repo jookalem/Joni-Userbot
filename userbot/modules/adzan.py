@@ -4,12 +4,12 @@ import requests
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 PLACE = ""
 
 
-@skyzu_cmd(pattern="adzan(?: |$)(.*)")
+@joo_cmd(pattern="adzan(?: |$)(.*)")
 async def get_adzan(adzan):
     if not adzan.pattern_match.group(1):
         LOCATION = PLACE
