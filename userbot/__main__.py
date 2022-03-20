@@ -41,7 +41,7 @@ async def userbot_on():
         if BOTLOG_CHATID != 0:
             await bot.send_message(
                 BOTLOG_CHATID,
-                f"⚡ᴊᴏɴɪ-ᴜsᴇʀʙᴏᴛ berhasil di aktifkan\n━━━━━━━━━━━━━━━\n❃ Bot Of : {ALIVE_NAME}\n❃ BotVer : {BOT_VER}@{UPSTREAM_REPO_BRANCH}\n━━━━━━━━━━━━━━━",
+                f"⚡ᴊᴏɴɪ-ᴜsᴇʀʙᴏᴛ Berhasil Di Aktifkan\n━━━━━━━━━━━━━━━\n❃ Bot Of : {ALIVE_NAME}\n❃ Bot Ver : {BOT_VER}@{UPSTREAM_REPO_BRANCH}\n━━━━━━━━━━━━━━━",
             )
     except Exception as e:
         LOGS.info(str(e))
