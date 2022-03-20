@@ -13,7 +13,7 @@ import userbot.modules.sql_helper.blacklist_sql as sql
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
 @register(incoming=True, disable_edited=True, disable_errors=True)
@@ -36,7 +36,7 @@ async def on_new_message(event):
             break
 
 
-@skyzu_cmd(pattern="addbl(?: |$)(.*)")
+@joo_cmd(pattern="addbl(?: |$)(.*)")
 async def on_add_black_list(addbl):
     text = addbl.pattern_match.group(1)
     to_blacklist = list(
@@ -50,7 +50,7 @@ async def on_add_black_list(addbl):
     )
 
 
-@skyzu_cmd(pattern="listbl(?: |$)(.*)")
+@joo_cmd(pattern="listbl(?: |$)(.*)")
 async def on_view_blacklist(listbl):
     all_blacklisted = sql.get_chat_blacklist(listbl.chat_id)
     OUT_STR = "Blacklists in the Current Chat:\n"
@@ -75,7 +75,7 @@ async def on_view_blacklist(listbl):
         await listbl.edit(OUT_STR)
 
 
-@skyzu_cmd(pattern="rmbl(?: |$)(.*)")
+@joo_cmd(pattern="rmbl(?: |$)(.*)")
 async def on_delete_blacklist(rmbl):
     text = rmbl.pattern_match.group(1)
     to_unblacklist = list(
