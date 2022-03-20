@@ -13,7 +13,7 @@
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 GCAST_BLACKLIST = [
     -1001473548283,  # SharingUserbot
@@ -32,10 +32,11 @@ GCAST_BLACKLIST = [
     -1001380293847,  # NastySupport
     -1001664518224,  # JoniSupport
     -1001606097524,  # SanjoSupportt
+    -1001554560763,  # Vegeta Supports
 ]
 
 
-@skyzu_cmd(pattern="gcast(?: |$)(.*)")
+@joo_cmd(pattern="gcast(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cgcast(?: |$)(.*)")
 async def gcast(event):
     xx = event.pattern_match.group(1)
@@ -65,7 +66,7 @@ async def gcast(event):
     )
 
 
-@skyzu_cmd(pattern="gucast(?: |$)(.*)")
+@joo_cmd(pattern="gucast(?: |$)(.*)")
 async def gucast(event):
     xx = event.pattern_match.group(1)
     if xx:
