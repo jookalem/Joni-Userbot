@@ -15,10 +15,10 @@ from os import remove
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, TERM_ALIAS
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="eval(?:\s|$)([\s\S]*)")
+@joo_cmd(pattern="eval(?:\s|$)([\s\S]*)")
 async def _(event):
     expression = event.pattern_match.group(1)
     if not expression:
@@ -91,7 +91,7 @@ async def _(event):
         await xx.edit(final_output)
 
 
-@skyzu_cmd(pattern="term(?: |$|\n)(.*)")
+@joo_cmd(pattern="term(?: |$|\n)(.*)")
 async def terminal_runner(term):
     """For .term command, runs bash commands and scripts on your server."""
     curruser = TERM_ALIAS if TERM_ALIAS else getuser()
@@ -143,7 +143,7 @@ async def terminal_runner(term):
         await term.edit(f"`{curruser}:~$ {command}\n{result}`")
 
 
-@skyzu_cmd(pattern="json$")
+@joo_cmd(pattern="json$")
 async def _(event):
     if event.fwd_from:
         return
