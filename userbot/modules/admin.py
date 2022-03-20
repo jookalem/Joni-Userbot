@@ -33,7 +33,7 @@ from userbot import BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # =================== CONSTANT ===================
 PP_TOO_SMOL = "**Gambar Terlalu Kecil**"
@@ -79,7 +79,7 @@ UNMUTE_RIGHTS = ChatBannedRights(until_date=None, send_messages=False)
 # ================================================
 
 
-@skyzu_cmd(pattern="setgpic$")
+@joo_cmd(pattern="setgpic$")
 async def set_group_photo(gpic):
     if not gpic.is_group:
         await gpic.edit("`Mohon Lakukan Perintah Ini Di Grup.`")
@@ -115,7 +115,7 @@ async def set_group_photo(gpic):
             await gpic.edit(PP_ERROR)
 
 
-@skyzu_cmd(pattern="promote(?: |$)(.*)")
+@joo_cmd(pattern="promote(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cpromote(?: |$)(.*)")
 async def promote(promt):
     # Get targeted chat
@@ -166,7 +166,7 @@ async def promote(promt):
         )
 
 
-@skyzu_cmd(pattern="demote(?: |$)(.*)")
+@joo_cmd(pattern="demote(?: |$)(.*)")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cdemote(?: |$)(.*)")
 async def demote(dmod):
     # Admin right check
@@ -216,7 +216,7 @@ async def demote(dmod):
         )
 
 
-@skyzu_cmd(pattern="ban(?: |$)(.*)")
+@joo_cmd(pattern="ban(?: |$)(.*)")
 async def ban(bon):
     # Here laying the sanity check
     chat = await bon.get_chat()
@@ -269,7 +269,7 @@ async def ban(bon):
         )
 
 
-@skyzu_cmd(pattern="unban(?: |$)(.*)")
+@joo_cmd(pattern="unban(?: |$)(.*)")
 async def nothanos(unbon):
     # Here laying the sanity check
     chat = await unbon.get_chat()
@@ -305,7 +305,7 @@ async def nothanos(unbon):
         await unbon.edit("**Sepertinya Terjadi Kesalahan!**")
 
 
-@skyzu_cmd(pattern="mute(?: |$)(.*)")
+@joo_cmd(pattern="mute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -359,7 +359,7 @@ async def spider(spdr):
             return await spdr.edit("**Terjadi Kesalahan!**")
 
 
-@skyzu_cmd(pattern="unmute(?: |$)(.*)")
+@joo_cmd(pattern="unmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -437,7 +437,7 @@ async def muter(moot):
             await moot.delete()
 
 
-@skyzu_cmd(pattern="ungmute(?: |$)(.*)")
+@joo_cmd(pattern="ungmute(?: |$)(.*)")
 async def ungmoot(un_gmute):
     # Admin or creator check
     chat = await un_gmute.get_chat()
@@ -479,7 +479,7 @@ async def ungmoot(un_gmute):
             )
 
 
-@skyzu_cmd(pattern="gmute(?: |$)(.*)")
+@joo_cmd(pattern="gmute(?: |$)(.*)")
 async def gspider(gspdr):
     # Admin or creator check
     chat = await gspdr.get_chat()
@@ -519,7 +519,7 @@ async def gspider(gspdr):
             )
 
 
-@skyzu_cmd(pattern="zombies(?: |$)(.*)")
+@joo_cmd(pattern="zombies(?: |$)(.*)")
 async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
@@ -588,7 +588,7 @@ async def rm_deletedacc(show):
         )
 
 
-@skyzu_cmd(pattern="admins$")
+@joo_cmd(pattern="admins$")
 async def get_admin(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -607,7 +607,7 @@ async def get_admin(show):
     await show.edit(mentions, parse_mode="html")
 
 
-@skyzu_cmd(pattern="pin(?: |$)(.*)")
+@joo_cmd(pattern="pin(?: |$)(.*)")
 async def pin(msg):
     # Admin or creator check
     chat = await msg.get_chat()
@@ -651,7 +651,7 @@ async def pin(msg):
         )
 
 
-@skyzu_cmd(pattern="kick(?: |$)(.*)")
+@joo_cmd(pattern="kick(?: |$)(.*)")
 async def kick(usr):
     # Admin or creator check
     chat = await usr.get_chat()
@@ -694,7 +694,7 @@ async def kick(usr):
         )
 
 
-@skyzu_cmd(pattern="users ?(.*)")
+@joo_cmd(pattern="users ?(.*)")
 async def get_users(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -784,7 +784,7 @@ async def get_user_from_id(user, event):
     return user_obj
 
 
-@skyzu_cmd(pattern="usersdel ?(.*)")
+@joo_cmd(pattern="usersdel ?(.*)")
 async def get_usersdel(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
@@ -874,7 +874,7 @@ async def get_userdel_from_id(user, event):
     return user_obj
 
 
-@skyzu_cmd(pattern="bots ?(.*)")
+@joo_cmd(pattern="bots ?(.*)")
 async def get_bots(show):
     info = await show.client.get_entity(show.chat_id)
     title = info.title if info.title else "Grup Ini"
