@@ -8,7 +8,7 @@ import random
 from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import edit_delete, edit_or_reply, skyzu_cmd
+from userbot.utils import edit_delete, edit_or_reply, joo_cmd
 from userbot.utils.misc import Carbon
 
 all_col = [
@@ -163,7 +163,7 @@ all_col = [
 ]
 
 
-@skyzu_cmd(pattern="(rc|c)arbon")
+@joo_cmd(pattern="(rc|c)arbon")
 async def crbn(event):
     event.sender
     xxxx = await edit_or_reply(event, "`Processing...`")
@@ -193,7 +193,7 @@ async def crbn(event):
     )
 
 
-@skyzu_cmd(pattern="ccarbon ?(.*)")
+@joo_cmd(pattern="ccarbon ?(.*)")
 async def crbn(event):
     event.sender
     match = event.pattern_match.group(1).strip()
