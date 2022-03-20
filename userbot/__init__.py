@@ -191,7 +191,7 @@ PM_LOGGR_BOT_API_ID = int(os.environ.get("PM_LOGGR_BOT_API_ID", "-100"))
 OPEN_WEATHER_MAP_APPID = (
     os.environ.get("OPEN_WEATHER_MAP_APPID") or "5ed2fcba931692ec6bd0a8a3f8d84936"
 )
-WEATHER_DEFCITY = os.environ.get("WEATHER_DEFCITY", "Batam")
+WEATHER_DEFCITY = os.environ.get("WEATHER_DEFCITY", "Bogor")
 
 # Lydia API
 LYDIA_API_KEY = (
@@ -258,7 +258,7 @@ INLINE_PIC = (
 )
 
 # Default emoji help
-EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✨"
+EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✪"
 
 # Last.fm Module
 BIO_PREFIX = os.environ.get("BIO_PREFIX", None)
@@ -462,6 +462,7 @@ with bot:
     try:
         bot(JoinChannelRequest("@ProjectJoni"))
         bot(JoinChannelRequest("@JoniSupport"))
+        bot(JoinChannelRequest("@michatindonesia1"))
 
         tgbot = TelegramClient("TG_BOT_TOKEN", api_id=API_KEY, api_hash=API_HASH).start(
             bot_token=BOT_TOKEN
