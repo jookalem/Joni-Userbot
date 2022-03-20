@@ -4,12 +4,12 @@ import os.path
 import time
 from os.path import exists, isdir
 
-from userbot.utils import humanbytes, skyzu_cmd
+from userbot.utils import humanbytes, joo_cmd
 
 MAX_MESSAGE_SIZE_LIMIT = 4095
 
 
-@skyzu_cmd(pattern="ls ?(.*)")
+@joo_cmd(pattern="ls ?(.*)")
 async def lst(event):
     if event.fwd_from:
         return
