@@ -4,14 +4,14 @@ from time import sleep
 from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, WEATHER_DEFCITY
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@skyzu_cmd(pattern="g(?: |$)(.*)")
+@joo_cmd(pattern="g(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(f"**JAKA SEMBUNG BAWA GOLOK**")
@@ -22,7 +22,7 @@ async def typewriter(typew):
 # Pantun
 
 
-@skyzu_cmd(pattern="p(?: |$)(.*)")
+@joo_cmd(pattern="p(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Salam Dulu Biar Sopan...`")
@@ -31,7 +31,7 @@ async def typewriter(typew):
 # Salam
 
 
-@skyzu_cmd(pattern="l(?: |$)(.*)")
+@joo_cmd(pattern="l(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Waalaikumsalam brodie...`")
@@ -40,7 +40,7 @@ async def typewriter(typew):
 # Menjawab Salam
 
 
-@skyzu_cmd(pattern="kenalin(?: |$)(.*)")
+@joo_cmd(pattern="kenalin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("☑️ `Skyzu Kuli Jawa`")
@@ -71,7 +71,7 @@ async def typewriter(typew):
 # King Userbot Support
 
 
-@skyzu_cmd(pattern="istigfar(?: |$)(.*)")
+@joo_cmd(pattern="istigfar(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
     await event.edit(f"`Heh Kamu Gaboleh Begitu...`")
@@ -82,7 +82,7 @@ async def perkenalan(event):
 # Istigfar
 
 
-@skyzu_cmd(pattern="virtual(?: |$)(.*)")
+@joo_cmd(pattern="virtual(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**OOOO**")
@@ -104,7 +104,7 @@ async def typewriter(typew):
     await typew.edit("**KASIAN MANA MASIH MUDA**")
 
 
-@skyzu_cmd(pattern="perkenalkan(?: |$)(.*)")
+@joo_cmd(pattern="perkenalkan(?: |$)(.*)")
 async def perkenalan(event):
     event.pattern_match.group(1)
     await event.edit(f"`Hai Guys , Perkenalkan Nama Gw {DEFAULTUSER}`")
@@ -119,7 +119,7 @@ async def perkenalan(event):
 # Perkenalan
 
 
-@skyzu_cmd(pattern="joni(?: |$)(.*)")
+@joo_cmd(pattern="joni(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
