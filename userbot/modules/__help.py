@@ -8,7 +8,7 @@ logging.basicConfig(
 )
 
 
-@skyzu_cmd(pattern="helpme")
+@joo_cmd(pattern="helpme")
 async def yardim(event):
     try:
         tgbotusername = BOT_USERNAME
