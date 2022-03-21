@@ -11,7 +11,7 @@ from telethon.utils import get_display_name
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 NO_ADMIN = "`Maaf Kamu Bukan Admin 👮`"
 
@@ -34,7 +34,7 @@ def user_list(l, n):
         yield l[i : i + n]
 
 
-@skyzu_cmd(pattern="startvc$")
+@joo_cmd(pattern="startvc$")
 async def start_voice(c):
     chat = await c.get_chat()
     admin = chat.admin_rights
@@ -50,7 +50,7 @@ async def start_voice(c):
         await c.edit(f"**ERROR:** `{ex}`")
 
 
-@skyzu_cmd(pattern="stopvc$")
+@joo_cmd(pattern="stopvc$")
 async def stop_voice(c):
     chat = await c.get_chat()
     admin = chat.admin_rights
@@ -66,7 +66,7 @@ async def stop_voice(c):
         await c.edit(f"**ERROR:** `{ex}`")
 
 
-@skyzu_cmd(pattern="vcinvite")
+@joo_cmd(pattern="vcinvite")
 async def _(sky):
     await sky.edit("`Sedang Menginvite Anggota...`")
     users = []
