@@ -6,10 +6,10 @@ from time import sleep
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="sok(?: |$)(.*)")
+@joo_cmd(pattern="sok(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1.5)
@@ -24,7 +24,7 @@ async def typewriter(typew):
     await typew.edit("**GA KEREN LO BEGITU NGENTOT**")
 
 
-@skyzu_cmd(pattern="alay(?: |$)(.*)")
+@joo_cmd(pattern="alay(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Hai Hama Sawah**")
@@ -46,7 +46,7 @@ async def typewriter(typew):
     await typew.edit("**Lawriiiiiee Ada Si Alay**")
 
 
-@skyzu_cmd(pattern="wah(?: |$)(.*)")
+@joo_cmd(pattern="wah(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("`Wahh, War Nya Keren`")
@@ -66,7 +66,7 @@ async def typewriter(typew):
     await typew.edit("`Udah Sana Badut Goblok`")
 
 
-@skyzu_cmd(pattern="kont(?: |$)(.*)")
+@joo_cmd(pattern="kont(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
@@ -95,7 +95,7 @@ async def typewriter(typew):
     await typew.edit("**KASIAN BANGET ANAK KONTOLL**")
 
 
-@skyzu_cmd(pattern="emak(?: |$)(.*)")
+@joo_cmd(pattern="emak(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -103,7 +103,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="ehh(?: |$)(.*)")
+@joo_cmd(pattern="ehh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -111,7 +111,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="mas(?: |$)(.*)")
+@joo_cmd(pattern="mas(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -119,7 +119,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="an(?: |$)(.*)")
+@joo_cmd(pattern="an(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -127,7 +127,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="bk(?: |$)(.*)")
+@joo_cmd(pattern="bk(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -135,7 +135,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="gj(?: |$)(.*)")
+@joo_cmd(pattern="gj(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -143,7 +143,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="gh(?: |$)(.*)")
+@joo_cmd(pattern="gh(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -151,7 +151,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="lol(?: |$)(.*)")
+@joo_cmd(pattern="lol(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -159,7 +159,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="title(?: |$)(.*)")
+@joo_cmd(pattern="title(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**OI ANAK TITLE**")
