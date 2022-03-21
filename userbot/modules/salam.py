@@ -17,7 +17,7 @@ async def typewriter(typew):
     await typew.edit("**Assalamu'alaikum...**")
 
 
-@skyzu_cmd(pattern="atg(?: |$)(.*)")
+@joo_cmd(pattern="atg(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**Astaghfirullah...**")
@@ -29,7 +29,7 @@ async def typewriter(typew):
     await typew.edit("**Wa'alaikumsalam...**")
 
 
-@skyzu_cmd(pattern="dor(?: |$)(.*)")
+@joo_cmd(pattern="dor(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
