@@ -1,10 +1,10 @@
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot.events import joo_cmd
 
 
-@register(outgoing=True, pattern=r"^\.(?:dgrup|dg)\s?(.*)?")
+@joo_cmd(outgoing=True, pattern=r"^\.(?:dgrup|dg)\s?(.*)?")
 async def _(event):
     if event.fwd_from:
         return
