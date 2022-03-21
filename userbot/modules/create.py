@@ -2,10 +2,10 @@
 from telethon.tl import functions
 
 from userbot import CMD_HELP
-from userbot.events import joo_cmd
+from userbot.events import register
 
 
-@joo_cmd(outgoing=True, pattern="^.buat (gb|g|c)(?: |$)(.*)")
+@register(outgoing=True, pattern="^.buat (gb|g|c)(?: |$)(.*)")
 async def telegraphs(grop):
     """For .create command, Creating New Group & Channel"""
     if not grop.text[0].isalpha() and grop.text[0] not in ("/", "#", "@", "!"):
