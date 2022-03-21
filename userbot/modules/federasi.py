@@ -3,10 +3,10 @@
 from sqlalchemy.exc import IntegrityError
 
 from userbot import CMD_HELP, bot
-from userbot.events import joo_cmd
+from userbot.events import register
 
 
-@joo_cmd(outgoing=True, disable_edited=True, pattern=r"^\.fbans(?: |$)(.*)")
+@register(outgoing=True, disable_edited=True, pattern=r"^\.fbans(?: |$)(.*)")
 async def fban(event):
     """Bans a user from connected federations."""
     try:
@@ -77,7 +77,7 @@ async def fban(event):
     )
 
 
-@joo_cmd(outgoing=True, disable_edited=True, pattern=r"^\.unfbans(?: |$)(.*)")
+@register(outgoing=True, disable_edited=True, pattern=r"^\.unfbans(?: |$)(.*)")
 async def unfban(event):
     """Unbans a user from connected federations."""
     try:
@@ -146,7 +146,7 @@ async def unfban(event):
     )
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.addfs(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.addfs(?: |$)(.*)")
 async def addf(event):
     """Adds current chat to connected federations."""
     try:
@@ -167,7 +167,7 @@ async def addf(event):
     await event.edit("**Added this group to federations list!**")
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.delfs$")
+@register(outgoing=True, pattern=r"^\.delfs$")
 async def delf(event):
     """Removes current chat from connected federations."""
     try:
@@ -179,7 +179,7 @@ async def delf(event):
     await event.edit("**Removed this group from federations list!**")
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.listfs$")
+@register(outgoing=True, pattern=r"^\.listfs$")
 async def listf(event):
     """List all connected federations."""
     try:
@@ -198,7 +198,7 @@ async def listf(event):
     await event.edit(msg)
 
 
-@joo_cmd(outgoing=True, disable_edited=True, pattern=r"^\.clearfs$")
+@register(outgoing=True, disable_edited=True, pattern=r"^\.clearfs$")
 async def delf(event):
     """Removes all chats from connected federations."""
     try:
