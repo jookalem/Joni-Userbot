@@ -6,7 +6,7 @@ from PIL import Image
 from validators.url import url
 
 from userbot import CMD_HELP
-from userbot.events import joo_cmd
+from userbot.events import register
 
 EMOJI_PATTERN = re.compile(
     "["
@@ -113,7 +113,7 @@ async def purge():
         pass
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.trump(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.trump(?: |$)(.*)")
 async def trump(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -134,7 +134,7 @@ async def trump(event):
     await purge()
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.qg(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.qg(?: |$)(.*)")
 async def qg(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -155,7 +155,7 @@ async def qg(event):
     await purge()
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.cmm(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.cmm(?: |$)(.*)")
 async def cmm(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -176,7 +176,7 @@ async def cmm(event):
     await purge()
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.kanna(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.kanna(?: |$)(.*)")
 async def kanna(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -197,7 +197,7 @@ async def kanna(event):
     await purge()
 
 
-@joo_cmd(outgoing=True, pattern=r"\.tweet(?: |$)(.*)")
+@register(outgoing=True, pattern=r"\.tweet(?: |$)(.*)")
 async def tweet(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
