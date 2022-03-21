@@ -23,7 +23,7 @@ from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
 from userbot import S_PACK_NAME as custompack
 from userbot import bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 KANGING_STR = [
     "Sedang Mengambil Sticker Ini Ke Pack Anda",
@@ -31,7 +31,7 @@ KANGING_STR = [
 ]
 
 
-@skyzu_cmd(pattern="(?:tikel|kang)\s?(.)?")
+@joo_cmd(pattern="(?:tikel|kang)\s?(.)?")
 async def kang(args):
     user = await bot.get_me()
     if not user.username:
@@ -273,7 +273,7 @@ async def resize_photo(photo):
     return image
 
 
-@skyzu_cmd(pattern="stkrinfo$")
+@joo_cmd(pattern="stkrinfo$")
 async def get_pack_info(event):
     if not event.is_reply:
         return await event.edit("`Mohon Balas Ke Sticker`")
@@ -316,7 +316,7 @@ async def get_pack_info(event):
     await event.edit(OUTPUT)
 
 
-@skyzu_cmd(pattern="get$")
+@joo_cmd(pattern="get$")
 async def sticker_to_png(sticker):
     if not sticker.is_reply:
         await sticker.edit("`NULL information to fetch...`")
