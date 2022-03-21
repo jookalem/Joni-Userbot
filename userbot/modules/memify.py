@@ -5,12 +5,12 @@ import textwrap
 from PIL import Image, ImageDraw, ImageFont
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot.events import joo_cmd
 
 THUMB_IMAGE_PATH = "./thumb_image.jpg"
 
 
-@register(outgoing=True, pattern=r"^\.mmf(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"^\.mmf(?: |$)(.*)")
 async def mim(event):
     if event.fwd_from:
         return
@@ -158,7 +158,7 @@ async def draw_meme_text(image_path, text):
     return webp_file
 
 
-@register(outgoing=True, pattern=r"^\.mmf2(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"^\.mmf2(?: |$)(.*)")
 async def mim(event):
     if event.fwd_from:
         return
