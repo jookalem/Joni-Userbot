@@ -11,10 +11,10 @@ from telethon.errors import rpcbaseerrors
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, DEVS
 from userbot.events import register
-from userbot.utils import edit_delete, skyzu_cmd
+from userbot.utils import edit_delete, joo_cmd
 
 
-@skyzu_cmd(pattern="purge$")
+@joo_cmd(pattern="purge$")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cpurge")
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
@@ -42,7 +42,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@skyzu_cmd(pattern="purgeme")
+@joo_cmd(pattern="purgeme")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cpurgeme")
 async def purgeme(delme):
     message = delme.text
@@ -62,7 +62,7 @@ async def purgeme(delme):
     await smsg.delete()
 
 
-@skyzu_cmd(pattern="del$")
+@joo_cmd(pattern="del$")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cdel")
 async def delete_it(delme):
     msg_src = await delme.get_reply_message()
@@ -74,7 +74,7 @@ async def delete_it(delme):
             await delme.edit("**Tidak Bisa Menghapus Pesan**")
 
 
-@skyzu_cmd(pattern="edit")
+@joo_cmd(pattern="edit")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cedit")
 async def editer(edit):
     message = edit.text
@@ -90,7 +90,7 @@ async def editer(edit):
         i += 1
 
 
-@skyzu_cmd(pattern="sd")
+@joo_cmd(pattern="sd")
 async def selfdestruct(destroy):
     message = destroy.text
     counter = int(message[4:6])
@@ -104,7 +104,7 @@ async def selfdestruct(destroy):
 purgechat = {}
 
 
-@skyzu_cmd(pattern=r"(p|purge)(from$|to$)")
+@joo_cmd(pattern=r"(p|purge)(from$|to$)")
 async def purgfromto(prgnew):
     reply = await prgnew.get_reply_message()
     if reply:
