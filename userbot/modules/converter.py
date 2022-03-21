@@ -1,14 +1,14 @@
 from platform import uname
 
 from userbot import ALIVE_NAME, CMD_HELP
-from userbot.events import register
+from userbot.events import joo_cmd
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@register(outgoing=True, pattern="^.convert(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.convert(?: |$)(.*)")
 async def convert(event):
     if event.fwd_from:
         return
