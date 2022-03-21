@@ -3,7 +3,7 @@ import re
 from asyncio import sleep
 
 from userbot import CMD_HELP, bot
-from userbot.events import joo_cmd
+from userbot.events import register
 
 EMOJI_PATTERN = re.compile(
     "["
@@ -26,7 +26,7 @@ def deEmojify(inputString: str) -> str:
     return re.sub(EMOJI_PATTERN, "", inputString)
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.rst(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^\.rst(?: |$)(.*)")
 async def rastick(animu):
     text = animu.pattern_match.group(1)
     if not text:
