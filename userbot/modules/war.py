@@ -2,10 +2,10 @@ from time import sleep
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="sayang(?: |$)(.*)")
+@joo_cmd(pattern="sayang(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
@@ -19,7 +19,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@skyzu_cmd(pattern="semangat(?: |$)(.*)")
+@joo_cmd(pattern="semangat(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
@@ -33,7 +33,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@skyzu_cmd(pattern="jamet(?: |$)(.*)")
+@joo_cmd(pattern="jamet(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**WOII JAMET**")
@@ -59,7 +59,7 @@ async def typewriter(typew):
     await typew.edit("**MUKA LU KEK LUTUNG KASARUNG**")
 
 
-@skyzu_cmd(pattern="pp(?: |$)(.*)")
+@joo_cmd(pattern="pp(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -67,25 +67,25 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="dp(?: |$)(.*)")
+@joo_cmd(pattern="dp(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MUKA LU HINA, GAUSAH SOK KERAS YA NGENTOT!!**")
 
 
-@skyzu_cmd(pattern="so(?: |$)(.*)")
+@joo_cmd(pattern="so(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**GAUSAH SOKAB SAMA GUA NGENTOT, LU BABU GA LEVEL!!**")
 
 
-@skyzu_cmd(pattern="met(?: |$)(.*)")
+@joo_cmd(pattern="met(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**NAMANYA JUGA JAMET CAPER SANA SINI BUAT CARI NAMA BHAHAHA**")
 
 
-@skyzu_cmd(pattern="war(?: |$)(.*)")
+@joo_cmd(pattern="war(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -93,7 +93,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="wartai(?: |$)(.*)")
+@joo_cmd(pattern="wartai(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -101,7 +101,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="kismin(?: |$)(.*)")
+@joo_cmd(pattern="kismin(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -109,19 +109,19 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="ded(?: |$)(.*)")
+@joo_cmd(pattern="ded(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**MATI AJA LU GOBLOK, GAGUNA LU HIDUP DI BUMI**")
 
 
-@skyzu_cmd(pattern="sokab(?: |$)(.*)")
+@joo_cmd(pattern="sokab(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**SOKAB BET SI LU NGENTOT!!**")
 
 
-@skyzu_cmd(pattern="gembel(?: |$)(.*)")
+@joo_cmd(pattern="gembel(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -129,13 +129,13 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="cuih(?: |$)(.*)")
+@joo_cmd(pattern="cuih(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**CIH GE KEREN LO BEGITU GOBLOK!!**")
 
 
-@skyzu_cmd(pattern="dih(?: |$)(.*)")
+@joo_cmd(pattern="dih(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit(
@@ -143,7 +143,7 @@ async def typewriter(typew):
     )
 
 
-@skyzu_cmd(pattern="gcs(?: |$)(.*)")
+@joo_cmd(pattern="gcs(?: |$)(.*)")
 async def typewriter(typew):
     typew.pattern_match.group(1)
     await typew.edit("**GC SAMPAH KAYA GINI, BUBARIN AJA GOBLOK!!**")
