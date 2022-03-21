@@ -23,7 +23,7 @@ from userbot import (
     PMPERMIT_TEXT,
 )
 from userbot.events import register
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 if PMPERMIT_PIC is None:
     CUSTOM_PIC = ALIVE_LOGO
@@ -193,7 +193,7 @@ async def auto_accept(event):
                     )
 
 
-@skyzu_cmd(pattern="notifoff$")
+@joo_cmd(pattern="notifoff$")
 async def notifoff(noff_event):
     """For .notifoff command, stop getting notifications from unapproved PMs."""
     try:
@@ -206,7 +206,7 @@ async def notifoff(noff_event):
     )
 
 
-@skyzu_cmd(pattern="notifon$")
+@joo_cmd(pattern="notifon$")
 async def notifon(non_event):
     """For .notifoff command, get notifications from unapproved PMs."""
     try:
@@ -219,7 +219,7 @@ async def notifon(non_event):
     )
 
 
-@skyzu_cmd(pattern="(?:setuju|ok)\s?(.)?")
+@joo_cmd(pattern="(?:setuju|ok)\s?(.)?")
 async def approvepm(apprvpm):
     """For .ok command, give someone the permissions to PM you."""
     try:
@@ -268,7 +268,7 @@ async def approvepm(apprvpm):
         )
 
 
-@skyzu_cmd(pattern="(?:tolak|nopm)\s?(.)?")
+@joo_cmd(pattern="(?:tolak|nopm)\s?(.)?")
 async def disapprovepm(disapprvpm):
     try:
         from userbot.modules.sql_helper.pm_permit_sql import dissprove
@@ -297,7 +297,7 @@ async def disapprovepm(disapprvpm):
         )
 
 
-@skyzu_cmd(pattern="block$")
+@joo_cmd(pattern="block$")
 async def blockpm(block):
     """For .block command, block people from PMing you!"""
     if block.reply_to_msg_id:
@@ -329,7 +329,7 @@ async def blockpm(block):
         )
 
 
-@skyzu_cmd(pattern="unblock$")
+@joo_cmd(pattern="unblock$")
 async def unblockpm(unblock):
     """For .unblock command, let people PMing you again!"""
     if unblock.reply_to_msg_id:
@@ -346,7 +346,7 @@ async def unblockpm(unblock):
         )
 
 
-@skyzu_cmd(pattern="(set|get|reset) pm_msg(?: |$)(\w*)")
+@joo_cmd(pattern="(set|get|reset) pm_msg(?: |$)(\w*)")
 async def add_pmsg(cust_msg):
     """Set your own Unapproved message"""
     if not PM_AUTO_BAN:
