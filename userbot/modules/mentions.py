@@ -3,13 +3,13 @@ import re
 from telethon.tl import types
 
 from userbot import CMD_HELP, bot
-from userbot.events import register
+from userbot.events import joo_cmd
 
 usernexp = re.compile(r"@(\w{3,32})\[(.+?)\]")
 nameexp = re.compile(r"\[([\w\S]+)\]\(tg://user\?id=(\d+)\)\[(.+?)\]")
 
 
-@register(outgoing=True, ignore_unsafe=True, disable_errors=True)
+@joo_cmd(outgoing=True, ignore_unsafe=True, disable_errors=True)
 async def mention(event):
     newstr = event.text
     if event.entities:
