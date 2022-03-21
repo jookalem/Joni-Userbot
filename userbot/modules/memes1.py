@@ -11,7 +11,7 @@ from validators.url import url
 from wget import download
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot.events import joo_cmd
 
 EMOJI_PATTERN = re.compile(
     "["
@@ -195,7 +195,7 @@ async def purge():
         pass
 
 
-@register(outgoing=True, pattern=r"^\.trump(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"^\.trump(?: |$)(.*)")
 async def trump(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -216,7 +216,7 @@ async def trump(event):
     await purge()
 
 
-@register(pattern="^.modi(?: |$)(.*)", outgoing=True)
+@joo_cmd(pattern="^.modi(?: |$)(.*)", outgoing=True)
 async def nekobot(event):
     text = event.pattern_match.group(1)
     reply_to_id = event.message
@@ -236,7 +236,7 @@ async def nekobot(event):
     await purge()
 
 
-@register(outgoing=True, pattern=r"^\.cmm(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"^\.cmm(?: |$)(.*)")
 async def cmm(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -257,7 +257,7 @@ async def cmm(event):
     await purge()
 
 
-@register(outgoing=True, pattern=r"^\.kanna(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"^\.kanna(?: |$)(.*)")
 async def kanna(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -278,7 +278,7 @@ async def kanna(event):
     await purge()
 
 
-@register(outgoing=True, pattern=r"\.tweet(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"\.tweet(?: |$)(.*)")
 async def tweet(event):
     text = event.pattern_match.group(1)
     text = re.sub("&", "", text)
@@ -307,7 +307,7 @@ async def tweet(event):
     await purge()
 
 
-@register(pattern="^.threat(?: |$)(.*)", outgoing=True)
+@joo_cmd(pattern="^.threat(?: |$)(.*)", outgoing=True)
 async def nekobot(event):
     replied = await event.get_reply_message()
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
@@ -349,7 +349,7 @@ async def nekobot(event):
     await bot.send_file(event.chat_id, file, reply_to=replied)
 
 
-@register(pattern="^.trash(?: |$)(.*)", outgoing=True)
+@joo_cmd(pattern="^.trash(?: |$)(.*)", outgoing=True)
 async def nekobot(event):
     replied = await event.get_reply_message()
     if not os.path.isdir(TEMP_DOWNLOAD_DIRECTORY):
@@ -391,7 +391,7 @@ async def nekobot(event):
     await bot.send_file(event.chat_id, file, reply_to=replied)
 
 
-@register(pattern="^.trap(?: |$)(.*)", outgoing=True)
+@joo_cmd(pattern="^.trap(?: |$)(.*)", outgoing=True)
 async def nekobot(e):
     input_str = e.pattern_match.group(1)
     input_str = deEmojify(input_str)
@@ -443,7 +443,7 @@ async def nekobot(e):
 # Ported by @AshSTR
 
 
-@register(outgoing=True, pattern="^.fgs ((.*) ; (.*))")
+@joo_cmd(outgoing=True, pattern="^.fgs ((.*) ; (.*))")
 async def FakeGoogleSearch(event):
     """Get a user-customised google search meme!"""
     input_str = event.pattern_match.group(1)
@@ -478,7 +478,7 @@ async def FakeGoogleSearch(event):
     os.remove("downloads/test.jpg")
 
 
-@register(outgoing=True, pattern=r"^\.ph(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern=r"^\.ph(?: |$)(.*)")
 async def phcomment(event):
     try:
         await event.edit("`Processing..`")
