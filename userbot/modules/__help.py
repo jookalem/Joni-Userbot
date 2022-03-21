@@ -1,7 +1,7 @@
 import logging
 
 from userbot import BOT_USERNAME
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 logging.basicConfig(
     format="[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s", level=logging.WARNING
