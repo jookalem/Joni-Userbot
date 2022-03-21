@@ -12,7 +12,7 @@ import heroku3
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 heroku_api = "https://api.heroku.com"
 if HEROKU_APP_NAME is not None and HEROKU_API_KEY is not None:
@@ -28,7 +28,7 @@ else:
 """
 
 
-@skyzu_cmd(pattern="(get|del) var(?: |$)(\w*)")
+@joo_cmd(pattern="(get|del) var(?: |$)(\w*)")
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -91,7 +91,7 @@ async def variable(var):
             return True
 
 
-@skyzu_cmd(pattern="set var (\w*) ([\s\S]*)")
+@joo_cmd(pattern="set var (\w*) ([\s\S]*)")
 async def set_var(var):
     await var.edit("`Sedang Menyetel Config Vars ヅ`")
     variable = var.pattern_match.group(1)
@@ -122,7 +122,7 @@ async def set_var(var):
 """
 
 
-@skyzu_cmd(pattern="usage(?: |$)")
+@joo_cmd(pattern="usage(?: |$)")
 async def dyno_usage(dyno):
     """
     Get your account Dyno Usage
@@ -186,7 +186,7 @@ async def dyno_usage(dyno):
             return True
 
 
-@skyzu_cmd(pattern="logs")
+@joo_cmd(pattern="logs")
 async def _(dyno):
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
