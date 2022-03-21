@@ -5,10 +5,10 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from userbot import ALIVE_NAME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="slogo(?: |$)(.*)")
+@joo_cmd(pattern="slogo(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
