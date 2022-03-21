@@ -2,12 +2,12 @@ import json
 import urllib.request
 
 from userbot import CMD_HELP
-from userbot.events import joo_cmd
+from userbot.events import register
 
 
 # Port By @skyzu From Skyzu-Userbot
 # Buat Kamu Yang Hapus Credits. Intinya Kamu Anjing:)
-@joo_cmd(outgoing=True, pattern="^.ip(?: |$)(.*)")
+@register(outgoing=True, pattern="^.ip(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
