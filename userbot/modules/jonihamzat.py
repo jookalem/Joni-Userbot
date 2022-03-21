@@ -7,10 +7,10 @@ import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.events import register
+from userbot.events import joo_cmd
 
 
-@register(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
+@joo_cmd(outgoing=True, pattern=r"^.hz(:? |$)(.*)?")
 async def _(hazmat):
     await hazmat.edit("`Ingin Mengaktifkan Perintah Hazmat`")
     level = hazmat.pattern_match.group(2)
