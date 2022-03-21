@@ -394,7 +394,7 @@ async def unmoot(unmot):
         try:
             await unmot.client(EditBannedRequest(unmot.chat_id, user.id, UNBAN_RIGHTS))
             await unmot.edit(
-                "```Berhasil Melakukan Unmute Lord!😈**"
+                "**Berhasil Melakukan Unmute Lord!😈**"
             )
             await sleep(3)
             await unmot.delete()
@@ -677,7 +677,7 @@ async def kick(usr):
     try:
         await usr.client.kick_participant(usr.chat_id, user.id)
         await sleep(0.5)
-    except Exception as e:! 
+    except Exception as e:
         return await usr.edit(NO_PERM + f"\n{str(e)}")
 
     if reason:
