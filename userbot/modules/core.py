@@ -8,7 +8,7 @@ import sys
 from pathlib import Path
 
 from userbot import CMD_HELP, LOGS, bot  # pylint:disable=E0602
-from userbot.events import joo_cmd
+from userbot.events import register
 
 DELETE_TIMEOUT = 5
 
@@ -39,7 +39,7 @@ def load_module(shortname):
         LOGS.info("Successfully imported " + shortname)
 
 
-@joo_cmd(outgoing=True, pattern=r"^\.install$")
+@register(outgoing=True, pattern=r"^\.install$")
 async def _(event):
     if event.fwd_from:
         return
