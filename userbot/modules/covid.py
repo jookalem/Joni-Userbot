@@ -6,10 +6,10 @@
 from covid import Covid
 
 from userbot import CMD_HELP
-from userbot.events import joo_cmd
+from userbot.events import register
 
 
-@joo_cmd(outgoing=True, pattern="^.covid (.*)")
+@register(outgoing=True, pattern="^.covid (.*)")
 async def corona(event):
     await event.edit("`Processing...`")
     country = event.pattern_match.group(1)
@@ -31,7 +31,7 @@ async def corona(event):
     await event.edit(f"`Corona Virus Info in {country}:`\n\n{output_text}")
 
 
-@joo_cmd(outgoing=True, pattern="^.covid$")
+@register(outgoing=True, pattern="^.covid$")
 async def corona(event):
     await event.edit("`Processing...`")
     country = "World"
