@@ -4,10 +4,10 @@ from telethon import events
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
 from userbot import CMD_HELP, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="truth(?: |$)(.*)")
+@joo_cmd(pattern="truth(?: |$)(.*)")
 async def _(event):
     await event.edit("Mengirim pesan truth...")
     async with bot.conversation("@truthordares_bot") as conv:
@@ -24,7 +24,7 @@ async def _(event):
         await event.edit(f"**#TRUTH**\n\n{response.message.message}")
 
 
-@skyzu_cmd(pattern="dare(?: |$)(.*)")
+@joo_cmd(pattern="dare(?: |$)(.*)")
 async def _(event):
     await event.edit("Mengirim pesan dare...")
     async with bot.conversation("@truthordares_bot") as conv:
@@ -41,7 +41,7 @@ async def _(event):
         await event.edit(f"**#DARE**\n\n{response.message.message}")
 
 
-@skyzu_cmd(pattern="spill(?: |$)(.*)")
+@joo_cmd(pattern="spill(?: |$)(.*)")
 async def _(event):
     await event.edit("Mengirim pesan spill...")
     async with bot.conversation("@Spillgame_bot") as conv:
