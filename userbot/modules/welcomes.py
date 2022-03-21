@@ -6,7 +6,7 @@ from telethon.events import ChatAction
 from userbot import BOTLOG_CHATID, CLEAN_WELCOME
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, LOGS, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
 @bot.on(ChatAction)
@@ -109,7 +109,7 @@ async def welcome_to_chat(event):
             update_previous_welcome(event.chat_id, current_message.id)
 
 
-@skyzu_cmd(pattern="setwelcome(?: |$)(.*)")
+@joo_cmd(pattern="setwelcome(?: |$)(.*)")
 async def save_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import add_welcome_setting
@@ -144,7 +144,7 @@ async def save_welcome(event):
         await event.edit(success.format("Disini"))
 
 
-@skyzu_cmd(pattern="checkwelcome$")
+@joo_cmd(pattern="checkwelcome$")
 async def show_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import get_current_welcome_settings
@@ -164,7 +164,7 @@ async def show_welcome(event):
         await event.reply(cws.reply)
 
 
-@skyzu_cmd(pattern="rmwelcome$")
+@joo_cmd(pattern="rmwelcome$")
 async def del_welcome(event):
     try:
         from userbot.modules.sql_helper.welcome_sql import rm_welcome_setting
