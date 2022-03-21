@@ -29,7 +29,7 @@ from telethon.utils import get_input_location
 
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, TEMP_DOWNLOAD_DIRECTORY, bot
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 # ====================== CONSTANT ===============================
 INVALID_MEDIA = "```Maaf Media Tidak Valid.```"
@@ -45,7 +45,7 @@ USERNAME_TAKEN = "```Mohon Maaf, Username Itu Sudah Ada Yang Menggunakannya.```"
 # ===============================================================
 
 
-@skyzu_cmd(pattern="reserved$")
+@joo_cmd(pattern="reserved$")
 async def mine(event):
     """For .reserved command, get a list of your reserved usernames."""
     result = await bot(GetAdminedPublicChannelsRequest())
@@ -55,7 +55,7 @@ async def mine(event):
     await event.edit(output_str)
 
 
-@skyzu_cmd(pattern="cname")
+@joo_cmd(pattern="cname")
 async def update_name(name):
     """For .name command, change your name in Telegram."""
     newname = name.text[6:]
@@ -71,7 +71,7 @@ async def update_name(name):
     await name.edit(NAME_OK)
 
 
-@skyzu_cmd(pattern="setpfp$")
+@joo_cmd(pattern="setpfp$")
 async def set_profilepic(propic):
     """For .profilepic command, change your profile picture in Telegram."""
     replymsg = await propic.get_reply_message()
@@ -99,7 +99,7 @@ async def set_profilepic(propic):
             await propic.edit(INVALID_MEDIA)
 
 
-@skyzu_cmd(pattern="setbio (.*)")
+@joo_cmd(pattern="setbio (.*)")
 async def set_biograph(setbio):
     """For .setbio command, set a new bio for your profile in Telegram."""
     newbio = setbio.pattern_match.group(1)
@@ -107,7 +107,7 @@ async def set_biograph(setbio):
     await setbio.edit(BIO_SUCCESS)
 
 
-@skyzu_cmd(pattern="username (.*)")
+@joo_cmd(pattern="username (.*)")
 async def update_username(username):
     """For .username command, set a new username in Telegram."""
     newusername = username.pattern_match.group(1)
@@ -118,7 +118,7 @@ async def update_username(username):
         await username.edit(USERNAME_TAKEN)
 
 
-@skyzu_cmd(pattern="count$")
+@joo_cmd(pattern="count$")
 async def count(event):
     """For .count command, get profile stats."""
     u = 0
@@ -155,7 +155,7 @@ async def count(event):
     await event.edit(result)
 
 
-@skyzu_cmd(pattern="delpfp")
+@joo_cmd(pattern="delpfp")
 async def remove_profilepic(delpfp):
     """For .delpfp command, delete your current profile picture in Telegram."""
     group = delpfp.text[8:]
@@ -182,7 +182,7 @@ async def remove_profilepic(delpfp):
     await delpfp.edit(f"`Berhasil Menghapus {len(input_photos)} Foto Profil.`")
 
 
-@skyzu_cmd(pattern="data(?: |$)(.*)")
+@joo_cmd(pattern="data(?: |$)(.*)")
 async def who(event):
 
     await event.edit("`Mengambil Informasi Data`")
