@@ -15,7 +15,7 @@ from PIL import Image
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, UPSTREAM_REPO_URL, bot
-from userbot.utils import skyzu_cmd, time_formatter
+from userbot.utils import joo_cmd, time_formatter
 
 # ================= CONSTANT =================
 DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
@@ -31,7 +31,7 @@ useragent = "Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) 
 opener.addheaders = [("User-agent", useragent)]
 
 
-@skyzu_cmd(pattern="random")
+@joo_cmd(pattern="random")
 async def randomise(items):
     """For .random command, get a random item from the list of items."""
     itemo = (items.text[8:]).split()
@@ -46,7 +46,7 @@ async def randomise(items):
     )
 
 
-@skyzu_cmd(pattern="sleep ([0-9]+)$")
+@joo_cmd(pattern="sleep ([0-9]+)$")
 async def sleepybot(time):
     """For .sleep command, let the userbot snooze for a few second."""
     counter = int(time.pattern_match.group(1))
@@ -61,7 +61,7 @@ async def sleepybot(time):
     await time.edit("`OK, I'm awake now.`")
 
 
-@skyzu_cmd(pattern="shutdown$")
+@joo_cmd(pattern="shutdown$")
 async def killdabot(event):
     """For .shutdown command, shut the bot down."""
     await event.edit("**Mematikan ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡**")
@@ -74,7 +74,7 @@ async def killdabot(event):
     await bot.disconnect()
 
 
-@skyzu_cmd(pattern="restart$")
+@joo_cmd(pattern="restart$")
 async def killdabot(event):
     await event.edit("**Restarting ⚡𝐉ᴏɴɪ 𝐔ѕᴇʀʙᴏᴛ⚡**")
     await asyncio.sleep(10)
@@ -90,7 +90,7 @@ async def killdabot(event):
     exit()
 
 
-@skyzu_cmd(pattern="readme$")
+@joo_cmd(pattern="readme$")
 async def reedme(e):
     await e.edit(
         "Sesuatu Yang Harus Kamu Baca:\n"
@@ -100,7 +100,7 @@ async def reedme(e):
     )
 
 
-@skyzu_cmd(pattern="repeat (.*)")
+@joo_cmd(pattern="repeat (.*)")
 async def repeat(rep):
     cnt, txt = rep.pattern_match.group(1).split(" ", 1)
     replyCount = int(cnt)
@@ -114,7 +114,7 @@ async def repeat(rep):
     await rep.edit(replyText)
 
 
-@skyzu_cmd(pattern="repo$")
+@joo_cmd(pattern="repo$")
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await wannasee.edit(
@@ -126,7 +126,7 @@ async def repo_is_here(wannasee):
     )
 
 
-@skyzu_cmd(pattern="raw$")
+@joo_cmd(pattern="raw$")
 async def raw(event):
     the_real_message = None
     reply_to_id = None
@@ -150,7 +150,7 @@ async def raw(event):
         )
 
 
-@skyzu_cmd(pattern="reverse(?: |$)(\d*)")
+@joo_cmd(pattern="reverse(?: |$)(\d*)")
 async def okgoogle(img):
     """For .reverse command, Google search images and stickers."""
     if os.path.isfile("okgoogle.png"):
