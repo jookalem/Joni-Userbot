@@ -11,7 +11,7 @@ from telethon import events
 from telethon.tl import functions, types
 
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 from userbot import (  # noqa pylint: disable=unused-import isort:skip
     AFKREASON,
@@ -141,7 +141,7 @@ async def on_afk(event):
             pass
 
 
-@skyzu_cmd(pattern="off(?: |$)(.*)")  # pylint:disable=E0602
+@joo_cmd(pattern="off(?: |$)(.*)")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
