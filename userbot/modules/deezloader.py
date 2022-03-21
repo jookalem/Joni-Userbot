@@ -16,10 +16,10 @@ from hachoir.parser import createParser
 from telethon.tl.types import DocumentAttributeAudio
 
 from userbot import DEEZER_ARL_TOKEN, TEMP_DOWNLOAD_DIRECTORY
-from userbot.events import joo_cmd
+from userbot.events import register
 
 
-@joo_cmd(
+@register(
     outgoing=True, pattern=r"^\.deezload (.+?|) (FLAC|MP3\_320|MP3\_256|MP3\_128)"
 )
 async def _(event):
