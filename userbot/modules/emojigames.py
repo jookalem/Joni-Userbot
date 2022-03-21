@@ -4,10 +4,10 @@
 from telethon.tl.types import InputMediaDice
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.events import joo_cmd
 
 
-@register(outgoing=True, pattern="^.dice(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.dice(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -24,7 +24,7 @@ async def _(event):
             pass
 
 
-@register(outgoing=True, pattern="^.dart(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.dart(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -41,7 +41,7 @@ async def _(event):
             pass
 
 
-@register(outgoing=True, pattern="^.ball(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.ball(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -58,7 +58,7 @@ async def _(event):
             pass
 
 
-@register(outgoing=True, pattern="^.dadu(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.dadu(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -75,7 +75,7 @@ async def _(event):
             pass
 
 
-@register(outgoing=True, pattern="^.petir(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.petir(?: |$)(.*)")
 async def _(event):
     if event.fwd_from:
         return
