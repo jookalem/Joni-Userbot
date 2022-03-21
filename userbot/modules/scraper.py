@@ -21,10 +21,10 @@ from telethon.tl.functions.channels import InviteToChannelRequest
 from telethon.tl.types import InputPeerUser
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.events import joo_cmd
 
 
-@register(outgoing=True, pattern=r"^\.getmemb$")
+@joo_cmd(outgoing=True, pattern=r"^\.getmemb$")
 async def scrapmem(event):
     chat = event.chat_id
     await event.edit("`Mohon tunggu...`")
@@ -39,7 +39,7 @@ async def scrapmem(event):
     await event.edit("`Berhasil Mengumpulkan Member..`")
 
 
-@register(outgoing=True, pattern=r"^\.addmemb$")
+@joo_cmd(outgoing=True, pattern=r"^\.addmemb$")
 async def admem(event):
     await event.edit("`Proses Menambahkan 0 Member...`")
     chat = await event.get_chat()
