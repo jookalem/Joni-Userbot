@@ -38,10 +38,10 @@ from PIL import Image, ImageEnhance, ImageOps
 from telethon.tl.types import DocumentAttributeFilename
 
 from userbot import CMD_HELP
-from userbot.events import register
+from userbot.events import joo_cmd
 
 
-@register(outgoing=True, pattern="^.deepfry(?: |$)(.*)")
+@joo_cmd(outgoing=True, pattern="^.deepfry(?: |$)(.*)")
 async def deepfryer(event):
     try:
         frycount = int(event.pattern_match.group(1))
