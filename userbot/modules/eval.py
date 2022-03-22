@@ -12,88 +12,138 @@ import sys
 import traceback
 from getpass import getuser
 from os import remove
+from sys import executable
 
-from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, TERM_ALIAS
-from userbot.utils import joo_cmd
+from userbot import CMD_HELP, TERM_ALIAS, CMD_HANDLER as cmd
+from userbot.utils import edit_or_reply, joo_cmd
 
 
-@joo_cmd(pattern="eval(?:\s|$)([\s\S]*)")
+@joo_cmd(pattern="eval(?: |$|\n)([\\s\\S]*)")
 async def _(event):
-    expression = event.pattern_match.group(1)
-    if not expression:
-        return await event.edit("**Berikan Code untuk di eksekusi.**")
-    if expression in ("userbot.session", "config.env"):
-        return await event.edit("**Itu operasi yang berbahaya! Tidak diperbolehkan!**")
-    cmd = "".join(event.message.message.split(maxsplit=1)[1:])
+    if event.fwd_from:
+        return
+    xx = await edit_or_reply(event, "Processing ...")
+    cmd = event.pattern_match.group(1)
     if not cmd:
-        return event.edit("**Apa yang harus saya jalankan?**")
-    cmd = (
-        cmd.replace("sendmessage", "send_message")
-        .replace("sendfile", "send_file")
-        .replace("editmessage", "edit_message")
-    )
-    xx = await event.edit("`Processing...`")
-    if event.reply_to_msg_id:
-        reply_to_id = event.reply_to_msg_id
+        return await xx.edit("`What should i eval...`")
+
     old_stderr = sys.stderr
     old_stdout = sys.stdout
     redirected_output = sys.stdout = io.StringIO()
     redirected_error = sys.stderr = io.StringIO()
     stdout, stderr, exc = None, None, None
-    reply_to_id = event.message.id
-
-    async def aexec(code, event):
-        exec(
-            "async def __aexec(e, client): "
-            + "\n message = event = e"
-            + "\n reply = await event.get_reply_message()"
-            + "\n chat = (await event.get_chat()).id"
-            + "".join(f"\n {line}" for line in code.split("\n")),
-        )
-
-        return await locals()["__aexec"](event, event.client)
 
     try:
-        await aexec(cmd, event)
+        returned = await aexec(cmd, xx)
     except Exception:
         exc = traceback.format_exc()
+
     stdout = redirected_output.getvalue()
     stderr = redirected_error.getvalue()
     sys.stdout = old_stdout
     sys.stderr = old_stderr
-    evaluation = ""
+
+    evaluation = "No Output"
     if exc:
         evaluation = exc
     elif stderr:
         evaluation = stderr
     elif stdout:
         evaluation = stdout
-    else:
-        evaluation = "Success"
-    final_output = f"**•  Eval : **\n`{cmd}` \n\n**•  Result : **\n`{evaluation}` \n"
+    elif returned:
+        evaluation = returned
 
-    if len(final_output) > 4096:
-        man = final_output.replace("`", "").replace("**", "").replace("__", "")
-        with io.BytesIO(str.encode(man)) as out_file:
+    final_output = "**EVAL**: \n`{}` \n\n**OUTPUT**: \n`{}` \n".format(
+        cmd, evaluation)
+
+    if len(final_output) >= 4096:
+        with io.BytesIO(str.encode(final_output)) as out_file:
             out_file.name = "eval.txt"
-            await event.client.send_file(
-                event.chat_id,
-                out_file,
-                force_document=True,
-                thumb="userbot/resources/logo.jpg",
-                allow_cache=False,
-                caption=f"`{cmd}`" if len(cmd) < 998 else None,
-                reply_to=reply_to_id,
-            )
+            await xx.reply(cmd, file=out_file)
             await xx.delete()
     else:
         await xx.edit(final_output)
 
 
+async def aexec(code, smessatatus):
+    message = event = smessatatus
+
+    reply = await event.get_reply_message()
+    exec(
+        f"async def __aexec(message, reply, client): "
+        + "\n event = smessatatus = message"
+        + "".join(f"\n {l}" for l in code.split("\n"))
+    )
+    return await locals()["__aexec"](message, reply, message.client)
+
+
+@joo_cmd(pattern="exec(?: |$|\n)([\\s\\S]*)")
+async def run(run_q):
+    """ For .exec command, which executes the dynamically created program """
+    code = run_q.pattern_match.group(1)
+
+    if run_q.is_channel and not run_q.is_group:
+        return await run_q.edit("`Exec isn't permitted on channels!`")
+
+    if not code:
+        return await run_q.edit(
+            "``` At least a variable is required to"
+            "execute. Use .help exec for an example.```"
+        )
+
+    if code in ("userbot.session", "config.env"):
+        return await run_q.edit("`That's a dangerous operation! Not Permitted!`")
+
+    if len(code.splitlines()) <= 5:
+        codepre = code
+    else:
+        clines = code.splitlines()
+        codepre = (
+            clines[0] +
+            "\n" +
+            clines[1] +
+            "\n" +
+            clines[2] +
+            "\n" +
+            clines[3] +
+            "...")
+
+    command = "".join(f"\n {l}" for l in code.split("\n.strip()"))
+    process = await asyncio.create_subprocess_exec(
+        executable,
+        "-c",
+        command.strip(),
+        stdout=asyncio.subprocess.PIPE,
+        stderr=asyncio.subprocess.PIPE,
+    )
+    stdout, stderr = await process.communicate()
+    result = str(stdout.decode().strip()) + str(stderr.decode().strip())
+
+    if result:
+        if len(result) > 4096:
+            file = open("output.txt", "w+")
+            file.write(result)
+            file.close()
+            await run_q.client.send_file(
+                run_q.chat_id,
+                "output.txt",
+                reply_to=run_q.id,
+                caption="`Output too large, sending as file`",
+            )
+            remove("output.txt")
+            return
+        await run_q.edit(
+            "**Query: **\n`" f"{codepre}" "`\n**Result: **\n`" f"{result}" "`"
+        )
+    else:
+        await run_q.edit(
+            "**Query: **\n`" f"{codepre}" "`\n**Result: **\n`No result returned/False`"
+        )
+
+
 @joo_cmd(pattern="term(?: |$|\n)(.*)")
 async def terminal_runner(term):
-    """For .term command, runs bash commands and scripts on your server."""
+    """ For .term command, runs bash commands and scripts on your server. """
     curruser = TERM_ALIAS if TERM_ALIAS else getuser()
     command = term.pattern_match.group(1)
     try:
@@ -143,40 +193,10 @@ async def terminal_runner(term):
         await term.edit(f"`{curruser}:~$ {command}\n{result}`")
 
 
-@joo_cmd(pattern="json$")
-async def _(event):
-    if event.fwd_from:
-        return
-    the_real_message = None
-    reply_to_id = None
-    if event.reply_to_msg_id:
-        previous_message = await event.get_reply_message()
-        the_real_message = previous_message.stringify()
-        reply_to_id = event.reply_to_msg_id
-    else:
-        the_real_message = event.stringify()
-        reply_to_id = event.message.id
-    if len(the_real_message) > 4096:
-        with io.BytesIO(str.encode(the_real_message)) as out_file:
-            out_file.name = "json.text"
-            await bot.send_file(
-                event.chat_id,
-                out_file,
-                force_document=True,
-                thumb="userbot/resources/logo.jpg",
-                allow_cache=False,
-                reply_to=reply_to_id,
-            )
-            await event.delete()
-    else:
-        await event.edit("`{}`".format(the_real_message))
-
-
-CMD_HELP.update(
-    {
-        "eval": f">`{cmd}eval print('world')`" "\nUsage: Just like exec.",
-        "exec": f">`{cmd}exec print('hello')`" "\nUsage: Execute small python scripts.",
-        "term": f">`{cmd}term <cmd>`"
-        "\nUsage: Run bash commands and scripts on your server.",
-    }
-)
+CMD_HELP.update({"eval": f">`{cmd}eval print('world')`"
+                 "\nUsage: Just like exec.",
+                 "exec": f">`{cmd}exec print('hello')`"
+                 "\nUsage: Execute small python scripts.",
+                 "term": f">`{cmd}term <cmd>`"
+                 "\nUsage: Run bash commands and scripts on your server.",
+                 })
