@@ -19,7 +19,7 @@ from userbot import (
     UPSTREAM_REPO_BRANCH,
     UPSTREAM_REPO_URL,
 )
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 requirements_path = path.join(
     path.dirname(path.dirname(path.dirname(__file__))), "requirements.txt"
@@ -146,7 +146,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@skyzu_cmd(pattern="update(?: |$)(now|deploy)?")
+@joo_cmd(pattern="update(?: |$)(now|deploy)?")
 @register(incoming=True, from_users=860951678,
           pattern=r"^\.cupdate(?: |$)(now|deploy)?")
 async def upstream(event):
