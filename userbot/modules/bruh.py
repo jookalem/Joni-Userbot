@@ -20,22 +20,22 @@ from userbot.events import register
 # CPING
 
 cping = [
-    "**Hadir cping** `100.699` ",
-    "**Hadir speed** `999.999` ",
-    "**Hadir boosted** `568.938` ",
-    "**Hadir pingers power** `789.669` ",
+    "**Hadir, Pingers** `101.678` ",
+    "**Hadir Speed** `999.999` ",
+    "**Hadir, Boosted** `567.765` ",
+    "**Hadir, Pingers Power** `789.212` ",
 ]
 
 brb = [
-    "**went AFK Now!** ",
-    "**punch owner AFK!** ",
-    "**why AFK idiot!** ",
+    "**Sial Lord Joni!😈** ",
+    "**Siap Lord!🙏** ",
+    "**See U Next Time Lord!🤗** ",
 ]
 
 afk = [
-    "**Owo offline AFK**! ",
-    "**Last seen a long time ago**! ",
-    "**fucking AFK!** ",
+    "**Laporan Di Terima Lord!👿**! ",
+    "**Baik Lord**!🙏 ",
+    "**Fuck You Joni!🤪** ",
 ]
 
 async def get_readable_time(seconds: int) -> str:
