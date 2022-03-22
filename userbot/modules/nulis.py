@@ -64,11 +64,11 @@ async def writer(event):
 
 CMD_HELP.update(
     {
-        "nulis": f"**plugin : **`nulis`\ 
-        \n\n  •  **syntax :** `{cmd}nulis1` <text>\
-        \n  •  **function : **Menulis Teks Di Buku ,Buat Lu Yang Mager Nulis\
-        \n\n  •  **syntax :** `{cmd}nulis2` <text>\
-        \n  •  **function : **Menulis Teks Di Buku ,Buat Lu Yang Mager Nulis\
+        "nulis": f"**Modules : **`nulis`\
+        \n\n •  **Syntax  :** `{cmd}nulis1`\
+        \n  •  **Function  : **Buat Lu Yang Mager Nulis Ngentod.\
+        \n\n •  **Syntax  :** `{cmd}nulis2`\
+        \n  •  **Function  : **Buat Lu Yang Mager Nulis Ngentod.\
     "
     }
 )
