@@ -1,5 +1,5 @@
 # Credits @renprx
-FROM https://randi356.github.io/Vegeta-Userbot
+# FROM https://randi356.github.io/Vegeta-Userbot
 
 """ Userbot module containing commands related to the \
     Information Superhighway (yes, Internet). """
