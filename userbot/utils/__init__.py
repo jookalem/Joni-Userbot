@@ -29,6 +29,7 @@ from .tools import (
     media_type,
     post_to_telegraph,
     run_cmd,
+    text_set,
     runcmd,
     reply_id,
     take_screen_shot,
