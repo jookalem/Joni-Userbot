@@ -9,10 +9,10 @@ from asyncio import sleep
 from userbot import BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP
-from userbot.utils import skyzu_cmd
+from userbot.utils import joo_cmd
 
 
-@skyzu_cmd(pattern="cspam (.*)")
+@joo_cmd(pattern="cspam (.*)")
 async def tmeme(e):
     cspam = str(e.pattern_match.group(1))
     message = cspam.replace(" ", "")
@@ -25,7 +25,7 @@ async def tmeme(e):
         )
 
 
-@skyzu_cmd(pattern="wspam (.*)")
+@joo_cmd(pattern="wspam (.*)")
 async def tmeme(e):
     wspam = str(e.pattern_match.group(1))
     message = wspam.split()
@@ -38,7 +38,7 @@ async def tmeme(e):
         )
 
 
-@skyzu_cmd(pattern="spam (.*)")
+@joo_cmd(pattern="spam (.*)")
 async def spammer(e):
     counter = int(e.pattern_match.group(1).split(" ", 1)[0])
     spam_message = str(e.pattern_match.group(1).split(" ", 1)[1])
@@ -50,7 +50,7 @@ async def spammer(e):
         )
 
 
-@skyzu_cmd(pattern="picspam")
+@joo_cmd(pattern="picspam")
 async def tiny_pic_spam(e):
     message = e.text
     text = message.split()
@@ -65,7 +65,7 @@ async def tiny_pic_spam(e):
         )
 
 
-@skyzu_cmd(pattern="delayspam (.*)")
+@joo_cmd(pattern="delayspam (.*)")
 async def spammer(e):
     spamDelay = float(e.pattern_match.group(1).split(" ", 2)[0])
     counter = int(e.pattern_match.group(1).split(" ", 2)[1])
