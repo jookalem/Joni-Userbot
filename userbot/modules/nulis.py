@@ -29,7 +29,7 @@ async def writer(event):
     for line in lines:
         draw.text((x, y), line, fill=(1, 22, 55), font=font)
         y = y + line_height - 5
-    file = "cilik.jpg"
+    file = "joo.jpg"
     img.save(file)
     await event.reply(file=file)
     os.remove(file)
@@ -55,7 +55,7 @@ async def writer(event):
     for line in lines:
         draw.text((x, y), line, fill=(1, 22, 55), font=font)
         y = y + line_height - 5
-    file = "grey.jpg"
+    file = "joo.jpg"
     img.save(file)
     await event.reply(file=file)
     os.remove(file)
