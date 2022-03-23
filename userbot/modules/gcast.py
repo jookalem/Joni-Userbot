@@ -33,6 +33,7 @@ GCAST_BLACKLIST = [
     -1001664518224,  # JoniSupport
     -1001606097524,  # SanjoSupportt
     -1001554560763,  # Vegeta Supports
+    -1001692751821,  # RamSupportGroup
 ]
 
 
