@@ -140,7 +140,7 @@ async def update(event, repo, ups_rem, ac_br):
     return
 
 
-@kyy_cmd(pattern="update(?: |$)(now|deploy)?")
+@joo_cmd(pattern="update(?: |$)(now|deploy)?")
 @register(incoming=True, from_users=860951678,
           pattern=r"^.cupdate(?: |$)(now|deploy)?")
 async def upstream(event):
