@@ -60,6 +60,8 @@
 *   [Ira](https://github.com/zigaz23) Gada-Userbot
 *   [Alfa](https://github.com/CoeF) Alfa-Userbot
 *   [Tede](https://github.com/tofikdn/tofikdn) Tede-Ubot
+*   [Vegeta](https://github.com/Randi356) Vegeta-Userbot
+
 
 *   DAN KEPADA SELURUH OWNER REPO USERBOT INDONESIA LAINNYA!..
 
