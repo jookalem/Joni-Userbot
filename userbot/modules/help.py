@@ -20,7 +20,7 @@ DEFAULTUSER = str(ALIVE_NAME) if ALIVE_NAME else uname().node
 # ============================================
 
 
-@joo_cmd(pattern="xhelp(?: |$)(.*)")
+@joo_cmd(pattern="help(?: |$)(.*)")
 async def help(event):
     """For .help command,"""
     args = event.pattern_match.group(1).lower()
