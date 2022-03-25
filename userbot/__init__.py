@@ -477,7 +477,7 @@ with bot:
                 data=re.compile("open")
             )
         )
-        async def opeen(event):
+        async def open(event):
             try:
                 tgbotusername = BOT_USERNAME
                 if tgbotusername is not None:
