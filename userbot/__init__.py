@@ -833,7 +833,7 @@ with bot:
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"dyno_usage")
+                data=re.compile(rb"usage_dyno")
             )
         )
         async def on_plug_in_callback_query_handler(event):
