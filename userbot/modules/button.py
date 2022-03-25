@@ -9,7 +9,7 @@ from telethon import Button
 
 from userbot import BOT_USERNAME
 from userbot import CMD_HANDLER as cmd
-from userbot import CMD_HELP, tgbot
+from userbot import CMD_HELP,
 from userbot.utils import edit_delete, joo_cmd, reply_id
 
 # regex obtained from:
