@@ -562,6 +562,7 @@ with bot:
                 buttons = paginate_help(0, dugmeler, "helpme")
                 text = f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)} "
                 await event.edit(
+                    result = builder.photo(
                     text,
                     file=kyylogo,
                     buttons=buttons,
@@ -574,7 +575,7 @@ with bot:
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"nepo")
+                data=re.compile(rb"repo")
             )
         )
         async def on_plug_in_callback_query_handler(event):
