@@ -557,16 +557,16 @@ with bot:
         )
         async def on_plug_in_callback_query_handler(event):
             builder = event.builder
+            result = none
             query = event.text
             if event.query.user_id == uid and query.startswith("@ikhsanntarjo"):
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)} "
-                await event.edit(
-                    result = builder.photo(
-                    text,
+                result = build.photo(
                     file=kyylogo,
-                    buttons=buttons,
                     link_preview=False,
+                    button=buttons, 
+                    text = f"⚡ᴊᴏɴɪ-ᴜѕᴇʀʙᴏᴛ⚡ **ɪɴʟɪɴᴇ ᴍᴇɴᴜ​​**\n\n✫ **ᴏᴡɴᴇʀ :** {DEFAULTUSER}\n✫ **ᴍᴏᴅᴜʟᴇꜱ :** {len(plugins)}", 
+       
                 )
             else:
                 reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
