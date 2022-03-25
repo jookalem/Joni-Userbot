@@ -12,7 +12,7 @@ import heroku3
 from userbot import ALIVE_NAME, BOTLOG, BOTLOG_CHATID
 from userbot import CMD_HANDLER as cmd
 from userbot import CMD_HELP, HEROKU_API_KEY, HEROKU_APP_NAME
-from userbot.utils import joo_cmd
+from userbot.utils import joo_cmd, edit_or_reply
 
 heroku_api = "https://api.heroku.com"
 if HEROKU_APP_NAME is not None and HEROKU_API_KEY is not None:
@@ -184,6 +184,19 @@ async def dyno_usage(dyno):
             await asyncio.sleep(20)
             await event.delete()
             return True
+
+
+@joo_cmd(pattern="dyno(?: |$)")
+async def fake_dyno(event):
+    xx = await edit_or_reply(event, "`Processing...`")
+    await xx.edit(
+        "**Informasi Dyno Heroku**:\n\n"
+        f"☂ **Penggunaan Dyno** **{app.name}**:\n"
+        f"    •**0 hour(s) - "
+        f"0%**\n\n"
+        "☂ **Sisa Dyno bulan ini**:\n"
+        f"    •**1000 hour(s) - 100%**"
+    )
 
 
 @joo_cmd(pattern="logs")
