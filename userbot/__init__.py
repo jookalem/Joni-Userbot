@@ -556,7 +556,7 @@ with bot:
             )
         )
         async def on_plug_in_callback_query_handler(event):
-            event.builder
+            builder = event.builder
             query = event.text
             if event.query.user_id == uid and query.startswith("@ikhsanntarjo"):
                 buttons = paginate_help(0, dugmeler, "helpme")
