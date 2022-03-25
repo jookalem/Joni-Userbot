@@ -568,7 +568,6 @@ with bot:
                     buttons=buttons,
                     link_preview=False,
                 )
-
             else:
                 reply_pop_up_alert = f"✗𝙒𝘼𝙍𝙉𝙄𝙉𝙂✗\n\nAnda Tidak Mempunyai Hak Untuk Menekan Tombol Button Ini."
                 await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
