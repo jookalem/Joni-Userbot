@@ -8,7 +8,7 @@ logging.basicConfig(
 )
 
 
-@joo_cmd(pattern="help")
+@joo_cmd(pattern="helpme")
 async def yardim(event):
     try:
         tgbotusername = BOT_USERNAME
