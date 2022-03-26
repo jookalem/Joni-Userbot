@@ -560,7 +560,7 @@ async def _(event):
 async def infor(event):
     await tgbot.send_message(
         event.chat_id,
-        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/NastySupportt)\n**Github**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/templat-userbot2)",
+        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/JoniSupport)\n**Github**: [Joni-Userbot](https://github.com/jookalem/Joni-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/jookalem/Joni-Userbot)",
         buttons=[
             [
                 custom.Button.inline(
