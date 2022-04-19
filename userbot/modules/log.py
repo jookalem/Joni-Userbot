@@ -28,23 +28,23 @@ LOG_CHATS_ = LOG_CHATS()
 
 
 @bot.on(events.ChatAction)
-async def logaddjoin(sky):
-    user = await sky.get_user()
-    chat = await sky.get_chat()
+async def logaddjoin(kyy):
+    user = await kyy.get_user()
+    chat = await kyy.get_chat()
     if not (user and user.is_self):
         return
     if hasattr(chat, "username") and chat.username:
-        chat = f"[{chat.title}](https://t.me/{chat.username}/{sky.action_message.id})"
+        chat = f"[{chat.title}](https://t.me/{chat.username}/{kyy.action_message.id})"
     else:
-        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{sky.action_message.id})"
-    if sky.user_added:
-        tmp = sky.added_by
+        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{kyy.action_message.id})"
+    if kyy.user_added:
+        tmp = kyy.added_by
         text = f"u📩 **#TAMBAH_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Group** {chat}"
-    elif sky.user_joined:
+    elif kyy.user_joined:
         text = f"📨 **#LOG_GABUNG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Group** {chat}"
     else:
         return
-    await sky.client.send_message(BOTLOG_CHATID, text)
+    await kyy.client.send_message(BOTLOG_CHATID, text)
 
 
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
